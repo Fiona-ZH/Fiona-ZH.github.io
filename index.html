@@ -7,6 +7,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous" rel="stylesheet">
   </head>
+
   <body>
     <header>
       <div class="splash">
@@ -46,6 +47,7 @@
         </svg>
       </div>
     </header>
+
     <nav>
       <div class="nav_logo">
         <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,13 +61,14 @@
         <h4>connect</h4>
       </div>
     </nav>
+
     <main>
       <section class="featured">
         <h2>Featured Project</h2>
         <div class="featured__hero">
           <span class="name">HIVE</span>
           <span class="intro">The place to harness insperations, sae your ideas, and make them heard.</span>
-          <img src="/images/featured_heroimg.png" alt="HIVE desktop and mobile interface showcase"/>
+          <img src="/images/home/featured_heroimg.png" alt="HIVE desktop and mobile interface showcase"/>
         </div>
         <article class="featured__intro"> HIVE is a lightweight personal cloud storage application, aiming at providing versatile storing and sharing solutions to the group of people who are creative, collaborative, and have a fast-paced lifestyle.
         </article>
@@ -73,13 +76,13 @@
         </button>
         <div class="featured__details">
           <div class="icon">
-            <img src="/images/role_icon.png"/>
+            <img src="/images/home/role_icon.png"/>
           </div>
           <div class="icon">
-            <img src="/images/deliverable_icon.png"/>
+            <img src="/images/home/deliverable_icon.png"/>
           </div>
           <div class="icon">
-            <img src="/images/tools_icon.png"/>
+            <img src="/images/home/tools_icon.png"/>
           </div>
           <div class="title">role</div>
           <div class="title">deliverable</div>
@@ -106,12 +109,13 @@
           </ul>
         </div>
       </section>
+
       <section class="about_me">
         <div class="about_me__profile"></div>
         <div class="about_me__title">about me</div>
         <div class="about_me__container">
           <div class="content_box">
-            <article class="content">
+            <article>
               I love UX design because of its multidisciplinary and human-centered nature. It’s the marriage of my desire to solve real-life problems by empathizing with people and my passion for technology and design. For me, pursuing a career as UX designer is to connect with the world from a new perspective. It is like continuing on a trail that was always one step away from the one I’ve been on for the past years.
               <br><br>
               I could only remember by flipping through the old photo albums that the doors and lower section of the walls in our apartment were covered with my doodles and cartoon stickers. But I do remember the times when I had to wait for my mom at her workplace after school but was granted to play on a spare computer powered with Win95, spending hours drawing in MS Paint, using a mouse with a rolling ball that can be taken out from the bottom. Yes, the memory is still quite vivid. I have always loved art and design as a little girl, but later I set out on a journey where they fade out of the focal point.
@@ -135,46 +139,56 @@
           </div>
         </div>
       </section>
+
       <section class="connect">
-        <div class="lets">let's connect</div>
-        <div class="thanks">Thanks for stopping by.</div>
+        <div class="connect__lets">let's connect</div>
+        <div class="connect__thanks">Thanks for stopping by.</div>
         <p>Check out my reusme if you are interested.<br> If you like to chat about my work, share your thoughts on UX design or watercolor, feel free to connect with me:</p>
-        <div class="social_media">
-          <div class="email">
-            <span class="icon">
-              <svg width="40" height="35" viewBox="0 0 40 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ul class="connect__scial_media">
+          <li class="email">
+            <a href="mailto:fiona.feifei.zhang@gmail.com">
+              <span class="icon">
+                <svg width="40" height="35" viewBox="0 0 40 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 2C0 0.895508 0.895432 0 2 0H38C39.1046 0 40 0.895508 40 2V32.6667C40 33.7712 39.1046 34.6667 38 34.6667H2C0.895432 34.6667 0 33.7712 0 32.6667V2ZM20.1683 20.2844L37.4455 10.3096L36.1122 8L20.0561 17.27L4 8L2.66667 10.3093L19.9439 20.2844L20 20.3816L20.0561 20.3491L20.1122 20.3816L20.1683 20.2844Z" fill="#FC999E"/>
-              </svg>
-            </span>
+                </svg>
+              </span>
+            </a>
             <span class="name">email</span>
-          </div>
-          <div class="linkedin">
-            <span class="icon">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          </li>
+          <li class="linkedin">
+            <a href="https://www.linkedin.com/in/fiona-feifei-zhang">
+              <span class="icon">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M38.4821 0H1.62953C0.752093 0 0 0.75 0 1.625V38.25C0 39.25 0.752093 40 1.62953 40H38.3567C39.2342 40 39.9863 39.25 39.9863 38.375V1.625C40.1116 0.75 39.3595 0 38.4821 0ZM11.9081 34.125H5.8914V15H11.9081V34.125ZM8.89977 12.375C7.01954 12.375 5.39 10.875 5.39 8.875C5.39 7 6.89419 5.375 8.89977 5.375C10.78 5.375 12.4095 6.875 12.4095 8.875C12.4095 10.875 10.78 12.375 8.89977 12.375ZM34.2202 34.125H28.3288V24.875C28.3288 22.625 28.3288 19.875 25.1951 19.875C22.0614 19.875 21.6853 22.25 21.6853 24.75V34.25H15.794V15H21.3093V17.625H21.4347C22.1867 16.125 24.1923 14.5 27.0754 14.5C33.0921 14.5 34.2202 18.5 34.2202 23.625V34.125Z" fill="#FC999E"/>
-              </svg>
-            </span>
-            <span class="name">linkedin</span>
-          </div>
-          <div class="twitter">
-            <span class="icon">
-              <svg width="40" height="35" viewBox="0 0 40 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                </svg>
+              </span>
+              <span class="name">linkedin</span>
+            </a>
+          </li>
+          <li class="twitter">
+            <a href="https://twitter.com/FionaFeifei_ZH">
+              <span class="icon">
+                <svg width="40" height="35" viewBox="0 0 40 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M40 4.13333C38.5047 4.8 37.0093 5.33333 35.2648 5.46667C37.0093 4.4 38.2555 2.66667 38.8785 0.666667C37.2586 1.73333 35.514 2.4 33.6449 2.8C32.1495 1.06667 30.0312 0 27.7882 0C23.3022 0 19.5639 3.86667 19.5639 8.8C19.5639 9.46667 19.6885 10.1333 19.8131 10.8C12.9595 10.4 6.97819 6.93333 2.86604 1.6C2.11838 2.93333 1.74455 4.4 1.74455 6C1.74455 9.06667 3.23988 11.7333 5.35826 13.3333C3.98754 13.3333 2.74143 12.9333 1.61994 12.2667V12.4C1.61994 16.6667 4.48598 20.1333 8.2243 20.9333C7.47664 21.0667 6.85358 21.2 6.10592 21.2C5.60748 21.2 5.10903 21.2 4.61059 21.0667C5.60748 24.5333 8.72274 27.0667 12.2118 27.2C9.47041 29.6 5.8567 30.9333 1.99377 30.9333C1.37072 30.9333 0.623053 30.9333 -1.85684e-09 30.8C3.73832 33.2 8.09969 34.6667 12.7103 34.6667C27.7882 34.6667 36.0125 21.3333 36.0125 9.73333C36.0125 9.33333 36.0125 8.93333 36.0125 8.66667C37.5078 7.33333 38.8785 5.86667 40 4.13333Z" fill="#FC999E"/>
-              </svg>
-            </span>
-            <span class="name">twitter</span>
-          </div>
-          <div class="github">
-            <span class="icon">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                </svg>
+              </span>
+              <span class="name">twitter</span>
+            </a>
+          </li>
+          <li class="github">
+            <a  href="https://github.com/Fiona-ZH">
+              <span class="icon">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M20 7.63785e-09C9 7.63785e-09 0 9.22621 0 20.5027C0 29.6007 5.75 37.2893 13.625 39.9802C14.625 40.1084 15 39.5958 15 38.9551C15 38.4425 15 37.1611 15 35.4953C9.375 36.7767 8.25 32.8043 8.25 32.8043C7.375 30.4977 6 29.857 6 29.857C4.125 28.5756 6.125 28.5756 6.125 28.5756C8.125 28.7038 9.25 30.6259 9.25 30.6259C11 33.7013 13.875 32.8043 15.125 32.2917C15.25 31.0103 15.875 30.1133 16.375 29.6007C11.875 29.0882 7.25 27.2942 7.25 19.4776C7.25 17.2991 8 15.377 9.25 13.9675C9 13.4549 8.375 11.4046 9.5 8.5855C9.5 8.5855 11.125 8.07293 15 10.6358C16.625 10.1232 18.25 9.99506 20 9.99506C21.75 9.99506 23.375 10.2513 25 10.6358C28.875 7.94479 30.5 8.45736 30.5 8.45736C31.625 11.2765 30.875 13.3267 30.75 13.8393C32 15.2489 32.75 17.0429 32.75 19.3494C32.75 27.1661 28.125 28.96 23.625 29.4726C24.375 30.1133 25 31.3947 25 33.3169C25 36.0078 25 38.3144 25 38.9551C25 39.4677 25.375 40.1084 26.375 39.9802C34.25 37.2893 40 29.6007 40 20.5027C40 9.22621 31 7.63785e-09 20 7.63785e-09Z" fill="#FC999E"/>
-              </svg>
-            </span>
-            <span class="name">github</span>
-          </div>
-        </div>
-        <p class="catch">Or simply catch me around Waterloo and we can always chat over coffee.</p>
+                </svg>
+              </span>
+              <span class="name">github</span>
+            </a>
+          </li>
+        </ul>
+        <p class="connect__catch">Or simply catch me around Waterloo and we can always chat over coffee.</p>
       </section>
+      
       <footer>
         <div class="quote">“I want to touch people with my art. I want them to say ‘he feels deeply, he feels tenderly.’”<br> -- Vincent Van Gogh
         </div>
