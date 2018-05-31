@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="148px" height="26px" viewBox="0 0 148 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>ur_result1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Case-Study" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HIVE---Case-Study-Page-1" transform="translate(-646.000000, -3078.000000)">
+            <g id="ur_result1" transform="translate(646.000000, 3078.000000)">
+                <path d="M11.5,13 C7.91014913,13 5,10.0898509 5,6.5 C5,2.91014913 7.91014913,0 11.5,0 C15.0898509,0 18,2.91014913 18,6.5 C18,10.0898509 15.0898509,13 11.5,13 Z M24,26 L0,26 C0,19.372583 5.372583,14 12,14 C18.627417,14 24,19.372583 24,26 Z" id="Combined-Shape" fill="#B1CBE7"></path>
+                <path d="M42.5,13 C38.9101491,13 36,10.0898509 36,6.5 C36,2.91014913 38.9101491,0 42.5,0 C46.0898509,0 49,2.91014913 49,6.5 C49,10.0898509 46.0898509,13 42.5,13 Z M55,26 L31,26 C31,19.372583 36.372583,14 43,14 C49.627417,14 55,19.372583 55,26 Z" id="Combined-Shape-Copy" fill="#B1CBE7"></path>
+                <path d="M73.5,13 C69.9101491,13 67,10.0898509 67,6.5 C67,2.91014913 69.9101491,0 73.5,0 C77.0898509,0 80,2.91014913 80,6.5 C80,10.0898509 77.0898509,13 73.5,13 Z M86,26 L62,26 C62,19.372583 67.372583,14 74,14 C80.627417,14 86,19.372583 86,26 Z" id="Combined-Shape-Copy-2" fill="#B1CBE7"></path>
+                <path d="M104.5,13 C100.910149,13 98,10.0898509 98,6.5 C98,2.91014913 100.910149,0 104.5,0 C108.089851,0 111,2.91014913 111,6.5 C111,10.0898509 108.089851,13 104.5,13 Z M117,26 L93,26 C93,19.372583 98.372583,14 105,14 C111.627417,14 117,19.372583 117,26 Z" id="Combined-Shape-Copy-3" fill="#B1CBE7"></path>
+                <g id="Group-3" transform="translate(124.000000, 0.000000)">
+                    <circle id="Oval-5" fill="#B1CBE7" cx="11.5" cy="6.5" r="6.5"></circle>
+                    <path d="M24,26 C24,19.372583 18.627417,14 12,14 C5.372583,14 0,19.372583 0,26 C5.33333333,26 9.33333333,26 12,26 C14.6666667,26 18.6666667,26 24,26 Z" id="Oval-6" fill="#B1CBE7"></path>
+                    <path d="M24,26 C24,19.372583 18.627417,14 12,14 L12,26 C14.6666667,26 18.6666667,26 24,26 Z" id="Oval-6" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
