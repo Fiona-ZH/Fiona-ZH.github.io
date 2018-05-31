@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="272px" height="272px" viewBox="0 0 272 272" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo/icon bw 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="252" height="252" rx="30"></rect>
+        <filter x="-6.3%" y="-5.6%" width="112.7%" height="112.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.590162628   0 0 0 0 0.590162628   0 0 0 0 0.590162628  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Hive---Style-Guide-V3" transform="translate(-1030.000000, -1266.000000)">
+            <g id="Logo" transform="translate(33.000000, 490.000000)">
+                <g id="Logo/icon-bw-2" transform="translate(1007.000000, 784.000000)">
+                    <g id="Rectangle-5-Copy-5">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <path d="M127.90367,35.4193548 L203,78.7096774 L203,165.290323 L127.90367,208.580645 L51.4166667,165.290323 L51.4166667,78.7096774 L127.90367,35.4193548 Z M198.827982,162.524508 L198.827982,87.0884495 L130.685015,125.726754 L130.685015,201.598335 L198.827982,162.524508 Z M190.483945,101.05307 L190.483945,156.343072 L177.5,163.886464 L177.5,141.217563 L152.012997,156.02496 L152.012997,178.693862 L139.029052,186.237253 L139.029052,130.94725 L152.012997,123.403859 L152.012997,145.203917 L177.5,130.396519 L177.5,108.596461 L190.483945,101.05307 Z" id="Combined-Shape" fill="#000000"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
