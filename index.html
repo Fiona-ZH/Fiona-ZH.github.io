@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Portfolio | Fiona Zhang</title>
     <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="styles/home.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous" rel="stylesheet">
   </head>
@@ -16,9 +18,9 @@
         </div>
         <div class="splash__line"></div>
         <div class="splash__menu_wrap">
-          <h4>projects</h4>
-          <h4>about</h4>
-          <h4>connect</h4>
+          <a href="#featured"><h4>projects</h4></a>
+          <a href="#about"><h4>about</h4></a>
+          <a href="#connect"><h4>connect</h4></a>
         </div>
         <div class="splash__hello">
           <h1>Hello!</h1>
@@ -41,13 +43,14 @@
         <img src="/images/home/logo.svg"/>
       </div>
       <div class="nav_menu">
-        <h4>projects</h4>
-        <h4>about</h4>
-        <h4>connect</h4>
+        <a href="#featured"><h4>projects</h4></a>
+        <a href="#about"><h4>about</h4></a>
+        <a href="#connect"><h4>connect</h4></a>
       </div>
     </nav>
 
     <main>
+      <a name="featured">
       <section class="featured">
         <h2>Featured Project</h2>
         <div class="featured__hero">
@@ -97,6 +100,7 @@
         </div>
       </section>
 
+      <a name="about">
       <section class="about_me">
         <div class="about_me__profile"></div>
         <div class="about_me__title">about me</div>
@@ -118,6 +122,7 @@
         </div>
       </section>
 
+      <a name="connect">
       <section class="connect">
         <div class="connect__lets">let's connect</div>
         <div class="connect__thanks">Thanks for stopping by.</div>
