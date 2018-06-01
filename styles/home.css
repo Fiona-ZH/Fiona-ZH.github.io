@@ -1,0 +1,110 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Import fonts*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700|Oswald|Playfair+Display:700,900');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+}
+
+/* ------- header ------- */
+
+.splash {
+  min-height: 100vh;
+  background: url("../images/home/header_bkg.svg") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.splash__logo_wrap {
+  width: 10vw;
+  margin: 0 auto;
+  padding-top: 5vh;
+  padding-bottom: 20px;
+}
+
+.splash__logo_wrap img {
+  max-width: 10vw;
+}
+
+.splash__line {
+  width: 60%;
+  height: 1px;
+  background-color: rgba(252,153,158,0.5);
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.splash__menu_wrap {
+  display: flex;
+  flex-flow: row;
+  width: 50%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.splash__menu_wrap h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6em;
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 4vh;
+}
+
+.splash__menu_wrap h4:hover {
+  color: rgba(252,153,158,1);
+}
+
+.splash__hello {
+  text-align: center;
+  padding-bottom: 4vh;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 3em;
+  line-height: 1.5em;
+  color: #fff;
+}
+
+.splash__intro {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.splash__intro h6 {
+  font-size: 1.4em;
+  line-height: 2em;
+  color: #fff;
+  padding-bottom: 2vh;
+}
+
+.splash__intro p {
+  font-size: 1.4em;
+  font-weight: 400;
+  line-height: 2em;
+  color: rgba(78,60,97,1);
+  padding-bottom: 2vh;
+}
+
+.splash__more {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+}
+
+.splash__more img {
+  height: 6vh;
+}
+
+/* ------- nav bar ------- */
+nav {
+  overflow:hidden;
+  background-color: rgba(78,60,97,1);
+}
