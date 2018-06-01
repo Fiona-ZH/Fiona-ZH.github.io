@@ -10,6 +10,60 @@ body {
   font-size: 10px;
 }
 
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 3em;
+  line-height: 1.5em;
+  color: #fff;
+}
+
+h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6em;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: rgba(41,30,65,1);
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+h2::before, h2::after{
+  content:' ';
+  background: url("/images/home/h2_dec.svg");
+  display: inline-block;
+  width: 80px;
+  height: 3px;
+  position: absolute;
+  top: 20px;
+}
+
+h2::before {
+  left: 0;
+}
+
+h2::after {
+  right: 0;
+}
+
+p {
+  font-size: 1.4em;
+  font-weight: 400;
+  line-height: 2em;
+  margin: 0 16px 0 16px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
 /* ------- header ------- */
 
 .splash {
@@ -49,10 +103,6 @@ body {
 }
 
 .splash__menu_wrap h4 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.6em;
-  font-weight: 300;
-  color: #fff;
   margin-bottom: 4vh;
 }
 
@@ -63,14 +113,6 @@ body {
 .splash__hello {
   text-align: center;
   padding-bottom: 4vh;
-}
-
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
-  font-size: 3em;
-  line-height: 1.5em;
-  color: #fff;
 }
 
 .splash__intro {
@@ -86,11 +128,8 @@ h1 {
 }
 
 .splash__intro p {
-  font-size: 1.4em;
-  font-weight: 400;
-  line-height: 2em;
   color: rgba(78,60,97,1);
-  padding-bottom: 2vh;
+  margin: 0 0 0 0;
 }
 
 .splash__more {
@@ -105,6 +144,152 @@ h1 {
 
 /* ------- nav bar ------- */
 nav {
+  height: 50px;
   overflow:hidden;
   background-color: rgba(78,60,97,1);
+}
+
+nav img {
+  height: 30px;
+  margin: 10px 0 0 16px;
+  display: inline-block;
+  float: left;
+}
+
+nav span {
+  width: 80%;
+  float: right;
+  margin-top: 15px;
+}
+
+nav h4 {
+  float: right;
+  padding-right: 6vw;
+}
+
+/* ------ featured section ------ */
+.featured__hero {
+  max-width: 100vw;
+  background: url("../images/home/featured_bkg.svg") repeat-x left top;
+}
+
+.featured__hero .name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  color: rgba(243,221,152,1);
+  display: block;
+  text-align: center;
+  padding: 10px;
+}
+
+.featured__hero .intro {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4em;
+  font-weight: 300;
+  line-height: 1.6em;
+  color: #fff;
+  display: block;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.featured__hero img {
+  display: block;
+  margin: 0 auto;
+}
+
+.view_casestudy {
+  width: 220px;
+  border-radius: 30px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: rgba(252,153,158,1);
+}
+
+.featured__details {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 2.5em auto;
+  justify-items: center;
+}
+
+.featured__details img {
+  width: 80px;
+}
+
+.featured__details .title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  padding-top: 5px;
+}
+
+.featured__details ul {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4em;
+  line-height: 1.6em;
+  text-align: center;
+}
+
+/* ------ section about ------ */
+
+.about_me__wrapper {
+  position: relative;
+  background-color: rgba(78,60,97,1);
+}
+
+.about_me .profile {
+  width: 100vw;
+  padding-top: 20px;
+}
+
+.about_me__title {
+  width: 40vw;
+  position: absolute;
+  left: 10%;
+  bottom: -3vw;
+}
+
+.about_me__container {
+  width: 100%;
+  background-color: rgba(41,30,65,1);
+}
+
+.content_box {
+  padding-top: 1vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  padding-bottom: 3vw;
+}
+
+article {
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4em;
+  line-height: 2em;
+  font-weight: 300;
+  color: #fff;
+  padding: 6vw;
+  border-style: dotted;
+  border-width: 1px;
+  border-color: rgba(252,153,158,1);;
+}
+
+.content_box .more {
+  text-align: center;
+}
+
+.content_box .more img {
+  height: 3vh;
 }
