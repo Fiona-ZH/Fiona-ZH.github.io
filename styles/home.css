@@ -348,13 +348,13 @@ article {
 .connect__social_media {
   padding-top: 3vh;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  grid-row-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-row-gap: 30px;
   justify-content: center;
 }
 
 .connect__social_media .icon {
-  height: 6vh;
+  height: 5vh;
 }
 
 .connect__social_media .name {
@@ -382,3 +382,37 @@ article {
 }
 
 /* ------ section footer ------ */
+footer {
+  position: relative;
+  width: 100%;
+  height: 130px;
+  background-color: rgba(41,30,65,1);
+}
+
+footer .quote {
+  width: 70%;
+  position: absolute;
+  right: 10%;
+  top: 16px;
+  /* float: right;
+  padding-top: 16px;
+  padding-right: 10%;
+  padding-bottom: 16px; */
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-size: 1.2em;
+  line-height: 1.6em;
+  text-align: right;
+  color: rgba(190,226,226,1);
+}
+
+footer .copyright {
+  position: absolute;
+  left: 10%;
+  bottom: 16px;
+  /* left: 10%;
+  bottom: 20px; */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  color: rgba(252,153,158,1);
+}
