@@ -32,31 +32,31 @@ h2 {
   font-weight: 600;
   color: rgba(41,30,65,1);
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   position: relative;
 }
 
 h2::before, h2::after{
   content:' ';
-  background: url("/images/home/h2_dec.svg");
+  background: url("/images/home/h2_dec.svg") repeat-x;
   display: inline-block;
-  width: 80px;
+  width: 20%;
   height: 3px;
   position: absolute;
-  top: 20px;
+  top: 30px;
 }
 
 h2::before {
-  left: 0;
+  left: 10%;
 }
 
 h2::after {
-  right: 0;
+  right: 10%;
 }
 
 p {
-  font-size: 1.4em;
+  font-size: 1.6em;
   font-weight: 400;
   line-height: 2em;
   margin: 0 16px 0 16px;
@@ -69,7 +69,32 @@ a {
   text-decoration: none;
 }
 
-/* ------- header ------- */
+/* ------ colors ------ */
+/* .pink {
+  color: rgba(252,153,158,1);
+}
+
+.cream {
+  color: rgba(252,238,237,1);
+}
+
+.teal_light {
+  color: rgba(190,226,226,1);
+}
+
+.teal_dark {
+  color: rgba(85,135,135,1);
+}
+
+.purple_light {
+  color: rgba(78,60,97,1);
+}
+
+.purple_dark {
+  color: rgba(41,30,65,1);
+} */
+
+/* ------ header ------ */
 
 .splash {
   min-height: 100vh;
@@ -121,14 +146,14 @@ a {
 }
 
 .splash__intro {
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
 }
 
 .splash__intro h6 {
-  font-size: 1.4em;
+  font-size: 1.6em;
   line-height: 2em;
-  color: #fff;
+  color: rgba(252,238,237,1);
   padding-bottom: 2vh;
 }
 
@@ -151,6 +176,7 @@ nav {
   height: 50px;
   overflow:hidden;
   background-color: rgba(78,60,97,1);
+  z-index: 999;
 }
 
 nav img {
@@ -169,6 +195,12 @@ nav span {
 nav h4 {
   float: right;
   padding-right: 6vw;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 /* ------ featured section ------ */
@@ -215,6 +247,11 @@ nav h4 {
   background-color: rgba(252,153,158,1);
 }
 
+.view_casestudy:hover {
+  background-color: rgba(78,60,97,1);
+  color: rgba(252,238,237,1);
+}
+
 .featured__details {
   width: 90%;
   margin: 0 auto;
@@ -223,6 +260,7 @@ nav h4 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto 2.5em auto;
+  grid-row-gap: 10px;
   justify-items: center;
 }
 
@@ -232,9 +270,10 @@ nav h4 {
 
 .featured__details .title {
   font-family: 'Oswald', sans-serif;
-  font-size: 1.4em;
+  font-size: 1.6em;
   text-transform: uppercase;
   padding-top: 5px;
+  color: rgba(85,135,135,1);
 }
 
 .featured__details ul {
@@ -279,9 +318,9 @@ article {
   width: 100%;
   margin: 0 auto;
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.4em;
+  font-size: 1.6em;
   line-height: 2em;
-  font-weight: 300;
+  font-weight: 200;
   color: #fff;
   padding: 6vw;
   border-style: dotted;
@@ -308,18 +347,19 @@ article {
 }
 
 .connect__lets {
-  padding-top: 5vh;
+  padding-top: 8vh;
   font-family: 'Playfair Display', serif;
-  font-size: 3em;
+  font-size: 4em;
   font-weight: 600;
   text-transform: uppercase;
+  line-height: 1.2em;
   color: rgba(252,153,158,1);
 }
 
 .connect__thanks {
   padding-top: 5vh;
   font-family: 'Oswald', sans-serif;
-  font-size: 1.8em;
+  font-size: 2em;
   color: rgba(85,135,135,1);
 }
 
@@ -345,10 +385,14 @@ article {
   left: 30%;
 }
 
+.resume:hover::before {
+ background-color: rgba(85,135,135,1);
+}
+
 .connect__social_media {
   padding-top: 3vh;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   grid-row-gap: 30px;
   justify-content: center;
 }
@@ -376,9 +420,13 @@ article {
   left: 40%;
 }
 
+.connect__social_media li:hover .name::before {
+  background-color: rgba(85,135,135,1);
+}
+
 .connect__catch {
   color: rgba(85,135,135,1);
-  padding-bottom: 10vh;
+  padding-bottom: 4vh;
 }
 
 /* ------ section footer ------ */
@@ -394,10 +442,6 @@ footer .quote {
   position: absolute;
   right: 10%;
   top: 16px;
-  /* float: right;
-  padding-top: 16px;
-  padding-right: 10%;
-  padding-bottom: 16px; */
   font-family: 'Open Sans', sans-serif;
   font-style: italic;
   font-size: 1.2em;
@@ -410,8 +454,6 @@ footer .copyright {
   position: absolute;
   left: 10%;
   bottom: 16px;
-  /* left: 10%;
-  bottom: 20px; */
   font-family: 'Open Sans', sans-serif;
   font-size: 1.2em;
   color: rgba(252,153,158,1);
