@@ -23,7 +23,6 @@ h4 {
   font-size: 1.6em;
   font-weight: 300;
   text-transform: uppercase;
-  text-decoration: none;
   color: rgba(252,238,237,1);
 }
 
@@ -64,6 +63,10 @@ p {
   padding-top: 10px;
   padding-bottom: 20px;
   color: rgba(41,30,65,1);
+}
+
+a {
+  text-decoration: none;
 }
 
 /* ------- header ------- */
@@ -207,7 +210,6 @@ nav h4 {
   text-transform: uppercase;
   text-align: center;
   color: #000;
-  text-decoration: none;
   padding: 10px;
   margin: 0 auto;
   background-color: rgba(252,153,158,1);
@@ -250,7 +252,7 @@ nav h4 {
 }
 
 .about_me .profile {
-  width: 100vw;
+  width: 100%;
   padding-top: 20px;
 }
 
@@ -315,8 +317,68 @@ article {
 }
 
 .connect__thanks {
-  padding-top: 3vh;
+  padding-top: 5vh;
   font-family: 'Oswald', sans-serif;
   font-size: 1.8em;
   color: rgba(85,135,135,1);
 }
+
+.connect p {
+  padding-top: 5vh;
+  line-height: 2.5em;
+}
+
+.resume {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.resume::before {
+  content: ' ';
+  width: 20px;
+  height: 5px;
+  background-color: rgba(252,153,158,1);
+  position: absolute;
+  bottom: -6px;
+  left: 30%;
+}
+
+.connect__social_media {
+  padding-top: 3vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-row-gap: 20px;
+  justify-content: center;
+}
+
+.connect__social_media .icon {
+  height: 6vh;
+}
+
+.connect__social_media .name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 10px;
+  bottom: 1.5vh;
+}
+
+.connect__social_media .name::before {
+  content: ' ';
+  width: 20px;
+  height: 5px;
+  background-color: rgba(252,153,158,1);
+  position: absolute;
+  bottom: -6px;
+  left: 40%;
+}
+
+.connect__catch {
+  color: rgba(85,135,135,1);
+  padding-bottom: 10vh;
+}
+
+/* ------ section footer ------ */
