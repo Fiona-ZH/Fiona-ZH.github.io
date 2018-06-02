@@ -23,7 +23,8 @@ h4 {
   font-size: 1.6em;
   font-weight: 300;
   text-transform: uppercase;
-  color: #fff;
+  text-decoration: none;
+  color: rgba(252,238,237,1);
 }
 
 h2 {
@@ -62,6 +63,7 @@ p {
   margin: 0 16px 0 16px;
   padding-top: 10px;
   padding-bottom: 20px;
+  color: rgba(41,30,65,1);
 }
 
 /* ------- header ------- */
@@ -128,7 +130,6 @@ p {
 }
 
 .splash__intro p {
-  color: rgba(78,60,97,1);
   margin: 0 0 0 0;
 }
 
@@ -292,4 +293,30 @@ article {
 
 .content_box .more img {
   height: 3vh;
+}
+
+/* ------ section connect ------ */
+.connect {
+  background-color: rgba(252,238,237,1);
+}
+
+.connect__lets, .connect__thanks, .connect p, .connect__social_media, .connect__catch {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.connect__lets {
+  padding-top: 5vh;
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(252,153,158,1);
+}
+
+.connect__thanks {
+  padding-top: 3vh;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8em;
+  color: rgba(85,135,135,1);
 }
