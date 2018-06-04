@@ -5,6 +5,8 @@
 /* Import fonts*/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700|Oswald|Playfair+Display:700,900');
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Ubuntu');
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 10px;
@@ -18,7 +20,8 @@ p {
   font-size: 1.6em;
   font-weight: 400;
   line-height: 2em;
-  margin: 0 16px 0 16px;
+  width: 90%;
+  margin: 0 auto;
   padding-top: 10px;
   padding-bottom: 10px;
   color: rgba(41,30,65,1);
@@ -500,3 +503,220 @@ nav .burger {
 }
 
 /* ------ section branding ------ */
+h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.8em;
+  text-align: right;
+  padding-right: 16px;
+  padding-bottom: 10px;
+}
+
+.branding .samples {
+  width: 96%;
+  display: block;
+  margin: 0 auto;
+}
+
+.hive_loge--b {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  margin: 10px 0 10px 0;
+}
+
+.hive_loge--b img {
+  width: 180px;
+  margin: 0 auto;
+}
+
+.hive_logo--icon {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+
+.hive_logo--icon img {
+  width: 80px;
+  height: 80px;
+}
+
+.color_palette {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+}
+
+.color_palette span {
+  width: 60px;
+  height: 60px;
+  font-size: 1.2em;
+  text-align: center;
+  padding-top: 25px;
+  border-radius: 50px;
+}
+
+.color_palette .color1 {
+  background-color: #FFE06D;
+}
+
+.color_palette .color2 {
+  background-color: #504840;
+  color: #fff;
+}
+
+.color_palette .color3 {
+  background-color: #B1CBE7;
+}
+
+.color_palette .color4 {
+  background-color: #E6764F;
+}
+
+.color_palette .color5 {
+  background-color: #4A4A4A;
+  color: #fff;
+}
+
+.color_palette .color6 {
+  background-color: #9B9B9B;
+  color: #fff;
+}
+
+.color_palette .color7 {
+  background-color: #BBBBBB;
+}
+
+.color_palette .color8 {
+  background-color: #F8F8F8;
+}
+
+.typ {
+  padding: 20px 20px 20px 5px;
+  margin-bottom: 20px;
+  background-color: rgba(177,203,231,0.5);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+}
+
+.typ span {
+  line-height: 1.6em;
+}
+
+.typ__mon {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6em;
+  font-weight: 600;
+  text-align: right;
+  grid-row: 1/3;
+}
+
+.typ__ub {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.6em;
+  font-weight: 600;
+  text-align: right;
+}
+
+.typ__mon--1, .typ__mon--2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.typ__mon--2 {
+  font-size: 1.6em;
+}
+
+.typ__ub--1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.4em;
+}
+
+/* ------ section prot_test ------ */
+.prot_test h1 {
+  margin-top: 20px;
+  line-height: 1.2em;
+}
+
+.prot_test .tasks {
+  font-style: italic;
+  padding-left: 10%;
+}
+
+.prot_test .feedback img {
+  width: 100%;
+  margin: 5px 0 20px 0;
+}
+
+.hifi_web {
+  margin: 30px 5px 20px 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.hifi_web img {
+  width: 30vw;
+  display: block;
+  margin: 0 auto;
+}
+
+.hifi_mobile {
+  margin: 40px 5px 20px 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+}
+
+.hifi_mobile img {
+  width: 22vw;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ------ section conclusion ------ */
+.conclusion h1 {
+  margin-top: 20px;
+}
+
+.conclusion li {
+  padding-top: 20px;
+}
+
+/* ------ footer ------ */
+footer {
+  margin-top: 30px;
+  height: 180px;
+  background-color: rgba(41,30,65,1);
+}
+
+footer .quote {
+  display: block;
+  padding-top: 20px;
+  padding-left: 20%;
+  padding-right: 5%;
+  text-align: right;
+  font-size: 1.4em;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.6em;
+  color: rgba(190,226,226,1);
+}
+
+footer .layout {
+  padding-top: 10%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer .copyright {
+  font-size: 1.4em;
+  color: rgba(252,153,158,1);
+}
