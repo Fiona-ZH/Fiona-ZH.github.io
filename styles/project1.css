@@ -166,6 +166,7 @@ header .btn {
   display: block;
   margin: 0 auto;
   padding-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* ------ nav ------- */
@@ -174,7 +175,6 @@ nav {
   overflow:hidden;
   background-color: rgba(248,248,248,1);
   z-index: 999;
-  margin-top: 20px;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -219,6 +219,16 @@ nav .burger {
   position: absolute;
   right: 16px;
   z-index: -1;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.move_down {
+  margin-top: 80px;
 }
 
 /* ------ section summary ------ */
