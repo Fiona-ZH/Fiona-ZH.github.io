@@ -203,6 +203,10 @@ nav h4 {
   width: 100%;
 }
 
+.move_down {
+  margin-top: 50px;
+}
+
 /* ------ featured section ------ */
 .featured__hero {
   max-width: 100vw;
