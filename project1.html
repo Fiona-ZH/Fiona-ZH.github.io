@@ -11,6 +11,7 @@
   </head>
 
   <body>
+    <a name="top">
     <header>
       <div class="burger">
         <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,28 +29,31 @@
       <img class="map" src="/images/project1/header_roadmap.svg"/>
     </header>
 
-    <nav>
+    <nav id="navbar">
       <div class="burger">
-        <div class="burger__line"></div>
-        <div class="burger__line"></div>
-        <div class="burger__line"></div>
+        <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.4286 8V6.28571H4.57143V8H15.4286Z" fill="#504840"/>
+          <path d="M15.4286 13.7143V12H4.57143V13.7143H15.4286Z" fill="#504840"/>
+          <path d="M4.57143 9.14286H15.4286V10.8571H4.57143V9.14286Z" fill="#504840"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M20 10C20 15.5228 15.5228 20 10 20C4.47716 20 0 15.5228 0 10C0 4.47716 4.47716 0 10 0C15.5228 0 20 4.47716 20 10ZM18.3333 10C18.3333 14.6024 14.6024 18.3334 10 18.3334C5.39763 18.3334 1.66667 14.6024 1.66667 10C1.66667 5.39764 5.39763 1.66668 10 1.66668C14.6024 1.66668 18.3333 5.39764 18.3333 10Z" fill="#504840"/>
+        </svg>
       </div>
-      <div class="nav__dot nav__dot--small">TOP</div>
-      <div class="nav__dot">S</div>
-      <div class="nav__dot">E</div>
-      <div class="nav__dot">I</div>
-      <div class="nav__dot">B</div>
-      <div class="nav__dot nav__dot--small">P&T</div>
-      <div class="nav__dot">C</div>
+      <span class="dot_line"></span>
+      <a href="#summary" class="nav__dot"><span>S</span></a>
+      <a href="#exploration" class="nav__dot"><span>E</span></a>
+      <a href="#ideation" class="nav__dot"><span>I</span></a>
+      <a href="#branding" class="nav__dot"><span>B</span></a>
+      <a href="#prot_test" class="nav__dot nav__dot--small"><span>P&T</span></a>
+      <a href="#conclusion" class="nav__dot nav__dot--last"><span>C</span></a>
     </nav>
 
     <main>
+      <a name="summary">
       <section class="summary">
         <h1>summary</h1>
         <p>Although here are many cloud storage services in the market, there are still customer needs that are not 100% satisfied. This is where HIVE steps in.<br><br>As a lightweight personal cloud storage application, it aims at providing versatile storing and sharing solutions to the group of people who are creative, collaborative, and have a fast-paced lifestyle.</p>
         <div class="heading2">
-          <span class="bullet_hex">
-          </span>
+          <img class="bullet_hex" src="/images/project1/h2_hex.svg"/>
           <h2>problems</h2>
         </div>
         <ol class="summary__problems">
@@ -59,8 +63,7 @@
           <li>Pricing for features and storages are not flexible.</li>
         </ol>
         <div class="heading2">
-          <span class="bullet_hex">
-          </span>
+          <img class="bullet_hex" src="/images/project1/h2_hex.svg"/>
           <h2>solutions</h2>
         </div>
         <ol class="summary__problems">
@@ -69,23 +72,23 @@
           <li>Introduce a virtual container, Jar, for sharing multiple items without moving to the same folder.</li>
           <li>Separate purchase plan of add-on storage space.</li>
         </ol>
-        <div class="delis_tools">
+        <div class="deliv_tools">
           <span class="title">Deliverables</span>
-          <span class="title">Tools</span>
           <span class="content">User research, Competitive analysis<br>User flow, Wireframe<br>Prototype, Usability testing</span>
+          <span class="title">Tools</span>
           <span class="content">Pen & Paper, Balsamiq<br>Sketch, InVision, Usability Hub</span>
         </div>
       </section>
 
+      <a name="exploration">
       <section class="exploration">
         <h1>exploration</h1>
         <div class="heading2">
-          <span class="bullet_hex">
-          </span>
+          <img class="bullet_hex" src="/images/project1/h2_hex.svg"/>
           <h2>competitive analysis</h2>
         </div>
         <p>There were two categories of competitors put under the microscope for the competitive analysis. One is general storage services such as DropBox, Google Drive and Box; the other focuses on note taking, EverNote.</p>
-        <div class="cometitor_wrap">
+        <div class="competitor_wrap">
           <img src="/images/project1/logo_db.png" alt="dropbox logo"/>
           <img src="/images/project1/logo_gd.png" alt="google drive logo"/>
           <img src="/images/project1/logo_box.png" alt="box logo"/>
@@ -93,8 +96,7 @@
         </div>
         <p>By analyzing the competitors’ strength and weakness, it was discovered that even with these big names in the market there are still needs for an application that integrates quick note-taking feature with cloud storage functionality. Also, the fact that sharing, although is made easier using links than through emails, is still limited to single element sharing across the market. A feature that enables a more flexible sharing method could make our product stand out based on users’ growing needs for online collaborations.</p>
         <div class="heading2">
-          <span class="bullet_hex">
-          </span>
+          <img class="bullet_hex" src="/images/project1/h2_hex.svg"/>
           <h2>user research</h2>
         </div>
         <p>Bearing the assumptions from the competitive analysis, I conducted a user survey to fnd out their goals, attitudes, and more importantly, complains of using cloud storage service.</p>
@@ -104,53 +106,52 @@
         </div>
         <div class="ur__result2">
           <img src="images/project1/ur_result2-1.svg" alt="graph of result 2-1"/>
-          <p class="ur__note">Upgraded to paid plan for extra features.</p>
           <img src="images/project1/ur_result2-2.svg" alt="graph of result 2-2"/>
+          <p class="ur__note">Upgraded to paid plan for extra features.</p>
           <p class="ur__note">Shared files are text-based</p>
         </div>
         <div class="ur__result3">
-          <p class="ur__note"><b>What do you mainly use it for?</b></p>
+          <p class="ur__title"><b>What do you mainly use it for?</b></p>
           <div class="ur__result3__graph">
-            <p class="ur__note">backup device 50%</p>
-            <p class="ur__note">share file across platforms 60%</p>
-            <p class="ur__note">collaborate 59%</p>
             <div class="line"></div>
-            <div class="bar-1"></div>
-            <div class="bar-2"></div>
-            <div class="bar-3"></div>
+            <p class="ur__note">backup device 50%</p>
+            <div class="bar bar-1"></div>
+            <p class="ur__note">share file across platforms 60%</p>
+            <div class="bar bar-2"></div>
+            <p class="ur__note">collaborate 59%</p>
+            <div class="bar bar-3"></div>
           </div>
         </div>
         <div class="ur__result4">
-          <p class="ur__note"><b>What are your biggest complains about the current products?</b></p>
+          <p class="ur__title"><b>What are your biggest complains about the current products?</b></p>
           <div class="ur__result4__graph">
+          <div class="line"></div>
             <p class="ur__note">app interface 61%</p>
+            <div class="bar bar-1"></div>
             <p class="ur__note">creating files 32%</p>
+            <div class="bar bar-2"></div>
             <p class="ur__note">organizing files 21%</p>
-            <div class="line"></div>
-            <div class="bar-1"></div>
-            <div class="bar-2"></div>
-            <div class="bar-3"></div>
+            <div class="bar bar-3"></div>
           </div>
         </div>
         <div class="ur__result5">
-          <p class="ur__note"><b>What are your most desired features?</b></p>
+          <p class="ur__title"><b>What are your most desired features?</b></p>
           <div class="ur__result5__graph">
+          <div class="line"></div>
             <p class="ur__note">real-time editing 87%</p>
+            <div class="bar bar-1"></div>
             <p class="ur__note">assigning permission level 74%</p>
+            <div class="bar bar-2"></div>
             <p class="ur__note">syncing local folders 71%</p>
+            <div class="bar bar-3"></div>
             <p class="ur__note">searching with tags 67%</p>
+            <div class="bar bar-4"></div>
             <p class="ur__note">comment notification 67%</p>
-            <div class="line"></div>
-            <div class="bar-1"></div>
-            <div class="bar-2"></div>
-            <div class="bar-3"></div>
-            <div class="bar-4"></div>
-            <div class="bar-5"></div>
+            <div class="bar bar-5"></div>
           </div>
         </div>
         <div class="heading2">
-          <span class="bullet_hex">
-          </span>
+          <img class="bullet_hex" src="/images/project1/h2_hex.svg"/>
           <h2>personas</h2>
         </div>
         <div class="persona-1">
@@ -211,20 +212,19 @@
         </div>
       </section>
 
+      <a name="ideation">
       <section class="ideation">
         <h1>ideation</h1>
         <p>With Plenty info collected on users’ problems and desires, I used the value proposition to map the product features.</p>
         <a href="https://drive.google.com/file/d/1g7AHzAWzbcd0E8C9mEO_uKyhQlfWsucN/view?usp=sharing"><div class="btn">view value proposition canvas</div></a>
         <div class="heading2">
-          <span class="bullet_hex">
-          </span>
+          <img class="bullet_hex" src="/images/project1/h2_hex.svg"/>
           <h2>user stories</h2>
         </div>
         <p>Then the high and several medium importance user stories were converted into user flows to illustrate how users would interact with the app to accomplish the tasks.</p>
         <a href="https://drive.google.com/open?id=1C8qqi0R8SC3JZ5bD8aCihAWjUX0z7DwieNBKV45OsmA"><div class="btn">view all user stories</div></a>
         <div class="heading2">
-          <span class="bullet_hex">
-          </span>
+          <img class="bullet_hex" src="/images/project1/h2_hex.svg"/>
           <h2>user flows</h2>
         </div>
         <a href="https://drive.google.com/open?id=1EGn2nrzuyXo3Bucnr80UuVnuEJ87HVFl"><div class="btn--blue">on-boarding</div></a>
@@ -233,8 +233,7 @@
         <a href="https://drive.google.com/open?id=1z8SATvOJmkNiLn6o-6VqOhdfC1-tXxRE"><div class="btn--blue">single file</div></a>
         <a href="https://drive.google.com/open?id=16u9TYZsTHQpDPhuGatAqR2YKPevTLlUl"><div class="btn--blue">multiple file</div></a>
         <div class="heading2">
-          <span class="bullet_hex">
-          </span>
+          <img class="bullet_hex" src="/images/project1/h2_hex.svg"/>
           <h2>wireframes</h2>
         </div>
         <div class="wf__draft">
@@ -259,6 +258,7 @@
         <a href="https://drive.google.com/open?id=1-xhfHaWo15WdY1J6fChEfidDvevSemDf"><div class="btn">mobile app wireframes</div></a>
       </section>
 
+      <a name="branding">
       <section class="branding">
         <h1>branding</h1>
         <p>Now it’s time to add a theme to the black and white. Again I looked back at my research data for inspirations. According to the personas my target audience is a group of people who are creative, achieving, collaborative, and with a fast-paced lifestyle. By emphasizing the emotions and feelings I want the product to convey to the audience, I created a moodboard and sketched out several versions of the logo.</p>
@@ -267,8 +267,7 @@
         <h3>A/B Testing</h3>
         <img src="/images/project1/logo_ab_testing.png" alt="initial five versions of logo in black and white used in AB testing"/>
         <div class="heading2">
-          <span class="bullet_hex">
-          </span>
+          <img class="bullet_hex" src="/images/project1/h2_hex.svg"/>
           <h2>style guide</h2>
         </div>
         <div class="hive_loge--b">
@@ -306,6 +305,7 @@
         </a>
       </section>
 
+      <a name="prot_text">
       <section class="prot_test">
         <h1>prototyping & testing</h1>
         <p>Using Sketch, several main screens were mocked up, then connected into clickable prototypes for usability testing in InVision and UsabilityHub. <br>With this first version of prototype, I conducted several remote, in-person and online testing, where the user was asked to do three tasks: </p>
@@ -334,8 +334,7 @@
             </li>
         </ul>
         <div class="heading2">
-          <span class="bullet_hex">
-          </span>
+          <img class="bullet_hex" src="/images/project1/h2_hex.svg"/>
           <h2>final mockups</h2>
         </div>
         <div class="hifi_web">
@@ -361,6 +360,7 @@
         <a href="https://invis.io/Z7GL2NET9AD"><div class="btn">mobile app prototype</div></a>
       </section>
 
+      <a name="conclusion">
       <section class="conslusion">
         <h1>conclusion</h1>
         <p>It was a rewarding journey from the initial exploring to prototyping the final product.
@@ -370,8 +370,7 @@
           <br>However HIVE is far from being perfect, for example, I would like to collect more survey results and conduct more user testing for each round of iteration, a task-based tutorial will be useful to introduce the unique features to first-time users, the commenting feature could be mocked up in further detail for more user testing on the flow.
         </p>
         <div class="heading2">
-          <span class="bullet_hex">
-          </span>
+          <img class="bullet_hex" src="/images/project1/h2_hex.svg"/>
           <h2>key learnings</h2>
         </div>
         <p>As the project grew, I learned a lot through the process and became a better designer in many areas. And as the product itself, there is always room for improvement. Here is a short list of the key reflections to keep in mind in the next project.</p>
