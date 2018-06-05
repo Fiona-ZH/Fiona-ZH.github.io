@@ -67,6 +67,7 @@ p {
 
 a {
   text-decoration: none;
+  color: rgba(41,30,65,1);
 }
 
 /* ------ colors ------ */
@@ -188,15 +189,15 @@ header .bkg {
 
 /* ------- nav bar ------- */
 nav {
-  height: 5rem;
+  height: 8rem;
   overflow:hidden;
   background-color: rgba(78,60,97,1);
   z-index: 999;
 }
 
 nav img {
-  height: 3rem;
-  margin: 1rem 0 0 1.6rem;
+  height: 4rem;
+  margin: 2rem 0 0 1.6rem;
   display: inline-block;
   float: left;
 }
@@ -204,7 +205,7 @@ nav img {
 nav span {
   width: 80%;
   float: right;
-  margin-top: 15px;
+  margin-top:3rem;
 }
 
 nav h4 {
@@ -219,7 +220,7 @@ nav h4 {
 }
 
 .move_down {
-  margin-top: 5rem;
+  margin-top: 8rem;
 }
 
 .curr-sele {
@@ -267,18 +268,14 @@ nav h4 {
   margin: 0 auto;
 }
 
-.featured a {
-  width: 22rem;
-}
-
 .view_casestudy {
+  display: block;
   width: 22rem;
   border-radius: 30px;
   font-family: 'Oswald', sans-serif;
   font-size: 1.6rem;
   text-transform: uppercase;
   text-align: center;
-  color: #000;
   padding: 1rem;
   margin: 0 auto;
   background-color: rgba(252,153,158,1);
@@ -287,6 +284,10 @@ nav h4 {
 .view_casestudy:hover {
   background-color: rgba(78,60,97,1);
   color: rgba(252,238,237,1);
+}
+
+.featured a:hover {
+  color: #fff;
 }
 
 .featured__details {
