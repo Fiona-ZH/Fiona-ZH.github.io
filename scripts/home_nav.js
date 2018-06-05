@@ -13,11 +13,14 @@ var sticky = window.innerHeight;
 
 function stickyNav() {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+    navbar.classList.add("sticky" "navhide")
+    navbar.classList.add("navhide")
     moveDown.classList.add("move_down")
   } else {
     navbar.classList.remove("sticky");
+    navbar.classList.remove("navhide")
     moveDown.classList.remove("move_down")
+
   }
 }
 

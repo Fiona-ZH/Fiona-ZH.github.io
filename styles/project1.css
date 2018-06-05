@@ -160,19 +160,14 @@ header .burger:hover {
 }
 
 header .btn {
-  margin-top: 10px;
-}
-
-.header__index {
-  width: 80vw;
-  margin: 0 auto;
+  margin-top: 25px;
 }
 
 .map {
-  width: 80%;
+  width: 90%;
   display: block;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 40px;
   margin-bottom: 20px;
 }
 
@@ -187,17 +182,20 @@ nav {
   align-items: center;
   justify-content: space-between;
   position: relative;
+  visibility: hidden;
+  transition: top 3s ease-in-out;
 }
 
 nav .burger {
   /* width: 24px; */
+  transform: rotate(90deg);
   font-size: 2.4em;
   color: #838383;
   margin-left: 16px;
 }
 
 nav .burger:hover {
-  color: rgba(252,153,158,1);
+  color: rgba(230,118,79,1);
 }
 
 .nav__dot {
@@ -238,7 +236,8 @@ nav .burger:hover {
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%
+  width: 100%;
+  visibility: visible;
 }
 
 .move_down {
