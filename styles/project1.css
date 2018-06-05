@@ -127,9 +127,15 @@ header {
 }
 
 header .burger {
-  width: 40px;
+  /* width: 40px; */
+  font-size: 2.5em;
+  color: #fff;
   padding-top: 16px;
   padding-left: 16px;
+}
+
+header .burger:hover {
+  color: rgba(252,153,158,1);
 }
 
 .header__logo {
@@ -184,8 +190,14 @@ nav {
 }
 
 nav .burger {
-  width: 24px;
+  /* width: 24px; */
+  font-size: 2.4em;
+  color: #838383;
   margin-left: 16px;
+}
+
+nav .burger:hover {
+  color: rgba(252,153,158,1);
 }
 
 .nav__dot {
@@ -216,7 +228,7 @@ nav .burger {
 .dot_line::after {
   content: ' ';
   background: url("../images/project1/nav_line.svg") repeat-x;
-  width: 70vw;
+  width: 69vw;
   height: 1px;
   position: absolute;
   right: 16px;

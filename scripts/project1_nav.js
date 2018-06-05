@@ -20,6 +20,8 @@ function stickyNav() {
   }
 }
 
+// ------ section indicator ------
+
 var summary = document.getElementById("navsummary");
 var sumPos = document.getElementById("summary_h1").offsetTop;
 
