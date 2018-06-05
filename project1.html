@@ -13,14 +13,7 @@
   <body>
     <a name="top">
     <header>
-      <div class="burger">
-        <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15.4286 8V6.28571H4.57143V8H15.4286Z" fill="#F8F8F8"/>
-          <path d="M15.4286 13.7143V12H4.57143V13.7143H15.4286Z" fill="#F8F8F8"/>
-          <path d="M4.57143 9.14286H15.4286V10.8571H4.57143V9.14286Z" fill="#F8F8F8"/>
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M20 10C20 15.5228 15.5228 20 10 20C4.47716 20 0 15.5228 0 10C0 4.47716 4.47716 0 10 0C15.5228 0 20 4.47716 20 10ZM18.3333 10C18.3333 14.6024 14.6024 18.3334 10 18.3334C5.39763 18.3334 1.66667 14.6024 1.66667 10C1.66667 5.39764 5.39763 1.66668 10 1.66668C14.6024 1.66668 18.3333 5.39764 18.3333 10Z" fill="#F8F8F8"/>
-        </svg>
-      </div>
+      <img class="burger" src="/images/project1/nav_burger.svg" alt="menu icon" />
       <img class="header__logo" src="/images/project1/logo_hive.svg" alt="app logo"/>
       <div class="header__role">UX Design | Visual Design | Branding</div>
       <img class="header__mock" src="/images/project1/header_img.png" alt="HIVE desktop and mobile interface showcase"/>
@@ -30,21 +23,15 @@
     </header>
 
     <nav id="navbar">
-      <div class="burger">
-        <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15.4286 8V6.28571H4.57143V8H15.4286Z" fill="#504840"/>
-          <path d="M15.4286 13.7143V12H4.57143V13.7143H15.4286Z" fill="#504840"/>
-          <path d="M4.57143 9.14286H15.4286V10.8571H4.57143V9.14286Z" fill="#504840"/>
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M20 10C20 15.5228 15.5228 20 10 20C4.47716 20 0 15.5228 0 10C0 4.47716 4.47716 0 10 0C15.5228 0 20 4.47716 20 10ZM18.3333 10C18.3333 14.6024 14.6024 18.3334 10 18.3334C5.39763 18.3334 1.66667 14.6024 1.66667 10C1.66667 5.39764 5.39763 1.66668 10 1.66668C14.6024 1.66668 18.3333 5.39764 18.3333 10Z" fill="#504840"/>
-        </svg>
+      <img class="burger" src="/images/project1/nav_burger-blk.svg" alt="menu icon" />
       </div>
       <span class="dot_line"></span>
-      <a href="#summary" class="nav__dot"><span>S</span></a>
-      <a href="#exploration" class="nav__dot"><span>E</span></a>
-      <a href="#ideation" class="nav__dot"><span>I</span></a>
-      <a href="#branding" class="nav__dot"><span>B</span></a>
-      <a href="#prot_test" class="nav__dot nav__dot--small"><span>P&T</span></a>
-      <a href="#conclusion" class="nav__dot nav__dot--last"><span>C</span></a>
+      <a href="#summary" class="nav__dot" id="navsummary"><span>S</span></a>
+      <a href="#exploration" class="nav__dot" id="navexploration"><span>E</span></a>
+      <a href="#ideation" class="nav__dot" id="navideation"><span>I</span></a>
+      <a href="#branding" class="nav__dot" id="navbranding"><span>B</span></a>
+      <a href="#prot_test" class="nav__dot nav__dot--small" id="navprot_test"><span>P&T</span></a>
+      <a href="#conclusion" class="nav__dot nav__dot--last" id="navconclusion"><span>C</span></a>
     </nav>
 
     <main>
@@ -82,7 +69,7 @@
 
       <a name="exploration">
       <section class="exploration">
-        <h1>exploration</h1>
+        <h1 id="exp_h1">exploration</h1>
         <div class="heading2">
           <img class="bullet_hex" src="/images/project1/h2_hex.svg"/>
           <h2>competitive analysis</h2>
@@ -214,7 +201,7 @@
 
       <a name="ideation">
       <section class="ideation">
-        <h1>ideation</h1>
+        <h1 id="idea_h1">ideation</h1>
         <p>With Plenty info collected on users’ problems and desires, I used the value proposition to map the product features.</p>
         <a href="https://drive.google.com/file/d/1g7AHzAWzbcd0E8C9mEO_uKyhQlfWsucN/view?usp=sharing"><div class="btn btn--big">view value proposition canvas</div></a>
         <div class="heading2">
@@ -266,7 +253,7 @@
 
       <a name="branding">
       <section class="branding">
-        <h1>branding</h1>
+        <h1 id="bran_h1">branding</h1>
         <p>Now it’s time to add a theme to the black and white. Again I looked back at my research data for inspirations. According to the personas my target audience is a group of people who are creative, achieving, collaborative, and with a fast-paced lifestyle. By emphasizing the emotions and feelings I want the product to convey to the audience, I created a moodboard and sketched out several versions of the logo.</p>
         <h3>Logo Sketch</h3>
         <img class="samples" src="/images/project1/logo_sketch.png" alt="logo sketches on paper"/>
@@ -313,7 +300,7 @@
 
       <a name="prot_test">
       <section class="prot_test">
-        <h1>prototyping <br> & <br> testing</h1>
+        <h1 id="prot_h1">prototyping <br> & <br> testing</h1>
         <p>Using Sketch, several main screens were mocked up, then connected into clickable prototypes for usability testing in InVision and UsabilityHub. <br>With this first version of prototype, I conducted several remote, in-person and online testing, where the user was asked to do three tasks: </p>
         <ul class="tasks">
           <li>Sign-up then get to the dashboard.</li>
@@ -378,7 +365,7 @@
 
       <a name="conclusion">
       <section class="conclusion">
-        <h1>conclusion</h1>
+        <h1 id="con_h1">conclusion</h1>
         <p>It was a rewarding journey from the initial exploring to prototyping the final product.
           <br>Although there are a lot of great products out there that have excellent features and a large user base, there is always room for improvement by discovering user’s needs and pains. In the last round of the usability testing, users liked the idea of HIVE being a handy tool for collecting and creating content. Some said they would like to use it with family and friends for sharing recipes, planning trips or organizing events.
         </p>

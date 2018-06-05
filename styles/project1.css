@@ -127,6 +127,7 @@ header {
 }
 
 header .burger {
+  width: 40px;
   padding-top: 16px;
   padding-left: 16px;
 }
@@ -148,8 +149,8 @@ header .burger {
 }
 
 .header__mock {
-  width: 90vw;
-  padding-left: 20vw;
+  width: 100vw;
+  padding-left: 10%;
 }
 
 header .btn {
@@ -183,6 +184,7 @@ nav {
 }
 
 nav .burger {
+  width: 24px;
   margin-left: 16px;
 }
 
@@ -198,7 +200,7 @@ nav .burger {
   text-align: center;
 }
 
-.nav__dot:hover {
+.nav__dot:hover, .nav__dot:focus {
   background-color: rgba(230,118,79,1);
 }
 
@@ -229,6 +231,10 @@ nav .burger {
 
 .move_down {
   margin-top: 80px;
+}
+
+.curr-sele {
+  background-color: rgba(230,118,79,1);
 }
 
 /* ------ section summary ------ */
@@ -509,7 +515,7 @@ nav .burger {
   bottom: 0;
   left: 25%;
   transform: translateY(25px);
-  z-index: 999;
+  z-index: 998;
 }
 
 /* ------ section branding ------ */
@@ -702,8 +708,8 @@ h3 {
 /* ------ footer ------ */
 footer {
   margin-top: 30px;
-  height: 180px;
   background-color: rgba(41,30,65,1);
+  padding-bottom: 20px;
 }
 
 footer .quote {
