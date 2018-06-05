@@ -5,7 +5,7 @@
 /* Import fonts*/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700|Oswald|Playfair+Display:700,900');
 
-body {
+html {
   font-family: 'Open Sans', sans-serif;
   font-size: 10px;
 }
@@ -13,14 +13,14 @@ body {
 h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: 3em;
-  line-height: 1.5em;
+  font-size: 3.2rem;
+  line-height: 4.2rem;
   color: #fff;
 }
 
 h4 {
   font-family: 'Oswald', sans-serif;
-  font-size: 1.6em;
+  font-size: 1.6rem;
   font-weight: 300;
   text-transform: uppercase;
   color: rgba(252,238,237,1);
@@ -28,12 +28,12 @@ h4 {
 
 h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 600;
   color: rgba(41,30,65,1);
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
   position: relative;
 }
 
@@ -44,24 +44,24 @@ h2::before, h2::after{
   width: 20%;
   height: 3px;
   position: absolute;
-  top: 30px;
+  top: 5rem;
 }
 
 h2::before {
-  left: 10%;
+  left: 6%;
 }
 
 h2::after {
-  right: 10%;
+  right: 6%;
 }
 
 p {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   font-weight: 400;
-  line-height: 2em;
-  margin: 0 16px 0 16px;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  line-height: 3.2rem;
+  margin: 0 2rem 0 2rem;
+  padding-top: 1.6rem;
+  padding-bottom: 2rem;
   color: rgba(41,30,65,1);
 }
 
@@ -96,44 +96,48 @@ a {
 
 /* ------ header ------ */
 
-.splash {
+header {
   min-height: 100vh;
-  background: url("../images/home/header_bkg.svg") no-repeat center center fixed;
+  /* background: url("../images/home/header_bkg.svg") no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
+  -o-background-size: cover; */
+  background-image: linear-gradient(#252661 20%, #F49491 65%, #FFDEBD 85%, #FFFCE9 95%);
+  position: relative;
 }
 
-.splash__logo_wrap {
-  width: 10vw;
+.splash {
+  width: 100%;
   margin: 0 auto;
+}
+
+
+
+.splash__logo_wrap {
+  display: flex;
+  justify-content: center;
   padding-top: 5vh;
-  padding-bottom: 20px;
+  padding-bottom: 2vh;
 }
 
 .splash__logo_wrap img {
-  max-width: 10vw;
+  width: 15vw;
 }
 
 .splash__line {
-  width: 60%;
-  height: 1px;
+  width: 80%;
+  height: 2px;
   background-color: rgba(252,153,158,0.5);
   margin: 0 auto;
-  margin-bottom: 5px;
+  margin-bottom: 1.6rem;
 }
 
 .splash__menu_wrap {
   display: flex;
-  flex-flow: row;
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
   justify-content: space-between;
-}
-
-.splash__menu_wrap h4 {
-  margin-bottom: 4vh;
 }
 
 .splash__menu_wrap h4:hover {
@@ -141,47 +145,58 @@ a {
 }
 
 .splash__hello {
+  width: 80%;
+  margin: 0 auto;
   text-align: center;
-  padding-bottom: 4vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
 }
 
 .splash__intro {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
+  text-align: center;
 }
 
 .splash__intro h6 {
-  font-size: 1.6em;
-  line-height: 2em;
+  font-size: 1.8rem;
+  line-height: 3rem;
   color: rgba(252,238,237,1);
-  padding-bottom: 2vh;
 }
 
 .splash__intro p {
-  margin: 0 0 0 0;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 3rem;
 }
 
 .splash__more {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .splash__more img {
   height: 6vh;
+  z-index: 998;
+}
+
+header .bkg {
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
 }
 
 /* ------- nav bar ------- */
 nav {
-  height: 50px;
+  height: 5rem;
   overflow:hidden;
   background-color: rgba(78,60,97,1);
   z-index: 999;
 }
 
 nav img {
-  height: 30px;
-  margin: 10px 0 0 16px;
+  height: 3rem;
+  margin: 1rem 0 0 1.6rem;
   display: inline-block;
   float: left;
 }
@@ -204,7 +219,7 @@ nav h4 {
 }
 
 .move_down {
-  margin-top: 50px;
+  margin-top: 5rem;
 }
 
 .curr-sele {
@@ -214,43 +229,57 @@ nav h4 {
 /* ------ featured section ------ */
 .featured__hero {
   max-width: 100vw;
-  background: url("../images/home/featured_bkg.svg") repeat-x left top;
+  /* background: url("../images/home/featured_bkg.svg") repeat-x left top; */
+  background-image: linear-gradient(#57467C 0%, #917FB6 20%, #F9BDDD 40%, #FFE9D9 60%, #FFF 90%);
+  margin-top: 2rem;
 }
 
 .featured__hero .name {
   font-family: 'Playfair Display', serif;
-  font-size: 2em;
+  font-size: 3rem;
   color: rgba(243,221,152,1);
   display: block;
   text-align: center;
-  padding: 10px;
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .featured__hero .intro {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.4em;
+  font-size: 1.4rem;
   font-weight: 300;
-  line-height: 1.6em;
+  line-height: 2.2rem;
   color: #fff;
-  display: block;
   text-align: center;
-  padding-bottom: 10px;
+  display: block;
+  padding-bottom: 1.6rem;
 }
 
-.featured__hero img {
+.hero-img {
   display: block;
+  width: 80%;
+  max-width: 40rem;
   margin: 0 auto;
 }
 
+.featured__hero img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.featured a {
+  width: 22rem;
+}
+
 .view_casestudy {
-  width: 220px;
+  width: 22rem;
   border-radius: 30px;
   font-family: 'Oswald', sans-serif;
-  font-size: 1.6em;
+  font-size: 1.6rem;
   text-transform: uppercase;
   text-align: center;
   color: #000;
-  padding: 10px;
+  padding: 1rem;
   margin: 0 auto;
   background-color: rgba(252,153,158,1);
 }
@@ -263,31 +292,35 @@ nav h4 {
 .featured__details {
   width: 90%;
   margin: 0 auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto 2.5em auto;
-  grid-row-gap: 10px;
+  grid-template-rows: auto 2.5rem auto;
+  grid-row-gap: 1rem;
   justify-items: center;
 }
 
+@media all and (max-width: 50rem) {
+  }
+}
+
 .featured__details img {
-  width: 80px;
+  width: 8rem;
 }
 
 .featured__details .title {
   font-family: 'Oswald', sans-serif;
-  font-size: 1.6em;
+  font-size: 1.6rem;
   text-transform: uppercase;
-  padding-top: 5px;
+  padding-top: 0.5rem;
   color: rgba(85,135,135,1);
 }
 
 .featured__details ul {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.4em;
-  line-height: 1.6em;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
   text-align: center;
 }
 
@@ -300,7 +333,6 @@ nav h4 {
 
 .about_me .profile {
   width: 100%;
-  padding-top: 20px;
 }
 
 .about_me__title {
@@ -326,12 +358,12 @@ article {
   width: 100%;
   margin: 0 auto;
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.6em;
-  line-height: 2em;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
   font-weight: 200;
   color: #fff;
   padding: 6vw;
-  border-style: dotted;
+  border-style: solid;
   border-width: 1px;
   border-color: rgba(252,153,158,1);;
 }
@@ -357,28 +389,28 @@ article {
 .connect__lets {
   padding-top: 8vh;
   font-family: 'Playfair Display', serif;
-  font-size: 4em;
+  font-size: 4rem;
   font-weight: 600;
   text-transform: uppercase;
-  line-height: 1.2em;
+  line-height: 5rem;
   color: rgba(252,153,158,1);
 }
 
 .connect__thanks {
   padding-top: 5vh;
   font-family: 'Oswald', sans-serif;
-  font-size: 2em;
+  font-size: 2rem;
   color: rgba(85,135,135,1);
 }
 
 .connect p {
   padding-top: 5vh;
-  line-height: 2.5em;
+  line-height: 2.5rem;
 }
 
 .resume {
   font-family: 'Oswald', sans-serif;
-  font-size: 1.1em;
+  font-size: 1.6rem;
   text-transform: uppercase;
   position: relative;
 }
@@ -401,20 +433,20 @@ article {
   padding-top: 3vh;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-  grid-row-gap: 30px;
+  grid-row-gap: 3rem;
   justify-content: center;
 }
 
 .connect__social_media .icon {
-  height: 5vh;
+  height: 4vh;
 }
 
 .connect__social_media .name {
   font-family: 'Oswald', sans-serif;
-  font-size: 1.8em;
+  font-size: 1.8rem;
   text-transform: uppercase;
   position: relative;
-  padding-left: 10px;
+  padding-left: 1rem;
   bottom: 1.5vh;
 }
 
@@ -434,14 +466,14 @@ article {
 
 .connect__catch {
   color: rgba(85,135,135,1);
-  padding-bottom: 4vh;
+  padding-bottom: 12vh;
 }
 
 /* ------ section footer ------ */
 footer {
   position: relative;
   width: 100%;
-  height: 130px;
+  height: 20rem;
   background-color: rgba(41,30,65,1);
 }
 
@@ -449,20 +481,24 @@ footer .quote {
   width: 70%;
   position: absolute;
   right: 10%;
-  top: 16px;
+  top: 1.6rem;
   font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
   font-style: italic;
-  font-size: 1.2em;
-  line-height: 1.6em;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
   text-align: right;
   color: rgba(190,226,226,1);
 }
 
 footer .copyright {
+  width: 80%;
   position: absolute;
   left: 10%;
-  bottom: 16px;
+  bottom: 2rem;
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.2em;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  text-align: left;
   color: rgba(252,153,158,1);
 }
