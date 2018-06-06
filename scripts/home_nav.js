@@ -8,7 +8,7 @@ window.onscroll = function(){
 var navbar = document.getElementById("navbar");
 var moveDown = document.getElementById("featured_title")
 // var sticky = navbar.offsetTop;
-var sticky = window.innerHeight;
+var sticky = (0.95 * window.innerHeight);
 
 
 function stickyNav() {
@@ -26,13 +26,13 @@ function stickyNav() {
 // ------ section indicator for max-width 1024px ------
 
 var projects = document.getElementById("navprojects");
-var proPos = document.getElementById("proPos").offsetTop;
+var proPos = (document.getElementById("proPos").offsetTop * 0.95);
 
 var about = document.getElementById("navabout");
-var aboutPos = document.getElementById("aboutPos").offsetTop;
+var aboutPos = (document.getElementById("aboutPos").offsetTop * 0.95);
 
 var connect = document.getElementById("navconnect");
-var connPos = document.getElementById("connPos").offsetTop;
+var connPos = (document.getElementById("connPos").offsetTop * 0.95);
 
 function currentSele(){
   if(window.pageYOffset >= proPos && window.pageYOffset < aboutPos) {
@@ -59,5 +59,3 @@ function currentSele(){
     connect.classList.remove("nav__dot--focus-d");
   }
 }
-
-// ------ section indicator for min-width 1025px ------

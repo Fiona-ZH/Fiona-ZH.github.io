@@ -128,8 +128,8 @@ header .burger {
   /* width: 4rem; */
   font-size: 2.5rem;
   color: #fff;
-  padding-top: 1.6rem;
-  padding-left: 1.6rem;
+  padding-top: 3rem;
+  padding-left: 3rem;
 }
 
 header .burger:hover {
@@ -153,8 +153,10 @@ header .burger:hover {
 }
 
 .header__mock {
-  width: 100vw;
-  padding-left: 10%;
+  width: 80%;
+  max-width: 60rem;
+  display: block;
+  margin: 0 auto;
 }
 
 header .btn {
@@ -169,9 +171,33 @@ header .btn {
   margin-bottom: 2rem;
 }
 
+@media all and (min-width: 481px) and (max-width: 780px) {
+  .map {
+    width: 60%;
+  }
+}
+
+@media all and (min-width: 781px) and (max-width: 1024px) {
+  .map {
+    width: 50%;
+  }
+}
+
+@media all and (min-width: 1025px) and (max-width: 1280px) {
+  .map {
+    width: 40%;
+  }
+}
+
+@media all and (min-width: 1281px){
+  .map {
+    width: 30%;
+  }
+}
+
 /* ------ nav ------- */
 nav {
-  height: 8rem;
+  height: 6rem;
   overflow:hidden;
   background-color: rgba(248,248,248,1);
   z-index: 999;
@@ -181,7 +207,6 @@ nav {
   justify-content: space-between;
   position: relative;
   visibility: hidden;
-  transition: top 3s ease-in-out;
 }
 
 nav .burger {
