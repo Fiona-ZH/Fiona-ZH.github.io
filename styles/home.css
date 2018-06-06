@@ -24,7 +24,7 @@ h1 {
   color: #fff;
 }
 
-@media all and (min-width: 1281px){
+@media all and (min-width: 1024px){
   h1 {
     font-size: 5rem;
     line-height: 7.5rem;
@@ -37,6 +37,12 @@ h4 {
   font-weight: 300;
   text-transform: uppercase;
   color: rgba(252,238,237,1);
+}
+
+@media all and (min-width: 1281px){
+  h4 {
+    font-size: 2rem;
+  }
 }
 
 h2 {
@@ -150,7 +156,7 @@ header {
 
 @media all and (min-width: 481px) and (max-width: 1280px) {
   .splash {
-    width: 80%;
+    width: 70%;
   }
 }
 
@@ -253,7 +259,7 @@ header {
 }
 
 header .bkg {
-  width: 100vw;
+  width: 100%;
   position: absolute;
   bottom: 0;
 }
@@ -556,7 +562,7 @@ article {
 }
 
 .connect__lets {
-  padding-top: 8vh;
+  padding-top: 8rem;
   font-family: 'Playfair Display', serif;
   font-size: 4rem;
   font-weight: 600;
@@ -574,7 +580,7 @@ article {
 
 .connect p {
   padding-top: 5vh;
-  line-height: 2.5rem;
+  line-height: 3.2rem;
 }
 
 .resume {
@@ -601,9 +607,21 @@ article {
 .connect__social_media {
   padding-top: 3vh;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-row-gap: 3rem;
   justify-content: center;
+}
+
+@media all and (min-width: 481px) and (max-width: 1024px) {
+  .connect__social_media {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media all and (min-width: 1025px){
+  .connect__social_media {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .connect__social_media .icon {
@@ -635,25 +653,79 @@ article {
 
 .connect__catch {
   color: rgba(85,135,135,1);
-  padding-bottom: 12vh;
+  padding-bottom: 12rem;
+}
+
+@media all and (min-width: 781px) and (max-width: 1024px) {
+  .connect__lets {
+    width: 60%;
+    padding-top: 15rem;
+  }
+
+  .connect__thanks, .connect p, .connect__social_media {
+    width: 60%;
+    padding-top: 5rem;
+  }
+
+  .connect__catch{
+    width: 60%;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+  }
+}
+
+@media all and (min-width: 1025px) and (max-width: 1280px) {
+  .connect__lets {
+    width: 60%;
+    padding-top: 20rem;
+  }
+
+  .connect__thanks, .connect p, .connect__social_media {
+    width: 60%;
+    padding-top: 5rem;
+  }
+
+  .connect__catch{
+    width: 60%;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+  }
+}
+
+@media all and (min-width: 1281px) {
+  .connect__lets {
+    width: 50%;
+    padding-top: 20rem;
+  }
+
+  .connect__thanks, .connect p, .connect__social_media {
+    width: 50%;
+    padding-top: 5rem;
+  }
+
+  .connect__catch{
+    width: 50%;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+  }
 }
 
 /* ------ section footer ------ */
 footer {
   position: relative;
   width: 100%;
-  height: 20rem;
   background-color: rgba(41,30,65,1);
 }
 
 footer .quote {
-  width: 70%;
-  position: absolute;
-  right: 10%;
-  top: 1.6rem;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  font-style: italic;
+  /* font-style: italic; */
   font-size: 1.4rem;
   line-height: 2.2rem;
   text-align: right;
@@ -662,12 +734,26 @@ footer .quote {
 
 footer .copyright {
   width: 80%;
-  position: absolute;
-  left: 10%;
-  bottom: 5rem;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4rem;
   line-height: 2rem;
   text-align: left;
-  color: rgba(252,153,158,1);
+  color: rgba(252,238,237,1);
+}
+
+@media all and (min-width: 781px) and (max-width: 1280px) {
+  footer .quote, footer .copyright {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media all and (min-width: 1281px) {
+  footer .quote, footer .copyright {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
