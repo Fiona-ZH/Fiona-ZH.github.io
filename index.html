@@ -27,7 +27,7 @@
           <h1>Hello! <br> I'm Fiona.</h1>
         </div>
         <div class="splash__intro">
-          <h6>A UX designer based in Waterloo Region, Canada.
+          <h6><span style="font-size: 1.6rem;">You can also call me Feifei :) </span><br>I am a UX designer based in Waterloo Region, Canada.
           </h6>
           <p>With a background in Engineering, I combine my strength in problem solving and my passion in design to create beautiful and functional user experience.
           </p>
@@ -41,13 +41,21 @@
 
     </header>
 
-    <nav id="navbar">
-      <a href="#top"><img src="/images/home/logo.svg"/></a>
-      <span>
-        <a href="#connect"><h4 id="navconnect">connect</h4></a>
-        <a href="#about"><h4 id="navabout">about</h4></a>
-        <a href="#featured"><h4  id="navprojects">projects</h4></a>
-      </span>
+    <nav class="top_hidden fade-in-left" id="navbar">
+      <div>
+        <a href="#top">
+          <div class="nav__dot"><img src="/images/home/logo.svg"/></div>
+        </a>
+        <a href="#featured">
+          <div id="navprojects" class="nav__dot"><h4 >projects</h4></div>
+        </a>
+        <a href="#about">
+          <div id="navabout" class="nav__dot"><h4 >about</h4></div>
+        </a>
+        <a href="#connect">
+          <div id="navconnect" class="nav__dot"><h4 >connect</h4></div>
+        </a>
+      </div>
     </nav>
 
     <main>
