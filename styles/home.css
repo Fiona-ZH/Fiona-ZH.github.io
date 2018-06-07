@@ -601,6 +601,7 @@ header .bkg {
   }
 
   .featured__hero .hero-img {
+    width: 100%;
     margin-left: 0;
     transform: translate(-15%, 5%);
   }

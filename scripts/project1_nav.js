@@ -7,15 +7,17 @@ window.onscroll = function() {
 
 var navbar = document.getElementById("navbar");
 var moveDown = document.getElementById("summary_h1")
-var sticky = (navbar.offsetTop * 0.9);
+var sticky = (moveDown.offsetTop * 0.9);
 
 
 function stickyNav() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky");
+    navbar.classList.add("nav_show");
     moveDown.classList.add("move_down");
   } else {
     navbar.classList.remove("sticky");
+    navbar.classList.remove("nav_show");
     moveDown.classList.remove("move_down")
   }
 }
