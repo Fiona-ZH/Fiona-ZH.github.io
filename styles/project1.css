@@ -90,7 +90,7 @@ i {
 }
 
 .btn {
-  width: 22rem;
+  width: 25rem;
   border-radius: 3rem;
   font-family: 'Oswald', sans-serif;
   font-size: 1.6rem;
@@ -98,7 +98,7 @@ i {
   text-align: center;
   color: #000;
   padding: 1rem;
-  margin: 0 auto;
+  margin: 1rem auto 2rem auto;
   background-color: rgba(255,224,109,1);
 }
 
@@ -141,12 +141,21 @@ header .burger {
   /* width: 4rem; */
   font-size: 2.5rem;
   color: #fff;
-  padding-top: 3rem;
-  padding-left: 3rem;
+  padding-top: 1.6rem;
+  padding-left: 1.6rem;
 }
 
 header .burger:hover {
   color: rgba(252,153,158,1);
+}
+
+@media all and (min-width: 1025px) {
+  header .burger {
+    font-size: 2.5rem;
+    color: #fff;
+    padding-top: 10vh;
+    padding-left: 5vw;
+  }
 }
 
 .header__logo {
@@ -1281,6 +1290,7 @@ footer .icon--layout img {
 }
 
 footer .copyright {
+  font-family: 'Oswald', sans-serif;
   font-size: 1.4rem;
   line-height: 3rem;
   color: rgba(252,238,237,1);
