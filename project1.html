@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <a name="top">
+    <a name="top"></a>
     <header>
       <!-- <img class="burger" src="/images/project1/nav_burger.svg" alt="menu icon" /> -->
       <a href="index.html"><i class="fa fa-chevron-circle-left burger" aria-hidden="true"></i></a>
@@ -23,7 +23,7 @@
       <img class="map" src="/images/project1/header_roadmap.svg"/>
     </header>
 
-    <nav id="navbar">
+    <nav id="navbar" class=".nav_hidden">
       <!-- <img class="burger" src="/images/project1/nav_burger-blk.svg" alt="menu icon" /> -->
       <a href="#top"><i class="fa fa-chevron-circle-left burger" aria-hidden="true"></i></a>
       <span class="dot_line"></span>
@@ -36,7 +36,7 @@
     </nav>
 
     <main>
-      <a name="summary">
+      <a name="summary"></a>
       <section class="summary">
         <h1 id="summary_h1">summary</h1>
         <p>Although here are many cloud storage services in the market, there are still customer needs that are not 100% satisfied. This is where HIVE steps in.<br><br>As a lightweight personal cloud storage application, it aims at providing versatile storing and sharing solutions to the group of people who are creative, collaborative, and have a fast-paced lifestyle.</p>
@@ -68,139 +68,143 @@
         </div>
       </section>
 
-      <a name="exploration">
+      <a name="exploration"></a>
       <section class="exploration">
-        <h1 id="exp_h1">exploration</h1>
-        <div class="heading2">
-          <img class="bullet_hex" src="/images/project1/h2_hex.svg"/>
-          <h2>competitive analysis</h2>
-        </div>
-        <p>There were two categories of competitors put under the microscope for the competitive analysis. One is general storage services such as DropBox, Google Drive and Box; the other focuses on note taking, EverNote.</p>
-        <div class="competitor_wrap">
-          <img src="/images/project1/logo_db.png" alt="dropbox logo"/>
-          <img src="/images/project1/logo_gd.png" alt="google drive logo"/>
-          <img src="/images/project1/logo_box.png" alt="box logo"/>
-          <img src="/images/project1/logo_en.png" alt="evernote logo"/>
-        </div>
-        <p>By analyzing the competitors’ strength and weakness, it was discovered that even with these big names in the market there are still needs for an application that integrates quick note-taking feature with cloud storage functionality. Also, the fact that sharing, although is made easier using links than through emails, is still limited to single element sharing across the market. A feature that enables a more flexible sharing method could make our product stand out based on users’ growing needs for online collaborations.</p>
-        <div class="heading2">
-          <img class="bullet_hex" src="/images/project1/h2_hex.svg"/>
-          <h2>user research</h2>
-        </div>
-        <p>Bearing the assumptions from the competitive analysis, I conducted a user survey to fnd out their goals, attitudes, and more importantly, complains of using cloud storage service.</p>
-        <div class="ur__result1">
-          <img src="images/project1/ur_result1.svg" alt="graph of result 1"/>
-          <p class="ur__note">93% Users use cloud storage services</p>
-        </div>
-        <div class="ur__result2">
-          <img src="images/project1/ur_result2-1.svg" alt="graph of result 2-1"/>
-          <img src="images/project1/ur_result2-2.svg" alt="graph of result 2-2"/>
-          <p class="ur__note">Upgraded to paid plan for extra features.</p>
-          <p class="ur__note">Shared files are text-based</p>
-        </div>
-        <div class="ur__result3">
-          <p class="ur__title"><b>What do you mainly use it for?</b></p>
-          <div class="ur__result3__graph">
+        <div class="ur--wrapper">
+          <h1 id="exp_h1">exploration</h1>
+          <div class="heading2">
+            <img class="bullet_hex" src="/images/project1/h2_hex.svg"/>
+            <h2>competitive analysis</h2>
+          </div>
+          <p>There were two categories of competitors put under the microscope for the competitive analysis. One is general storage services such as DropBox, Google Drive and Box; the other focuses on note taking, EverNote.</p>
+          <div class="competitor_wrap">
+            <img src="/images/project1/logo_db.png" alt="dropbox logo"/>
+            <img src="/images/project1/logo_gd.png" alt="google drive logo"/>
+            <img src="/images/project1/logo_box.png" alt="box logo"/>
+            <img src="/images/project1/logo_en.png" alt="evernote logo"/>
+          </div>
+          <p>By analyzing the competitors’ strength and weakness, it was discovered that even with these big names in the market there are still needs for an application that integrates quick note-taking feature with cloud storage functionality. Also, the fact that sharing, although is made easier using links than through emails, is still limited to single element sharing across the market. A feature that enables a more flexible sharing method could make our product stand out based on users’ growing needs for online collaborations.</p>
+          <div class="heading2">
+            <img class="bullet_hex" src="/images/project1/h2_hex.svg"/>
+            <h2>user research</h2>
+          </div>
+          <p>Bearing the assumptions from the competitive analysis, I conducted a user survey to fnd out their goals, attitudes, and more importantly, complains of using cloud storage service.</p>
+          <div class="ur__result1">
+            <img src="images/project1/ur_result1.svg" alt="graph of result 1"/>
+            <p class="ur__note">93% Users use cloud storage services</p>
+          </div>
+          <div class="ur__result2">
+            <img src="images/project1/ur_result2-1.svg" alt="graph of result 2-1"/>
+            <img src="images/project1/ur_result2-2.svg" alt="graph of result 2-2"/>
+            <p class="ur__note">Upgraded to paid plan for extra features.</p>
+            <p class="ur__note">Shared files are text-based</p>
+          </div>
+          <div class="ur__result3">
+            <p class="ur__title"><b>What do you mainly use it for?</b></p>
+            <div class="ur__result3__graph">
+              <div class="line"></div>
+              <p class="ur__note">backup device 50%</p>
+              <div class="bar bar-1"></div>
+              <p class="ur__note">share file across platforms 60%</p>
+              <div class="bar bar-2"></div>
+              <p class="ur__note">collaborate 59%</p>
+              <div class="bar bar-3"></div>
+            </div>
+          </div>
+          <div class="ur__result4">
+            <p class="ur__title"><b>What are your biggest complains about the current products?</b></p>
+            <div class="ur__result4__graph">
             <div class="line"></div>
-            <p class="ur__note">backup device 50%</p>
-            <div class="bar bar-1"></div>
-            <p class="ur__note">share file across platforms 60%</p>
-            <div class="bar bar-2"></div>
-            <p class="ur__note">collaborate 59%</p>
-            <div class="bar bar-3"></div>
+              <p class="ur__note">app interface 61%</p>
+              <div class="bar bar-1"></div>
+              <p class="ur__note">creating files 32%</p>
+              <div class="bar bar-2"></div>
+              <p class="ur__note">organizing files 21%</p>
+              <div class="bar bar-3"></div>
+            </div>
+          </div>
+          <div class="ur__result5">
+            <p class="ur__title"><b>What are your most desired features?</b></p>
+            <div class="ur__result5__graph">
+            <div class="line"></div>
+              <p class="ur__note">real-time editing 87%</p>
+              <div class="bar bar-1"></div>
+              <p class="ur__note">assigning permission level 74%</p>
+              <div class="bar bar-2"></div>
+              <p class="ur__note">syncing local folders 71%</p>
+              <div class="bar bar-3"></div>
+              <p class="ur__note">searching with tags 67%</p>
+              <div class="bar bar-4"></div>
+              <p class="ur__note">comment notification 67%</p>
+              <div class="bar bar-5"></div>
+            </div>
+          </div>
+          <div class="heading2">
+            <img class="bullet_hex" src="/images/project1/h2_hex.svg"/>
+            <h2>personas</h2>
           </div>
         </div>
-        <div class="ur__result4">
-          <p class="ur__title"><b>What are your biggest complains about the current products?</b></p>
-          <div class="ur__result4__graph">
-          <div class="line"></div>
-            <p class="ur__note">app interface 61%</p>
-            <div class="bar bar-1"></div>
-            <p class="ur__note">creating files 32%</p>
-            <div class="bar bar-2"></div>
-            <p class="ur__note">organizing files 21%</p>
-            <div class="bar bar-3"></div>
+        <div class="persona--wrapper">
+          <div class="persona-1">
+            <div class="persona__header">
+              <img src="images/project1/persona1.png" alt="photo of persona Elise C"/>
+              <span><b>Name:</b> Elie C.</span>
+              <span><b>Age:</b> 34</span>
+              <span><b>Occupation:</b> Marketing Specialist</span>
+              <span><i>— “I’m just greatful the limited sized email attachment is not the only way of sharing files.”</i></span>
+            </div>
+            <div class="persona__content">
+              <p><b>Bio</b></p>
+              <p>Elise works for a international advertisement company, where she closely collaborates with her teammates at work and really enjoys that. Since her company has offices globally and collaborate on lots of the projects, she always finds herself revising marketing campaine materials, getting feedback and collecting requirements on the go. She loves that she can store everything online and share them using her phone, pc or tablet.</p>
+              <p><b>Motivation</b></p>
+              <ul>
+                <li>Shares all the marketing materials with teammates.</li>
+                <li>Have access to files on the go and out of the office.</li>
+              </ul>
+              <p><b>Goals</b></p>
+              <ul>
+                <li>Work on the same document with remote teammates at the same time.</li>
+              </ul>
+              <p><b>Frustration</b></p>
+              <ul>
+                <li>Uploading files and creating folders to organize them are not as easy as sharing them.</li>
+                <li>Sometimes the comments/feedback are missed when working on multiple projects.</li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="ur__result5">
-          <p class="ur__title"><b>What are your most desired features?</b></p>
-          <div class="ur__result5__graph">
-          <div class="line"></div>
-            <p class="ur__note">real-time editing 87%</p>
-            <div class="bar bar-1"></div>
-            <p class="ur__note">assigning permission level 74%</p>
-            <div class="bar bar-2"></div>
-            <p class="ur__note">syncing local folders 71%</p>
-            <div class="bar bar-3"></div>
-            <p class="ur__note">searching with tags 67%</p>
-            <div class="bar bar-4"></div>
-            <p class="ur__note">comment notification 67%</p>
-            <div class="bar bar-5"></div>
-          </div>
-        </div>
-        <div class="heading2">
-          <img class="bullet_hex" src="/images/project1/h2_hex.svg"/>
-          <h2>personas</h2>
-        </div>
-        <div class="persona-1">
-          <div class="persona__header">
-            <img src="images/project1/persona1.png" alt="photo of persona Elise C"/>
-            <span><b>Name:</b> Elie C.</span>
-            <span><b>Age:</b> 34</span>
-            <span><b>Occupation:</b> Marketing Specialist</span>
-            <span><i>— “I’m just greatful the limited sized email attachment is not the only way of sharing files.”</i></span>
-          </div>
-          <div class="persona__content">
-            <p><b>Bio</b></p>
-            <p>Elise works for a international advertisement company, where she closely collaborates with her teammates at work and really enjoys that. Since her company has offices globally and collaborate on lots of the projects, she always finds herself revising marketing campaine materials, getting feedback and collecting requirements on the go. She loves that she can store everything online and share them using her phone, pc or tablet.</p>
-            <p><b>Motivation</b></p>
-            <ul>
-              <li>Shares all the marketing materials with teammates.</li>
-              <li>Have access to files on the go and out of the office.</li>
-            </ul>
-            <p><b>Goals</b></p>
-            <ul>
-              <li>Work on the same document with remote teammates at the same time.</li>
-            </ul>
-            <p><b>Frustration</b></p>
-            <ul>
-              <li>Uploading files and creating folders to organize them are not as easy as sharing them.</li>
-              <li>Sometimes the comments/feedback are missed when working on multiple projects.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="persona-2">
-          <div class="persona__header">
-            <img src="images/project1/persona2.png" alt="photo of persona Norman H"/>
-            <span><b>Name:</b>Norman H.</span>
-            <span><b>Age:</b>21</span>
-            <span><b>Occupation:</b>Student</span>
-            <span><i>— “I would love cloud storage more if organizing files can be as easy as in my OS.” </i></span>
-          </div>
-          <div class="persona__content">
-            <p><b>Bio</b></p>
-            <p>Norman is studying phsychology in university and working toward his goal of having his own clinic. He participated in several research projects which requires a lot of reading, writing and information collecting. Cloud storage helps him keep all the articles and notes available whenever he needs them on the lab computer or even his mobile phone. He noticed he's running out of storage space but doesn't like the monthly subscription idea of buying online storage space.</p>
-            <p><b>Motivation</b></p>
-            <ul>
-              <li>Backup devices</li>
-              <li>Store files to use on lab computer and make space on pc and mobile.</li>
-            </ul>
-            <p><b>Goals</b></p>
-            <ul>
-              <li>An easier way to organize and search for files.</li>
-              <li>Files created are synced automatically.</li>
-              <li>Have access to my files even when I'm not using my own device.</li>
-            </ul>
-            <p><b>Frustration</b></p>
-            <ul>
-              <li>Need one place to take note, save and share them.</li>
-              <li>The website interface is not as pleasant to use as the app.</li>
-            </ul>
+          <div class="persona-2">
+            <div class="persona__header">
+              <img src="images/project1/persona2.png" alt="photo of persona Norman H"/>
+              <span><b>Name:</b>Norman H.</span>
+              <span><b>Age:</b>21</span>
+              <span><b>Occupation:</b>Student</span>
+              <span><i>— “I would love cloud storage more if organizing files can be as easy as in my OS.” </i></span>
+            </div>
+            <div class="persona__content">
+              <p><b>Bio</b></p>
+              <p>Norman is studying phsychology in university and working toward his goal of having his own clinic. He participated in several research projects which requires a lot of reading, writing and information collecting. Cloud storage helps him keep all the articles and notes available whenever he needs them on the lab computer or even his mobile phone. He noticed he's running out of storage space but doesn't like the monthly subscription idea of buying online storage space.</p>
+              <p><b>Motivation</b></p>
+              <ul>
+                <li>Backup devices</li>
+                <li>Store files to use on lab computer and make space on pc and mobile.</li>
+              </ul>
+              <p><b>Goals</b></p>
+              <ul>
+                <li>An easier way to organize and search for files.</li>
+                <li>Files created are synced automatically.</li>
+                <li>Have access to my files even when I'm not using my own device.</li>
+              </ul>
+              <p><b>Frustration</b></p>
+              <ul>
+                <li>Need one place to take note, save and share them.</li>
+                <li>The website interface is not as pleasant to use as the app.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      <a name="ideation">
+      <a name="ideation"></a>
       <section class="ideation">
         <h1 id="idea_h1">ideation</h1>
         <p>With Plenty info collected on users’ problems and desires, I used the value proposition to map the product features.</p>
@@ -252,7 +256,7 @@
         <a href="https://drive.google.com/open?id=1-xhfHaWo15WdY1J6fChEfidDvevSemDf"><div class="btn">mobile app wireframes</div></a>
       </section>
 
-      <a name="branding">
+      <a name="branding"></a>
       <section class="branding">
         <h1 id="bran_h1">branding</h1>
         <p>Now it’s time to add a theme to the black and white. Again I looked back at my research data for inspirations. According to the personas my target audience is a group of people who are creative, achieving, collaborative, and with a fast-paced lifestyle. By emphasizing the emotions and feelings I want the product to convey to the audience, I created a moodboard and sketched out several versions of the logo.</p>
@@ -299,7 +303,7 @@
         </a>
       </section>
 
-      <a name="prot_test">
+      <a name="prot_test"></a>
       <section class="prot_test">
         <h1 id="prot_h1">prototyping <br> & <br> testing</h1>
         <p>Using Sketch, several main screens were mocked up, then connected into clickable prototypes for usability testing in InVision and UsabilityHub. <br>With this first version of prototype, I conducted several remote, in-person and online testing, where the user was asked to do three tasks: </p>
@@ -364,7 +368,7 @@
         <a href="https://invis.io/Z7GL2NET9AD"><div class="btn">mobile app prototype</div></a>
       </section>
 
-      <a name="conclusion">
+      <a name="conclusion"></a>
       <section class="conclusion">
         <h1 id="con_h1">conclusion</h1>
         <p>It was a rewarding journey from the initial exploring to prototyping the final product.
@@ -393,23 +397,25 @@
     </main>
 
     <footer>
-      <div class="quote"><i>“I want to touch people with my art. I want them to say ‘he feels deeply, he feels tenderly.’”
-        <br>-- Vincent Van Gogh</i>
-      </div>
-      <div class="layout">
-        <div class="copyright">© 2018 Fiona Zhang</div>
-        <a href="mailto:fiona.feifei.zhang@gmail.com">
-          <img src="/images/project1/logo/social_email.svg" alt="email me"/>
-        </a>
-        <a href="https://www.linkedin.com/in/fiona-feifei-zhang">
-          <img src="/images/project1/logo/social_linkedin.svg" alt="connect with me on linkedin"/>
-        </a>
-        <a href="https://twitter.com/FionaFeifei_ZH">
-          <img src="/images/project1/logo/social_twitter.svg" alt="connect with me on twitter"/>
-        </a>
-        <a href="https://github.com/Fiona-ZH">
-          <img src="/images/project1/logo/social_github.svg" alt="find me on github"/>
-        </a>
+      <div class="footer--wrapper">
+        <div class="quote"><i>“I want to touch people with my art. I want them to say <br> ‘he feels deeply, he feels tenderly.’”
+          <br>-- Vincent Van Gogh</i>
+        </div>
+        <div class="icon--layout">
+          <a href="mailto:fiona.feifei.zhang@gmail.com">
+            <img src="/images/project1/logo/social_email.svg" alt="email me"/>
+          </a>
+          <a href="https://www.linkedin.com/in/fiona-feifei-zhang">
+            <img src="/images/project1/logo/social_linkedin.svg" alt="connect with me on linkedin"/>
+          </a>
+          <a href="https://twitter.com/FionaFeifei_ZH">
+            <img src="/images/project1/logo/social_twitter.svg" alt="connect with me on twitter"/>
+          </a>
+          <a href="https://github.com/Fiona-ZH">
+            <img src="/images/project1/logo/social_github.svg" alt="find me on github"/>
+          </a>
+        </div>
+        <div class="copyright">© 2018 All Rights Reserved<br>Designed and Developed by <span style="color: rgba(252,153,158,1);">Fiona Zhang</span></div>
       </div>
     </footer>
 
