@@ -25,22 +25,22 @@ function stickyNav() {
 // ------ section indicator ------
 
 var summary = document.getElementById("navsummary");
-var sumPos = (0.9 *  document.getElementById("summary_h1").offsetTop);
+var sumPos = ( document.getElementById("summary_h1").offsetTop);
 
 var exploration = document.getElementById("navexploration");
-var expPos = (0.9 *  document.getElementById("exp_h1").offsetTop);
+var expPos = ( document.getElementById("exp_h1").offsetTop);
 
 var ideation = document.getElementById("navideation");
-var ideaPos = (0.9 *  document.getElementById("idea_h1").offsetTop);
+var ideaPos = ( document.getElementById("idea_h1").offsetTop);
 
 var branding = document.getElementById("navbranding");
-var branPos = (0.95 *  document.getElementById("bran_h1").offsetTop);
+var branPos = ( document.getElementById("bran_h1").offsetTop);
 
 var prot_test = document.getElementById("navprot_test");
-var protPos = (0.95 *  document.getElementById("prot_h1").offsetTop);
+var protPos = ( document.getElementById("prot_h1").offsetTop);
 
 var conclusion = document.getElementById("navconclusion");
-var conPos = (0.97 *  document.getElementById("con_h1").offsetTop);
+var conPos = ( document.getElementById("con_h1").offsetTop);
 
 function currentSele(){
   if(window.pageYOffset >= sumPos && window.pageYOffset < expPos) {
