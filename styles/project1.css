@@ -1050,14 +1050,15 @@ h3 {
   margin: 0.5rem 0 2rem 0;
 }
 
+/* ------ section hifi mocks ------ */
+
 .hifi_web {
   margin: 3rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  padding: 2rem;
-  background-color: rgba(177,203,231,0.5);
-  border-radius: 1rem;
+  padding: 6rem 2rem;
+  background-color: rgba(177,203,231,1);
 }
 
 .hifi_web img {
@@ -1073,9 +1074,8 @@ h3 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
-  padding: 2rem;
-  background-color: rgba(177,203,231,0.5);
-  border-radius: 1rem;
+  padding: 6rem 2rem;
+  background-color: rgba(177,203,231,1);
 }
 
 .hifi_mobile img {
@@ -1084,6 +1084,27 @@ h3 {
   margin: 0 auto;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+@media all and (min-width: 781px) and (max-width: 1024px) {
+  .hifi_mocks {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media all and (min-width: 1025px) and (max-width: 1280px){
+  .hifi_mocks {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media all and (min-width: 1281px) {
+  .hifi_mocks {
+    width: 70%;
+    margin: 0 auto;
+  }
 }
 
 /* ------ section conclusion ------ */
@@ -1121,6 +1142,25 @@ h3 {
 
 .conclusion li {
   padding-top: 2rem;
+}
+
+.btm_links {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: rgba(85,135,135,1);
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media all and (min-width: 580px){
+  .btm_links {
+    font-size: 1.8rem;
+  }
 }
 
 /* ------ footer ------ */
