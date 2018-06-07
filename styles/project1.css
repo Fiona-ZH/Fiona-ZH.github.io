@@ -107,6 +107,19 @@ i {
   color: rgba(252,238,237,1);
 }
 
+@media all and (min-width: 320px) and (max-width: 1024px) {
+  .mob-hide {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .mob-hide {
+    display: block;
+  }
+}
+
+
 /* ------ colors ------- */
 /* yellow:
 rgba(255,224,109,1);
@@ -729,6 +742,12 @@ nav .burger:hover {
   }
 }
 
+.value_prop {
+  width: 84vw;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
 .ideation .btn--big {
   width: 30rem;
 }
@@ -741,8 +760,24 @@ nav .burger:hover {
   background-color: rgba(177,203,231,1);
 }
 
-.wf__draft img {
+.user_flow {
+  width: 80%;
+  margin: 0 auto;
+  padding: 4rem 0 2rem 0;
+}
+
+.uf_o {
+  width: 50%;
+}
+
+.uf_s {
   width: 100%;
+}
+
+.wf__draft img {
+  display: block;
+  width: 85%;
+  margin: 0 auto;
 }
 
 .wf__question {
@@ -806,6 +841,13 @@ nav .burger:hover {
     width: 60%;
     margin: 0 auto;
   }
+}
+
+.wf_final img {
+  display: block;
+  width: 80vw;
+  margin: 0 auto;
+  padding: 5rem 0 2rem 0;
 }
 
 /* ------ section branding ------ */
@@ -1058,7 +1100,7 @@ h3 {
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   padding: 6rem 2rem;
-  background-color: rgba(177,203,231,1);
+  /* background-color: rgba(177,203,231,1); */
 }
 
 .hifi_web img {
@@ -1067,6 +1109,12 @@ h3 {
   margin: 0 auto;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  -o-box-shadow:      0px 5px 10px #555;
+  -icab-box-shadow:   0px 5px 10px #555;
+  -khtml-box-shadow:  0px 5px 10px #555;
+  -moz-box-shadow:    0px 5px 10px #555;
+  -webkit-box-shadow: 0px 5px 10px #555;
+  box-shadow:         0px 5px 10px #555;
 }
 
 .hifi_mobile {
@@ -1075,7 +1123,7 @@ h3 {
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   padding: 6rem 2rem;
-  background-color: rgba(177,203,231,1);
+  /* background-color: rgba(177,203,231,1); */
 }
 
 .hifi_mobile img {
@@ -1084,6 +1132,12 @@ h3 {
   margin: 0 auto;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  -o-box-shadow:      0px 5px 10px #555;
+  -icab-box-shadow:   0px 5px 10px #555;
+  -khtml-box-shadow:  0px 5px 10px #555;
+  -moz-box-shadow:    0px 5px 10px #555;
+  -webkit-box-shadow: 0px 5px 10px #555;
+  box-shadow:         0px 5px 10px #555;
 }
 
 @media all and (min-width: 781px) and (max-width: 1024px) {
@@ -1148,10 +1202,9 @@ h3 {
   font-family: 'Oswald', sans-serif;
   font-size: 1.4rem;
   text-transform: uppercase;
-  color: rgba(85,135,135,1);
   width: 80%;
   margin: 0 auto;
-  padding-top: 3rem;
+  padding-top: 10rem;
   padding-bottom: 3rem;
   display: flex;
   justify-content: space-between;
@@ -1217,11 +1270,15 @@ footer .quote {
 }
 
 footer .icon--layout {
-  width: 50%;
-  max-width: 25rem;
-  padding-top: 10%;
+  width: 40%;
+  max-width: 16rem;
+  padding-top: 2rem;
   display: flex;
   justify-content: space-between;
+}
+
+footer .icon--layout img {
+  height: 2rem;
 }
 
 footer .copyright {
