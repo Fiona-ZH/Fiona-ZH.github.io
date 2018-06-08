@@ -7,14 +7,14 @@
 
 html {
   font-family: 'Open Sans', sans-serif;
-  font-size: 11px;
+  font-size: 10px;
 }
 
-@media all and (min-width: 481px){
+/* @media all and (min-width: 481px){
   html {
     font-size: 10px;
   }
-}
+} */
 
 h1 {
   font-family: 'Playfair Display', serif;
@@ -24,10 +24,10 @@ h1 {
   color: #fff;
 }
 
-@media all and (min-width: 1024px){
+@media all and (min-width: 768px){
   h1 {
-    font-size: 5rem;
-    line-height: 7.5rem;
+    font-size: 6rem;
+    line-height: 9rem;
   }
 }
 
@@ -147,12 +147,7 @@ a {
 
 header {
   min-height: 100%;
-  /* background: url("../images/home/header_bkg.svg") no-repeat center center fixed;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover; */
-  background-image: linear-gradient(#291E41 0%, #252661 20%, #F49491 65%, #FFDEBD 85%, #FFFCE9 95%);
+  background-image: linear-gradient(#291E41 0%, #252661 20%, #F49491 55%, #FFDEBD 75%, #FFFCE9 95%);
   background-attachment: fixed;
   position: relative;
 }
@@ -243,7 +238,14 @@ header {
 }
 
 @media all and (min-width: 481px) and (max-width: 1024px) {
+  .splash__intro h6 {
+    font-size: 2.5rem;
+    line-height: 5rem;
+  }
+
   .splash__intro p {
+    font-size: 2rem;
+    line-height: 4rem;
     padding-top: 5rem;
   }
   .splash__more {
@@ -252,7 +254,14 @@ header {
 }
 
 @media all and (min-width: 1025px) and (max-width: 1280px) {
+  .splash__intro h6 {
+    font-size: 2.5rem;
+    line-height: 5rem;
+  }
+
   .splash__intro p {
+    font-size: 2rem;
+    line-height: 4rem;
     padding-top: 5rem;
   }
   .splash__more {
@@ -261,7 +270,14 @@ header {
 }
 
 @media all and (min-width: 1281px) {
+  .splash__intro h6 {
+    font-size: 2.5rem;
+    line-height: 5rem;
+  }
+
   .splash__intro p {
+    font-size: 2rem;
+    line-height: 4rem;
     padding-top: 5rem;
   }
   .splash__more {
