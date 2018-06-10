@@ -13,15 +13,11 @@
   <body>
     <a name="top"></a>
     <header>
-      <!-- <img class="burger" src="/images/project1/nav_burger.svg" alt="menu icon" /> -->
       <a href="index.html"><i class="fa fa-chevron-circle-left burger" aria-hidden="true"></i></a>
       <img class="header__logo" src="/images/project1/logo_hive.svg" alt="app logo"/>
-      <div class="header__role">UX Design | Visual Design | Branding</div>
-      <img class="header__mock" src="/images/project1/header_img.png" alt="HIVE desktop and mobile interface showcase"/>
-      <a href="https://invis.io/BSGL186PCJF"><div class="btn">web app prototype</div></a>
-      <a href="https://invis.io/Z7GL2NET9AD"><div class="btn">mobile app prototype</div></a>
-      <img class="map" src="/images/project1/header_roadmap.svg"/>
-    </header>
+      <div class="header__intro">The place to harness insperations, share your ideas, and make them heard.</div>
+      <img class="header__mock" src="/images/project1/hifi-mock.png" alt="HIVE desktop and mobile interface showcase"/>
+      </header>
 
     <nav id="navbar" class="fade-in-left">
       <div>
@@ -40,7 +36,43 @@
       <a name="summary"></a>
       <section class="summary">
         <h1 id="summary_h1"><br>- summary -</h1>
-        <p>Although here are many cloud storage services in the market, there are still customer needs that are not 100% satisfied. This is where HIVE steps in.<br><br>As a lightweight personal cloud storage application, it aims at providing versatile storing and sharing solutions to the group of people who are creative, collaborative, and have a fast-paced lifestyle.</p>
+        <p>Although there are many cloud storage services in the market, there are still customer needs that are not 100% satisfied. This is where HIVE steps in.<br><br>As a lightweight personal cloud storage application, it aims at providing versatile storing and sharing solutions to the group of people who are creative, collaborative, and have a fast-paced lifestyle.</p>
+        <div class="featured__details">
+          <div class="detail__col">
+            <img src="/images/home/role_icon.png"/>
+            <div class="title">role</div>
+            <ul>
+              <li>UX design</li>
+              <li>Visual design</li>
+              <li>Branding</li>
+            </ul>
+          </div>
+          <div class="detail__col">
+            <img src="/images/home/deliverable_icon.png"/>
+            <div class="title">deliverables</div>
+            <ul>
+              <li>User research</li>
+              <li>Competitive analysis</li>
+              <li>User flow</li>
+              <li>Wireframe</li>
+              <li>Prototype</li>
+              <li>Usability testing</li>
+            </ul>
+          </div>
+          <div class="detail__col">
+            <img src="/images/home/tools_icon.png"/>
+            <div class="title">tools</div>
+            <ul>
+              <li>Pen & paper</li>
+              <li>Balsamiq</li>
+              <li>Sketch</li>
+              <li>InVision</li>
+              <li>Usability Hub</li>
+            </ul>
+          </div>
+        </div>
+        <a href="https://invis.io/BSGL186PCJF"><div class="btn">web app prototype</div></a>
+        <a href="https://invis.io/Z7GL2NET9AD"><div class="btn">mobile app prototype</div></a>
         <div class="heading2">
           <img class="bullet_hex" src="/images/project1/h2_hex.svg"/>
           <h2>problems</h2>
@@ -61,12 +93,6 @@
           <li>Introduce a virtual container, Jar, for sharing multiple items without moving to the same folder.</li>
           <li>Separate purchase plan of add-on storage space.</li>
         </ol>
-        <div class="deliv_tools">
-          <span class="title">Deliverables</span>
-          <span class="content">User research, Competitive analysis<br>User flow, Wireframe<br>Prototype, Usability testing</span>
-          <span class="title">Tools</span>
-          <span class="content">Pen & Paper, Balsamiq<br>Sketch, InVision, Usability Hub</span>
-        </div>
       </section>
 
       <a name="exploration"></a>
@@ -149,9 +175,9 @@
           <div class="persona-1">
             <div class="persona__header">
               <img src="images/project1/persona1.png" alt="photo of persona Elise C"/>
-              <span><b>Name:</b> Elie C.</span>
-              <span><b>Age:</b> 34</span>
-              <span><b>Occupation:</b> Marketing Specialist</span>
+              <span class="basic"><b>Name:</b> Elie C.</span>
+              <span class="basic"><b>Age:</b> 34</span>
+              <span class="basic"><b>Occupation:</b> Marketing Specialist</span>
               <span><i>— “I’m just greatful the limited sized email attachment is not the only way of sharing files.”</i></span>
             </div>
             <div class="persona__content">
@@ -176,9 +202,9 @@
           <div class="persona-2">
             <div class="persona__header">
               <img src="images/project1/persona2.png" alt="photo of persona Norman H"/>
-              <span><b>Name:</b>Norman H.</span>
-              <span><b>Age:</b>21</span>
-              <span><b>Occupation:</b>Student</span>
+              <span class="basic"><b>Name:</b> Norman H.</span>
+              <span class="basic"><b>Age:</b> 21</span>
+              <span class="basic"><b>Occupation:</b> Student</span>
               <span><i>— “I would love cloud storage more if organizing files can be as easy as in my OS.” </i></span>
             </div>
             <div class="persona__content">
@@ -445,8 +471,16 @@
       </div>
     </footer>
 
-  <!-- Scripts  -->
-  <script src="scripts/project1_nav.js"></script>
+    <!-- Scripts  -->
+    <script src="scripts/project1_nav.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120573511-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
+      gtag('config', 'UA-120573511-1');
+    </script>
   </body>
 </html>
