@@ -3,12 +3,12 @@
 }
 
 /* Import fonts*/
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700|Oswald|Playfair+Display:700,900');
-
+@import url('https://fonts.googleapis.com/css?family=Oswald|Playfair+Display:700,900');
+@import url('https://fonts.googleapis.com/css?family=Exo');
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Ubuntu');
 
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'exo', sans-serif;
   font-size: 10px;
 }
 
@@ -75,8 +75,8 @@ ul {
 }
 
 b {
+  font-size: 1.8rem;
   font-weight: 600;
-  color: #828282;
 }
 
 i {
@@ -134,7 +134,7 @@ rgba(230,118,79,1);
 /* ------ header ------ */
 header {
   max-width: 100vw;
-  background-image: linear-gradient(#57467C 0%, #917FB6 20%, #F9BDDD 35%, #FFE9D9 55%, #FFF 70%);
+  background-image: linear-gradient(#57467C 0%, #917FB6 50%, #F9BDDD 75%, #FFE9D9 85%, #FFF 95%);
 }
 
 header .burger {
@@ -166,56 +166,88 @@ header .burger:hover {
   transform: translateY(-1rem);
 }
 
-.header__role {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.6rem;
-  color: #fff;
+.header__intro {
+  font-family: 'Montserrat', serif;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  color: rgba(243,221,152,1);
   text-align: center;
-  padding-bottom: 1.6rem;
+  padding: 1.6rem;
 }
 
 .header__mock {
-  width: 80%;
-  max-width: 60rem;
+  width: 90%;
   display: block;
+  margin: 2rem auto;
+}
+
+.featured__details {
+  width: 80%;
   margin: 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 2.5rem auto;
+  grid-row-gap: 1rem;
+  justify-items: center;
+}
+
+.featured__details ul {
+  list-style: none;
+}
+
+.detail__col {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .featured__details {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 2rem;
+    justify-items: center;
+  }
+}
+
+@media all and (min-width: 767px) and (max-width: 1024px){
+  .featured__details {
+    width: 60%;
+  }
+}
+
+.featured__details img {
+  width: 8rem;
+}
+
+.featured__details .title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  padding-top: 0.5rem;
+  color: rgba(85,135,135,1);
+}
+
+.featured__details ul {
+  font-family: 'exo', sans-serif;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  text-align: center;
+  padding-top: 1rem;
 }
 
 header .btn {
   margin-top: 2.5rem;
 }
 
-.map {
-  width: 90%;
-  display: block;
-  margin: 0 auto;
-  padding-top: 4rem;
-  margin-bottom: 2rem;
-}
 
-@media all and (min-width: 481px) and (max-width: 780px) {
-  .map {
-    width: 60%;
-  }
-}
-
-@media all and (min-width: 781px) and (max-width: 1024px) {
-  .map {
-    width: 50%;
-  }
-}
-
-@media all and (min-width: 1025px) and (max-width: 1280px) {
-  .map {
-    width: 40%;
-  }
-}
-
-@media all and (min-width: 1281px){
-  .map {
-    width: 30%;
-  }
-}
 
 /* ------ nav ------- */
 @media all and (max-width: 1024px) {
@@ -408,25 +440,6 @@ nav .burger:hover {
     width: 50%;
     margin: 0 auto;
   }
-}
-
-.deliv_tools {
-  width: 100%;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin: 1rem 0 1rem 0;
-  font-size: 1.4rem;
-  line-height: 3rem;
-  background-color: rgba(177,203,231,0.5);
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-row-gap: 1rem;
-  grid-column-gap: 1.5rem;
-}
-
-.deliv_tools .title {
-  font-weight: 600;
-  text-align: right;
 }
 
 /* ------ section exploration ------ */
@@ -651,7 +664,7 @@ nav .burger:hover {
   background-color: rgba(177,203,231,0.5);
   display: grid;
   grid-template-columns: 2fr 3fr;
-  grid-template-rows: 1fr 1fr 1fr 3fr;
+  grid-template-rows: 1fr 1fr 2fr 3fr;
   grid-column-gap: 0.5rem;
 }
 
@@ -665,7 +678,7 @@ nav .burger:hover {
 }
 
 .persona__header span {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 3rem;
   padding-right: 1.6rem;
   align-self: center;
@@ -686,6 +699,10 @@ nav .burger:hover {
   .persona__header span {
     padding: 0 5% 0 5%;
   }
+
+  .persona__header .basic {
+    text-align: center;
+  }
 }
 
 @media all and (min-width: 481px) and (max-width: 780px) {
@@ -704,7 +721,8 @@ nav .burger:hover {
 
 @media all and (min-width: 1025px) and (max-width: 1280px){
   .persona--wrapper {
-    width: 90%;
+    width: 86%;
+    padding-left: 5rem;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -775,10 +793,6 @@ nav .burger:hover {
 
 .ideation .btn {
   margin-bottom: 2rem;
-}
-
-.ideation .btn--blue {
-  background-color: rgba(177,203,231,1);
 }
 
 .user_flow {
