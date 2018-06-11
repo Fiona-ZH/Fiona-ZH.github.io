@@ -159,6 +159,14 @@ header {
   position: relative;
 }
 
+/* --- set height for iOS devices --- */
+
+@media all and (device-width: 375px) and (device-height: 667px) and (orientation:portrait){
+  header {
+    min-height: 667px;
+  }
+}
+
 .splash {
   width: 100%;
   margin: 0 auto;
