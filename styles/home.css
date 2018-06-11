@@ -3,8 +3,8 @@
 }
 
 /* Import fonts*/
-@import url('https://fonts.googleapis.com/css?family=Oswald|Playfair+Display:700,900');
-@import url('https://fonts.googleapis.com/css?family=Exo');
+/* @import url('https://fonts.googleapis.com/css?family=Oswald|Playfair+Display:700,900');
+@import url('https://fonts.googleapis.com/css?family=Exo'); */
 
 html {
   font-family: 'exo', sans-serif;
@@ -80,7 +80,7 @@ h2 {
 @media all and (min-width: 481px) and (max-width: 1024px) {
   h2::before, h2::after{
     content:' ';
-    background: url("/images/home/h2_dec.svg") repeat-x;
+    background: url("../images/home/h2_dec.svg") repeat-x;
     display: inline-block;
     width: 20%;
     height: 3px;
