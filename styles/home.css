@@ -161,7 +161,7 @@ header {
 
 /* --- set height for iOS devices --- */
 
-@media all and (device-width: 375px) and (device-height: 667px) and (orientation:portrait){
+@media all and (width: 375px) and (height: 667px) and (orientation:portrait){
   header {
     min-height: 667px;
   }
