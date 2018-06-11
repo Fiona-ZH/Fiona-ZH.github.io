@@ -149,12 +149,16 @@ a {
 header {
   min-height: 100vh;
   background-image: linear-gradient(#291E41 0%, #252661 20%, #F49491 55%, #FFDEBD 75%, #FFFCE9 95%);
+  background-image: -webkit-gradient (linear, #291E41 0%, #252661 20%, #F49491 55%, #FFDEBD 75%, #FFFCE9 95%);
+  background-image: -webkit-linear-gradient (#291E41 0%, #252661 20%, #F49491 55%, #FFDEBD 75%, #FFFCE9 95%);
+  background-image: -moz-linear-gradient(#291E41 0%, #252661 20%, #F49491 55%, #FFDEBD 75%, #FFFCE9 95%);
+  background-image: -o-linear-gradient(#291E41 0%, #252661 20%, #F49491 55%, #FFDEBD 75%, #FFFCE9 95%);
   background-attachment: fixed;
   position: relative;
 }
 
 /* --- set viewport for iOS devices --- */
-@media all and (width: 320px) and (height: 568px) and (orientation:portrait) {
+/* @media all and (width: 320px) and (height: 568px) and (orientation:portrait) {
   header {
     min-height: 568px;
     width: 100%;
@@ -192,7 +196,7 @@ header {
     width: 100%;
     background-image: url("../images/home/header_bkg-mob.png");
   }
-}
+} */
 
 .splash {
   width: 100%;
