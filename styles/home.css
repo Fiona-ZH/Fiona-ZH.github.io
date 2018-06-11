@@ -11,12 +11,6 @@ html {
   font-size: 10px;
 }
 
-/* @media all and (min-width: 481px){
-  html {
-    font-size: 10px;
-  }
-} */
-
 h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
@@ -159,13 +153,13 @@ header {
   position: relative;
 }
 
-/* --- set height for iOS devices --- */
+/* --- set viewport for iOS devices --- */
 
 @media all and (width: 375px) and (height: 667px) and (orientation:portrait) {
   header {
     min-height: 667px;
     width: 100%;
-    background-image: url("../images/home/header_bkg-mob.png");
+    background-image: url("../images/home/header_bkg-mob.png") repeat-x fixed;
   }
 }
 
@@ -173,7 +167,7 @@ header {
   header {
     min-height: 1024px;
     width: 100%;
-    background-image: url("../images/home/header_bkg-mob.png");
+    background-image: url("../images/home/header_bkg-mob.png") repeat-x fixed;
   }
 }
 
@@ -209,7 +203,7 @@ header {
 .splash__line {
   width: 80%;
   height: 2px;
-  background-color: rgba(252,153,158,0.5);
+  background-color: rgba(78,60,97,1);
   margin: 0 auto;
   margin-bottom: 1.6rem;
 }
@@ -703,6 +697,13 @@ article {
   border-style: solid;
   border-width: 1px;
   border-color: rgba(252,153,158,1);;
+}
+
+article .sub-title {
+  font-size: 2rem;
+  color: rgba(252,153,158,1);
+  line-height: 5rem;
+  text-transform: uppercase;
 }
 
 .content_box .more {
