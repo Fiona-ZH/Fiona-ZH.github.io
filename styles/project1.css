@@ -1154,12 +1154,6 @@ h3 {
   margin: 0 auto;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  /* -o-box-shadow:      0px 5px 10px #555;
-  -icab-box-shadow:   0px 5px 10px #555;
-  -khtml-box-shadow:  0px 5px 10px #555;
-  -moz-box-shadow:    0px 5px 10px #555;
-  -webkit-box-shadow: 0px 5px 10px #555;
-  box-shadow:         0px 5px 10px #555; */
 }
 
 .hifi_mobile {
@@ -1173,6 +1167,7 @@ h3 {
 
 .hifi_mobile img {
   width: 95%;
+  max-width: 375px;
   display: block;
   margin: 0 auto;
   padding-top: 1rem;
