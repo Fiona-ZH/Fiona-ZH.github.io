@@ -154,12 +154,35 @@ header {
 }
 
 /* --- set viewport for iOS devices --- */
+@media all and (width: 320px) and (height: 568px) and (orientation:portrait) {
+  header {
+    min-height: 568px;
+    width: 100%;
+    background-image: url("../images/home/header_bkg-mob.png");
+  }
+}
 
 @media all and (width: 375px) and (height: 667px) and (orientation:portrait) {
   header {
     min-height: 667px;
     width: 100%;
-    background-image: url("../images/home/header_bkg-mob.png") repeat-x fixed;
+    background-image: url("../images/home/header_bkg-mob.png");
+  }
+}
+
+@media all and (width: 414px) and (height: 736px) and (orientation:portrait) {
+  header {
+    min-height: 736px;
+    width: 100%;
+    background-image: url("../images/home/header_bkg-mob.png");
+  }
+}
+
+@media all and (width: 375px) and (height: 812px) and (orientation:portrait) {
+  header {
+    min-height: 812px;
+    width: 100%;
+    background-image: url("../images/home/header_bkg-mob.png");
   }
 }
 
@@ -167,7 +190,15 @@ header {
   header {
     min-height: 1024px;
     width: 100%;
-    background-image: url("../images/home/header_bkg-mob.png") repeat-x fixed;
+    background-image: url("../images/home/header_bkg-mob.png");
+  }
+}
+
+@media all and (width: 1024px) and (height: 1366px) and (orientation:portrait) {
+  header {
+    min-height: 1366px;
+    width: 100%;
+    background-image: url("../images/home/header_bkg-mob.png");
   }
 }
 
