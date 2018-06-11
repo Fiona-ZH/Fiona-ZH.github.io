@@ -194,14 +194,6 @@ header {
   }
 }
 
-@media all and (width: 1024px) and (height: 1366px) and (orientation:portrait) {
-  header {
-    min-height: 1366px;
-    width: 100%;
-    background-image: url("../images/home/header_bkg-mob.png");
-  }
-}
-
 .splash {
   width: 100%;
   margin: 0 auto;
