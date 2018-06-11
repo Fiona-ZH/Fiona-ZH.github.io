@@ -264,8 +264,8 @@ header {
   }
 
   .splash__intro p {
-    width: 60%;
-    font-size: 2rem;
+    width: 90%;
+    font-size: 1.8rem;
     line-height: 4rem;
     padding-top: 1rem;
   }
@@ -604,26 +604,28 @@ header .bkg {
 
 
 @media all and (min-width: 1025px) {
+  .layout-l-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
   .featured__hero {
     width: 50%;
-    float: right;
+    /* float: right; */
     margin-bottom: 5rem;
   }
 
   .featured__hero .name {
     display: none;
-    text-align: left;
-    margin-left: 5rem;
   }
 
   .featured__hero .intro {
     display: none;
-    text-align: left;
-    margin-left: 5rem;
   }
 
   .hero-img {
-    width: 170%;
+    width: 160%;
     margin-left: 0;
     transform: translate(5%, 0);
   }
