@@ -157,7 +157,7 @@ header {
 }
 
 /* --- set viewport for iOS devices --- */
-/* @media all and (width: 320px) and (height: 568px) and (orientation:portrait) {
+@media all and (width: 320px) and (height: 568px) and (orientation:portrait) {
   header {
     min-height: 568px;
     width: 100%;
@@ -195,7 +195,7 @@ header {
     width: 100%;
     background-image: url("../images/home/header_bkg-mob.png");
   }
-} */
+}
 
 .splash {
   width: 100%;
