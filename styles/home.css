@@ -14,7 +14,7 @@ html {
 h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: 5rem;
+  font-size: 6rem;
   line-height: 5.5rem;
   color: #fff;
   width: 80%;
@@ -52,8 +52,6 @@ h2 {
   font-weight: 600;
   color: rgba(41,30,65,1);
   text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
   position: relative;
 }
 
@@ -148,7 +146,7 @@ a {
 
 header {
   min-height: 100vh;
-  background-image: linear-gradient(#291E41 0%, #252661 20%, #F49491 55%, #FFDEBD 75%, #FFFCE9 95%);
+  background-image: linear-gradient(#291E41 0%, #252661 25%, #F49491 55%, #FFDEBD 75%, #FFFCE9 95%);
   background-image: -webkit-linear-gradient (#291E41 0%, #252661 20%, #F49491 55%, #FFDEBD 75%, #FFFCE9 95%);
   background-image: -moz-linear-gradient(#291E41 0%, #252661 20%, #F49491 55%, #FFDEBD 75%, #FFFCE9 95%);
   background-image: -o-linear-gradient(#291E41 0%, #252661 20%, #F49491 55%, #FFDEBD 75%, #FFFCE9 95%);
@@ -157,7 +155,7 @@ header {
 }
 
 /* --- set viewport for iOS devices --- */
-@media all and (width: 320px) and (height: 568px) and (orientation:portrait) {
+/* @media all and (width: 320px) and (height: 568px) and (orientation:portrait) {
   header {
     min-height: 568px;
     width: 100%;
@@ -195,7 +193,7 @@ header {
     width: 100%;
     background-image: url("../images/home/header_bkg-mob.png");
   }
-}
+} */
 
 .splash {
   width: 100%;
@@ -280,13 +278,14 @@ header {
 @media all and (min-width: 481px) and (max-width: 1024px) {
   .splash__intro h6 {
     font-size: 2.5rem;
-    line-height: 5rem;
+    line-height: 4rem;
+    padding-top: 4rem;
   }
 
   .splash__intro p {
     width: 90%;
     font-size: 1.8rem;
-    line-height: 4rem;
+    line-height: 3rem;
     padding-top: 1rem;
   }
   .splash__more {
@@ -296,14 +295,17 @@ header {
 
 @media all and (min-width: 1025px) and (max-width: 1280px) {
   .splash__intro h6 {
+    width: 60%;
+    margin: 0 auto;
     font-size: 2.5rem;
-    line-height: 5rem;
+    line-height: 4rem;
+    padding-top: 4rem;
   }
 
   .splash__intro p {
-    width: 60%;
+    width: 80%;
     font-size: 1.8rem;
-    line-height: 4rem;
+    line-height: 3rem;
     padding-top: 1rem;
   }
   .splash__more {
@@ -314,14 +316,15 @@ header {
 @media all and (min-width: 1281px) {
   .splash__intro h6 {
     font-size: 2.5rem;
-    line-height: 5rem;
+    line-height: 4rem;
+    padding-top: 4rem;
   }
 
   .splash__intro p {
     width: 60%;
     font-size: 1.8rem;
-    line-height: 4rem;
-    padding-top: 5rem;
+    line-height: 3rem;
+    padding-top: 3rem;
   }
   .splash__more {
     padding-top: 22rem;
@@ -387,7 +390,7 @@ header .bkg {
     overflow: hidden;
     display: block;
     position: fixed;
-    top: 10vh;
+    top: 15vh;
     left: 6%;
     z-index: 999;
   }
@@ -457,7 +460,7 @@ header .bkg {
     display: block;
     position: absolute;
     width: 1px;
-    height: 16vh;
+    height: 17vh;
     top: 2rem;
     left: 1rem;
     border: .5px;
@@ -591,6 +594,11 @@ header .bkg {
 }
 
 @media all and (min-width: 781px) and (max-width: 1024px) {
+  .featured__hero .name {
+    font-size: 6rem;
+    padding-top: 10rem;
+  }
+
   .layout-l {
     width: 60%;
   }
@@ -611,11 +619,14 @@ header .bkg {
   padding: 1rem;
   margin: 2rem 0 10rem 0;
   background-color: rgba(252,153,158,1);
+  transition-duration: 120ms;
+  transition-timing-function: ease-out;
 }
 
 .view_casestudy:hover {
   background-color: rgba(78,60,97,1);
   color: rgba(252,238,237,1);
+  transform: scale(1.05, 1.05);
 }
 
 .featured a:hover {
@@ -632,8 +643,8 @@ header .bkg {
 
   .featured__hero {
     width: 50%;
-    /* float: right; */
     margin-bottom: 5rem;
+    overflow: hidden;
   }
 
   .featured__hero .name {
@@ -661,7 +672,7 @@ header .bkg {
   .layout-l .name {
     font-family: 'Playfair Display', serif;
     font-weight: 600;
-    font-size: 4rem;
+    font-size: 6rem;
     color: rgba(243,221,152,1);
     display: block;
     text-align: center;
@@ -671,9 +682,10 @@ header .bkg {
 
   .layout-l .intro {
     font-family: 'exo', sans-serif;
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 2.2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 3.2rem;
+    color: rgba(41,30,65,1);
     display: block;
     padding: 2rem 0;
   }
@@ -887,7 +899,7 @@ article .sub-title {
 }
 
 .connect__catch {
-  color: rgba(85,135,135,1);
+  /* color: rgba(85,135,135,1); */
   padding-bottom: 12rem;
 }
 
@@ -958,9 +970,9 @@ footer .quote {
   margin: 0 auto;
   padding-top: 3rem;
   padding-bottom: 5rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'exo', sans-serif;
   font-weight: 300;
-  /* font-style: italic; */
+  font-style: italic;
   font-size: 1.4rem;
   line-height: 2.2rem;
   text-align: right;
