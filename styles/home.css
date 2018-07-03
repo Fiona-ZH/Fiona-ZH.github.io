@@ -21,7 +21,7 @@ h1 {
   margin: 0 auto;
   text-align: center;
   padding-top: 8vh;
-  padding-bottom: 6vh;
+  padding-bottom: 8vh;
 }
 
 @media all and (min-width: 768px){
@@ -43,49 +43,6 @@ h4 {
 @media all and (min-width: 1281px){
   h4 {
     font-size: 2rem;
-  }
-}
-
-h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  font-weight: 600;
-  color: rgba(41,30,65,1);
-  text-align: center;
-  position: relative;
-}
-
-@media all and (min-width: 481px){
-  h2 {
-    font-size: 3rem;
-  }
-}
-
-@media all and (min-width: 1025px){
-  h2 {
-    font-size: 3rem;
-    margin-top: 10rem;
-    margin-bottom: 3rem;
-  }
-}
-
-@media all and (min-width: 481px) and (max-width: 1024px) {
-  h2::before, h2::after{
-    content:' ';
-    background: url("../images/home/h2_dec.svg") repeat-x;
-    display: inline-block;
-    width: 20%;
-    height: 3px;
-    position: absolute;
-    top: 5.5rem;
-  }
-
-  h2::before {
-    left: 6%;
-  }
-
-  h2::after {
-    right: 6%;
   }
 }
 
@@ -196,7 +153,7 @@ header {
 } */
 
 .splash {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -225,16 +182,16 @@ header {
 }
 
 .splash__line {
-  width: 80%;
+  width: 100%;
   height: 2px;
   background-color: rgba(78,60,97,1);
   margin: 0 auto;
-  margin-bottom: 1.6rem;
+  margin-bottom: 0.8rem;
 }
 
 .splash__menu_wrap {
   display: flex;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   justify-content: space-between;
 }
@@ -258,7 +215,7 @@ header {
 }
 
 .splash__intro p {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   color: rgba(78,60,97,1);
@@ -279,11 +236,10 @@ header {
   .splash__intro h6 {
     font-size: 2.5rem;
     line-height: 4rem;
-    padding-top: 4rem;
   }
 
   .splash__intro p {
-    width: 90%;
+    width: 100%;
     font-size: 1.8rem;
     line-height: 3rem;
     padding-top: 1rem;
@@ -294,16 +250,31 @@ header {
 }
 
 @media all and (min-width: 1025px) and (max-width: 1280px) {
+  .splash__logo_wrap {
+    padding-top: 10vh;
+  }
+
+  .splash__line {
+    display: none;
+  }
+
+  .splash__menu_wrap {
+    display: none;
+  }
+
+  h1 {
+    padding-top: 8vh;
+  }
+
   .splash__intro h6 {
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
     font-size: 2.5rem;
     line-height: 4rem;
-    padding-top: 4rem;
   }
 
   .splash__intro p {
-    width: 80%;
+    width: 100%;
     font-size: 1.8rem;
     line-height: 3rem;
     padding-top: 1rem;
@@ -317,17 +288,16 @@ header {
   .splash__intro h6 {
     font-size: 2.5rem;
     line-height: 4rem;
-    padding-top: 4rem;
   }
 
   .splash__intro p {
-    width: 60%;
+    width: 80%;
     font-size: 1.8rem;
     line-height: 3rem;
     padding-top: 3rem;
   }
   .splash__more {
-    padding-top: 22rem;
+    padding-top: 16rem;
   }
 }
 
@@ -643,6 +613,7 @@ header .bkg {
 
   .featured__hero {
     width: 50%;
+    margin-top: 5rem;
     margin-bottom: 5rem;
     overflow: hidden;
   }
@@ -969,7 +940,7 @@ footer .quote {
   display: block;
   margin: 0 auto;
   padding-top: 3rem;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
   font-family: 'exo', sans-serif;
   font-weight: 300;
   font-style: italic;
