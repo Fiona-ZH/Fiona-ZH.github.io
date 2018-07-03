@@ -633,7 +633,7 @@ header .bkg {
     font-family: 'Playfair Display', serif;
     font-weight: 600;
     font-size: 6rem;
-    color: rgba(243,221,152,1);
+    color: var(--purple-light);
     display: block;
     text-align: center;
     padding-top: 8rem;
@@ -760,7 +760,7 @@ article .sub-title {
 
 /* ------ section connect ------ */
 .connect {
-  background-color: var(--pink);
+  background-color: var(--cream);
 }
 
 .connect__lets, .connect__thanks, .connect p, .connect__social_media, .connect__catch {
