@@ -1,3 +1,6 @@
+window.onload = function() {
+};
+
 // ------ Sticky nav bar ------
 
 window.onscroll = function(){
