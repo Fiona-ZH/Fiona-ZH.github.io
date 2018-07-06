@@ -96,51 +96,42 @@ header {
   background-image: -webkit-linear-gradient (#291E41 0%, #252661 20%, #F49491 55%, #FFDEBD 75%, #FFFCE9 95%);
   background-image: -moz-linear-gradient(#291E41 0%, #252661 20%, #F49491 55%, #FFDEBD 75%, #FFFCE9 95%);
   background-image: -o-linear-gradient(#291E41 0%, #252661 20%, #F49491 55%, #FFDEBD 75%, #FFFCE9 95%);
+  background-repeat: repeat-x;
   background-attachment: fixed;
   position: relative;
   overflow: hidden;
 }
 
 /* --- set viewport for iOS devices --- */
-/* @media all and (width: 320px) and (height: 568px) and (orientation:portrait) {
+@media all and (width: 320px) and (height: 568px) and (orientation:portrait) {
   header {
-    min-height: 568px;
-    width: 100%;
-    background-image: url("../images/home/header_bkg-mob.png");
+    height: 568px;
   }
 }
 
 @media all and (width: 375px) and (height: 667px) and (orientation:portrait) {
   header {
-    min-height: 667px;
-    width: 100%;
-    background-image: url("../images/home/header_bkg-mob.png");
+    height: 667px;
   }
 }
 
 @media all and (width: 414px) and (height: 736px) and (orientation:portrait) {
   header {
-    min-height: 736px;
-    width: 100%;
-    background-image: url("../images/home/header_bkg-mob.png");
+    height: 736px;
   }
 }
 
 @media all and (width: 375px) and (height: 812px) and (orientation:portrait) {
   header {
-    min-height: 812px;
-    width: 100%;
-    background-image: url("../images/home/header_bkg-mob.png");
+    height: 812px;
   }
 }
 
 @media all and (width: 768px) and (height: 1024px) and (orientation:portrait) {
   header {
-    min-height: 1024px;
-    width: 100%;
-    background-image: url("../images/home/header_bkg-mob.png");
+    height: 1024px;
   }
-} */
+}
 
 .splash {
   width: 90%;
@@ -462,7 +453,7 @@ header .bkg {
   .nav__dot:hover img {
    display: block;
    -webkit-animation: fade-in-left 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: fade-in-left 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	 animation: fade-in-left 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   }
 
   .nav__dot:hover h4 {
@@ -470,19 +461,19 @@ header .bkg {
    font-weight: 600;
    color: var(--pink);
    -webkit-animation: fade-in-left 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: fade-in-left 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	 animation: fade-in-left 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   }
 
   .nav__dot--focus-d {
     background-color: var(--purple-light);
     -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-         animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   }
 
   .nav__dot--focus-l {
     background-color: var(--teal-dark);
     -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-          animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   }
 
 

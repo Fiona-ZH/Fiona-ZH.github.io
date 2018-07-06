@@ -3,6 +3,7 @@
 window.onscroll = function() {
   stickyNav()
   currentSele()
+  fadeIn()
 };
 
 var navbar = document.getElementById("navbar");
@@ -79,4 +80,29 @@ function currentSele(){
     conclusion.classList.remove("curr-sele");
   }
 
+}
+
+// ------ fade in ------
+var mocCols = document.getElementsByClassName("col");
+
+function fadeIn() {
+  for (var i = 0; i < mocCols.length; i++) {
+    var mockPos = mocCols[i].offsetTop - window.innerHeight*0.6;
+    if(mockPos <= window.pageYOffset){
+      mocCols[i].classList.add("fade-in-bottom");
+    }
+    else {
+      mocCols[i].classList.remove("fade-in-bottom");
+    }
+  }
+}
+
+window.onresize = function() {
+  init()
+}
+
+function init() {
+  for (var i = 0; i < mocCols.length; i++) {
+    mocCols[i].classList.remove("fade-in-bottom");
+  }
 }

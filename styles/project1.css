@@ -107,11 +107,14 @@ i {
   padding: 1rem;
   margin: 2rem auto 4rem auto;
   background-color: var(--yellow);
+  transition-duration: 120ms;
+  transition-timing-function: ease-out;
 }
 
 .btn:hover {
   background-color: var(--orange);
   color: rgba(252,238,237,1);
+  transform: scale(1.05, 1.05);
 }
 
 @media all and (min-width: 320px) and (max-width: 1024px) {
@@ -133,7 +136,6 @@ header {
 }
 
 header .burger {
-  /* width: 4rem; */
   font-size: 2.5rem;
   color: #fff;
   padding-top: 1.6rem;
@@ -142,6 +144,8 @@ header .burger {
 
 header .burger:hover {
   color: rgba(252,153,158,1);
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 
 @media all and (min-width: 1025px) {
@@ -304,6 +308,7 @@ nav .burger:hover {
   color: #FFF;
   padding-top: 0.4rem;
   text-align: center;
+  position: relative;
 }
 
 .nav__dot:hover, .nav__dot:focus {
@@ -332,46 +337,40 @@ nav .burger:hover {
     display: none;
   }
 
+  nav .dots {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  /* nav .navlabel {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4rem;
+    color: var(--orange);
+  } */
+
   .nav_show {
     display: block;
     visibility: visible;
   }
 
-  nav div {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-  }
-
   .fade-in-left {
 	   -webkit-animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	   animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   }
 
   @-webkit-keyframes fade-in-left {
     0% {
       -webkit-transform: translateX(-50px);
-              transform: translateX(-50px);
+      transform: translateX(-50px);
       opacity: 0;
     }
     100% {
       -webkit-transform: translateX(0);
-              transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  @keyframes fade-in-left {
-    0% {
-      -webkit-transform: translateX(-50px);
-              transform: translateX(-50px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
+      transform: translateX(0);
       opacity: 1;
     }
   }
@@ -392,7 +391,7 @@ nav .burger:hover {
     height: 50vh;
     width: 1px;
     position: absolute;
-    left: 1.5rem;
+    left: 1.8rem;
     bottom: 0;
     z-index: -1;
   }
@@ -1167,8 +1166,23 @@ h3 {
 }
 
 .prot_test .feedback img {
-  width: 100%;
-  margin: 0.5rem 0 2rem 0;
+  width: 160%;
+  margin: 2rem 0 0 0;
+  transform: translateX(-20%);
+}
+
+.prot_test .feedback .ba {
+  width: 160%;
+  transform: translateX(-20%);
+  display: flex;
+  justify-content: space-around;
+  margin: 0.5rem 0 4rem 0;
+}
+
+.prot_test .feedback span {
+  background-color: rgba(177,203,231,0.5);
+  padding: 0 4rem;
+  border-radius: 10rem;
 }
 
 /* ------ section hifi mocks ------ */
@@ -1192,6 +1206,7 @@ h3 {
   margin: 0 auto;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .hifi_mobile {
@@ -1210,12 +1225,7 @@ h3 {
   margin: 0 auto;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  /* -o-box-shadow:      0px 5px 10px #555;
-  -icab-box-shadow:   0px 5px 10px #555;
-  -khtml-box-shadow:  0px 5px 10px #555;
-  -moz-box-shadow:    0px 5px 10px #555;
-  -webkit-box-shadow: 0px 5px 10px #555;
-  box-shadow:         0px 5px 10px #555; */
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 @media all and (min-width: 781px) and (max-width: 1024px) {
@@ -1231,14 +1241,36 @@ h3 {
 @media all and (min-width: 1025px) {
   .hifi_web {
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 3rem 0 3rem 8%;
+    margin: 3rem 10%;
   }
 
   .hifi_mobile {
     grid-template-columns: repeat(4, 1fr);
-    margin: 3rem 0 3rem 8%;
+    margin: 3rem 10%;
   }
 
+}
+
+.hifi_mocks .col {
+  opacity: 0;
+}
+
+.fade-in-bottom {
+   -webkit-animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+   animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 /* ------ section conclusion ------ */
