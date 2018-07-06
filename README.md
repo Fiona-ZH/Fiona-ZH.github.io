@@ -1,3 +1,3 @@
 # My Portfolio
 
-A show case of my work at Bloc.
+A show case of my work on UX Design Projects.
