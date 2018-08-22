@@ -3,9 +3,9 @@
 }
 
 /* Import fonts*/
-/* @import url('https://fonts.googleapis.com/css?family=Oswald|Playfair+Display:700,900');
-@import url('https://fonts.googleapis.com/css?family=Exo');
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Ubuntu'); */
+@import url('https://fonts.googleapis.com/css?family=Oswald|Playfair+Display:700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri|Hind Siliguri');
 
 :root {
   --yellow: rgba(255,224,109,1);
@@ -14,7 +14,7 @@
 }
 
 html {
-  font-family: 'exo', sans-serif;
+  font-family: 'Hind Siliguri', sans-serif;
   font-size: 10px;
 }
 
@@ -37,7 +37,7 @@ h1 {
   font-family: "Playfair Display", serif;
   font-weight: 600;
   text-transform: uppercase;
-  font-size: 4rem;
+  font-size: 2.4rem;
   text-align: center;
   color: var(--orange);
   padding-top: 6rem;
@@ -45,18 +45,18 @@ h1 {
 }
 
 .heading2 {
-  padding-top: 4rem;
-  padding-bottom: 3rem;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
 }
 
 h2{
-  font-weight: 600;
+  font-weight: 400;
   text-transform: uppercase;
-  font-size: 2.4rem;
-  color: #333;
+  font-size: 4rem;
+  color: #888;
   padding-left: 1rem;
   display: inline-block;
-  transform: translateY(-4px);
+  transform: translateY(1px);
 }
 
 ol {
@@ -121,11 +121,19 @@ i {
   .mob-hide {
     display: none;
   }
+
+  .web-hide {
+    display: block;
+  }
 }
 
 @media all and (min-width: 1025px) {
   .mob-hide {
     display: block;
+  }
+
+  .web-hide {
+    display: none;
   }
 }
 
@@ -230,7 +238,7 @@ header .burger:hover {
 }
 
 .featured__details ul {
-  font-family: 'exo', sans-serif;
+  font-family: 'Hind Siliguri', sans-serif;
   font-size: 1.6rem;
   line-height: 3.2rem;
   text-align: center;
@@ -1398,7 +1406,7 @@ footer .icon--layout img {
 }
 
 footer .copyright {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Hind Siliguri', sans-serif;
   font-size: 1.4rem;
   line-height: 3rem;
   color: rgba(252,238,237,1);
