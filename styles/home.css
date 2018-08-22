@@ -19,9 +19,10 @@
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css?family=Oswald|Playfair+Display:700,900');
 @import url('https://fonts.googleapis.com/css?family=Exo');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 html {
-  font-family: 'exo', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 10px;
 }
 
@@ -189,10 +190,10 @@ header {
 
 .splash__intro h6 {
   font-family: 'Oswald', sans-serif;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 2rem;
   line-height: 3rem;
-  color: var(--purple-light);
+  color: var(--purple-dark);
 }
 
 .splash__intro p {
@@ -510,7 +511,7 @@ header .bkg {
 }
 
 .featured__hero .intro {
-  font-family: 'exo', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.2rem;
@@ -672,7 +673,7 @@ header .bkg {
   }
 
   .layout-l .intro {
-    font-family: 'exo', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 3.2rem;
@@ -717,7 +718,7 @@ header .bkg {
 article {
   width: 100%;
   margin: 0 auto;
-  font-family: 'exo', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 1.6rem;
   line-height: 3.5rem;
   font-weight: 300;
