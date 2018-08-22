@@ -169,7 +169,7 @@ header .burger:hover {
   font-family: 'Montserrat', serif;
   font-size: 1.8rem;
   line-height: 3.2rem;
-  color: rgba(243,221,152,1);
+  color: #FFF;
   text-align: center;
   padding: 1.6rem;
 }
