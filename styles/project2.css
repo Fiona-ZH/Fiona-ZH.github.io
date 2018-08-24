@@ -74,7 +74,7 @@ h5 {
   font-size: 1.8rem;
   font-weight: 600;
   color: var(--grey);
-  text-align: center;
+  text-align: center;text-transform: capitalize;
   padding: 4rem 0 2rem 0;
 }
 
@@ -849,6 +849,12 @@ nav .burger:hover {
   margin-bottom: 4rem;
 }
 
+.uf-s {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}
+
 .treetest {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -884,6 +890,66 @@ nav .burger:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/* --- wf Demo --- */
+
+.wfDemo {
+  width: 94%;
+  margin: 6rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 3rem 2rem 3rem 2rem;
+  border-radius: 2rem;
+  background-image: linear-gradient(#71BEC6 0%, #ACE3DF 40%, #CAEFF8 80%, #FFF 100%);
+}
+
+.wfDemo img {
+  width: 95%;
+  max-width: 250px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media all and (min-width: 781px) and (max-width: 1024px) {
+  .wfDemo {
+    width: 80%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .wfDemo {
+    width: 80%;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 3rem 10%;
+  }
+}
+
+.wfDemo .col {
+  opacity: 0;
+}
+
+.fade-in-bottom {
+   -webkit-animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+   animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 
@@ -922,12 +988,6 @@ nav .burger:hover {
   transform: translate(-50%, -50%);
 }
 
-@media all and (min-width: 1025px) {
-  .logoDemo img {
-    width: 50%;
-  }
-}
-
 .logoPref {
   width: 94%;
   margin: 6rem auto;
@@ -940,15 +1000,7 @@ nav .burger:hover {
 }
 
 @media all and (min-width: 1025px) {
-  .logoPref {
-    width: 72%;
-    padding: 0 2rem 4rem 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 4rem;
-    justify-content: center;
-    align-items: center;
-  }
+
 }
 
 .logoPref img, .logoFinal img {
@@ -961,11 +1013,31 @@ nav .burger:hover {
 }
 
 .logoFinal {
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   padding: 0 2rem 4rem 2rem;
   border-radius: 2rem;
   text-align: center;
+}
+
+@media all and (min-width: 1025px) {
+  .logoDemo img {
+    width: 50%;
+  }
+
+  .logoPref {
+    width: 72%;
+    padding: 0 2rem 4rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 4rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logoFinal {
+    width: 60%;
+  }
 }
 
 .colorDemo {
