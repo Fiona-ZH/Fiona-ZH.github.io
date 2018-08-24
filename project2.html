@@ -554,11 +554,9 @@
 
 
       <a name="branding"></a>
-      <section class="branding">
+      <section class="branding frame-rsp">
         <h1 id="bran_h1"><br>- branding -</h1>
-      </section>
-      <div class="moodboard"></div>
-      <section class="frame-rsp">
+        <img class="moodboard" src="images/project2/moodboardRect.png" alt="moodboard"/>
         <p>In order to create an effective and attractive branding image and tone for the app, it was crucial to determine the target audience based on the early market researches and persona profiles. </p>
         <h5>Mission</h5>
         <p>The mission of our app is to encourage home-cooking by providing an easy and time-saving way to shop for groceries of good quality. People who are interested in or want to get better at cooking but live a fast-paced lifestyle, and people who simply want to enjoy the convenience of online shopping at an affordable price, are our primary target audiences.</p>
@@ -591,36 +589,46 @@
           <img class="bullet_hex" src="images/project2/h2_o.svg"/>
           <h2>Logo</h2>
         </div>
-        <div>
+      </section>
+        <div class="logoDemo">
           <img src="images/project2/logoDisplay.png" alt="yum x finalized logo" />
         </div>
-        <img src="images/project2/logoPref1.png" alt="black and white logo preference test" />
-        <img src="images/project2/logoPref2.png" alt="coloured logo preference test" />
-        <h5>B/W Logos Preference Test</h5>
-        <h5>Coloured Logos Preference Test</h5>
+        <div class="logoPref">
+          <span>
+            <h5>B/W Logos Preference Test</h5>
+            <img class="centered-max" src="images/project2/logoPref1.png" alt="black and white logo preference test" />
+          </span>
+          <span>
+            <h5>Coloured Logos Preference Test</h5>
+            <img class="centered-max" src="images/project2/logoPref2.png" alt="coloured logo preference test" /></span>
+        </div>
+      <section class="frame-rsp">
         <p>The logo evolved through several rounds of iterations based on feedback from Preference Tests. The goal was to create a unique, simple, versatile logo that symbolize the brand identity as an assistant in cooking and grocery shopping.</p>
-        <img src="images/project2/logoFinal.png" alt="Final logo" />
+        <div class="logoFinal">
+          <h5>Finalized YumX Logo</h5>
+          <img src="images/project2/logoFinal.png" alt="Final logo" />
+        </div>
 
         <div class="heading2">
           <img class="bullet_hex" src="images/project2/h2_o.svg"/>
           <h2>Colour Palette</h2>
         </div>
-        <img src="images/project2/colourPalette.png" alt="Colour palette" />
         <p>Colors express emotions. Red and green are the most pleasant colors to boost people’s appetize. The combination is vibrant and energetic. With the green being toned down as the primary color, it establishes a friendly, reliable feeling, as well as a clean look.</p>
+        <img class="centered-max colorDemo" src="images/project2/colourPalette.png" alt="Colour palette" />
 
         <div class="heading2">
           <img class="bullet_hex" src="images/project2/h2_o.svg"/>
           <h2>Typography</h2>
         </div>
         <p>Typeface Oxygen was chosen for both large and small font display. Its geometric round shaped structure resonates with the app logo and provides a clean and minimal look especially for the information-intensive screens. Oxygen is also a sans-serif typeface with a large x-height, which guarantees a good readability on mobile devices.</p>
-        <img src="images/project2/typography-web.png" alt="Colour palette" />
-        <img src="images/project2/typpography-mob.png" alt="Colour palette" />
+        <img class="mob-hide typDemo" src="images/project2/typography-web.png" alt="Colour palette" />
+        <img class="web-hide typDemo" src="images/project2/typpography-mob.png" alt="Colour palette" />
         <a href="https://drive.google.com/open?id=1nHtEQJRq36hY1IrIXRuM8cxZPaDS-BT9" target="_blank" class="btn">view style guide</a>
       </section>
 
 
       <a name="prot_test"></a>
-      <section class="prot_test">
+      <section class="prot_test frame-rsp">
         <h1 id="bran_h1"><br>- Prototyping & Testing -</h1>
         <p>Finally, it was time to add icing on the cake! With all the styles applied and details tuned, ~100 high-fidelity screens were mocked up in Sketch, then exported to InVision to create a clickable prototype for usability testing.</p>
         <p>The goal is to further evaluate whether the color scheme and stylized elements are in harmony with the layout and enhance the usability; if they help convey clear messages and assist users in navigation to complete the tasks.</p>
@@ -632,7 +640,10 @@
         <p>The usability testing includes a scenario and three tasks for users to perform. The tasks still features the five main user flows as tested for the low-fi wireframes.</p>
         <a href="https://drive.google.com/open?id=1xv6ErY2yQO4PlKpj4j96n1TpEPGwY46chC9Wep3CJS8" target="_blank" class="btn">view testing script</a>
         <p>The testing was conducted both in the form of in-person and online interviews, and as a click-through test using the online usability testing platform, Maze. See the video below for one of the usability testing session recordings:</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/iAA40B0SyKA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/embed/iAA40B0SyKA" target="_blank" class="web-hide btn">usability test recording</a>
+      </section>
+        <iframe width="780" height="500" src="https://www.youtube.com/embed/iAA40B0SyKA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="mob-hide testRec"></iframe>
+      <section class="frame-rsp">
         <p>Aside from the major user flows, tasks such as posting photos, using app credits and other features were also tested in Maze with ~15 testing results collected for each round of iteration. Heatmaps and paths generated from the test results helped pinpoint issues on both visual elements and layouts.</p>
 
         <div class="heading2">
@@ -640,45 +651,76 @@
           <h2>Key Findings & Solutions</h2>
         </div>
         <ul>
-          <li>
-            <p>The main design challenge that went through rounds of iterations was the transfer of ingredients from a recipe to Grocery List, then to Shopping Bag for editing. At first, options were given in a notice to stay on current screen after adding ingredients, or go to the destination. It was observed that the notice caused bouncing between screens and determined to be necessary. By removing them, users get to the destination screen immediately without the need for a second thought whether to stay or not.</p>
-            <img src="images/project2/pt1before.png" alt="alert before" />
-            <img src="images/project2/pt1after.png" alt="alert after" />
-            <h5>Deleted alerts</h5>
-            <p>Although the process was made less overwhelming, the concept of Basket, later changed to Shopping Bag for better understanding, still caused confusions. Users had difficulties in understanding where the items will be once added/deleted items, or cancel an order halfway. </p>
-            <p>A tutorial screen was added to help with the confusion, but users tend to jump right out of any instructional modals. So I went back to revisit the in-app purchase user flow while re-imagining the entire shopping process with all the possibilities. It was found that although holding unfinished orders in a Shopping Bag was a function that most of e-commerce sites have, however, in the case of this app, once users decided on the items to buy from the Grocery List, it was more natural to finish the checkout process or cancel the deal all together. So the extra status of saving orders in the Shopping Bag was redundant. Changing it from a ‘physical’ place in the app to a ‘stage’ that only exists right before the checkout process reduced users’ cognitive load.</p>
-            <p>As a result, the in-app purchase flow was simplified after all the iterations. And the test results showed a much better success rate of the task.</p>
-            <img src="images/project2/uf-5purchase.png" alt="purchase user flow before" />
-            <img src="images/project2/uf-5purchase2.png" alt="purchase user flow after" />
-            <h5>before</h5>
-            <h5>after</h5>
-          </li>
-          <li>
-            <p>Because users were unfamiliar with the Pantry feature, the initial attempt was to introduce it with an alert window when adding items for the first time. However, it seemed to interrupt the flow and caused confusion when users stopped to read it and found the content was not related to their immediate tasks. Also it was not very helpful for understanding the Pantry feature because users forget about reading it after finishing their task that didn’t involve using it.</p>
-            <p>That was when I came across an article, in which the author interpreted the Yerkes Dodson Law as “ideal engagement allow or assist in user’s intrinsic motivation. But over-stimuli brings down productivity.” This made me revisit the necessity of the feature of adding items to Pantry from Grocery List and Shopping Bag in the flow. Upon realizing the bonus feature was interrupting user’s immediate goals, I decided to completely take it out. And less struggles were seen on the task.</p>
-            <img src="images/project2/pt2before.png" alt="grocery list screen before" />
-            <img src="images/project2/pt2after.png" alt="grocery list screen after" />
-            <h5>before</h5>
-            <h5>after</h5>
-          </li>
-          <li>
-            <p>When users select stores in the onboarding stage, they were questioning the correlation between map pins and the listed stores. And they thought only one store can be chosen.</p>
-            <p>So I made the following changes: </p>
-            <p>Extra screens were added to show the change of status when users tap on a pin or a store card: A bubble pops up pointing at the store location on the map, the card is highlighted and scrolls to the top of the list. </p>
-            <p>Changing the look of the checkboxes to eliminate the confusion with radio buttons.</p>
-            <img src="images/project2/pt3before.png" alt="find stores screen before" />
-            <img src="images/project2/pt3after.png" alt="find stores screen after" />
-            <h5>before</h5>
-            <h5>after</h5>
-          </li>
-          <li>
-            <p>When the search bar is activated, search histories are displayed on a blank background as shortcuts. Once started typing, the search suggestions were displayed in a dropdown box from the search bar with recipes displaying on the background. During testing, users expected the background recipes to be updated while typing, which was not intended for. So in order to reduce the distraction, all the search background were changed to blank while the search bar is in focus until users press Go to confirm the input. Only then the page will be refreshed with search results.</p>
-            <img src="images/project2/pt4before.png" alt="search screen before" />
-            <img src="images/project2/pt4after.png" alt="search screen after" />
-            <h5>before</h5>
-            <h5>after</h5>
+          <li><p>The main design challenge that went through rounds of iterations was the transfer of ingredients from a recipe to Grocery List, then to Shopping Bag for editing. At first, options were given in a notice to stay on current screen after adding ingredients, or go to the destination. It was observed that the notice caused bouncing between screens and determined to be necessary. By removing them, users get to the destination screen immediately without the need for a second thought whether to stay or not.</p>
           </li>
         </ul>
+      </section>
+      <div class="test-2col">
+        <img src="images/project2/pt1before.png" alt="alert before" />
+        <img src="images/project2/pt1after.png" alt="alert after" />
+        <h5 class="deleteAlert">Deleted alerts</h5>
+      </div>
+      <section class="frame-rsp">
+        <ul>
+          <li>
+            <p>Although the process was made less overwhelming, the concept of Basket, later changed to Shopping Bag for better understanding, still caused confusions. Users had difficulties in understanding where the items will be once added/deleted items, or cancel an order halfway. <br>
+            A tutorial screen was added to help with the confusion, but users tend to jump right out of any instructional modals. So I went back to revisit the in-app purchase user flow while re-imagining the entire shopping process with all the possibilities. It was found that although holding unfinished orders in a Shopping Bag was a function that most of e-commerce sites have, however, in the case of this app, once users decided on the items to buy from the Grocery List, it was more natural to finish the checkout process or cancel the deal all together. So the extra status of saving orders in the Shopping Bag was redundant. Changing it from a ‘physical’ place in the app to a ‘stage’ that only exists right before the checkout process reduced users’ cognitive load.<br>
+            As a result, the in-app purchase flow was simplified after all the iterations. And the test results showed a much better success rate of the task.</p>
+          </li>
+        </ul>
+      </section>
+      <div class="testFlow">
+        <img src="images/project2/uf-5purchase.png" alt="purchase user flow before" />
+        <a href="https://drive.google.com/open?id=1ztewBelmRaPAoBpU9UHGuknUrqcc5w4W" target="_blank" class="btn">Purchase user flow V1</a>
+        <img src="images/project2/uf-5purchase2.png" alt="purchase user flow after" />
+        <a href="https://drive.google.com/open?id=1TCF9jzgfgK4jbNkAz2SOf6V-dT_-2mTc" target="_blank" class="btn">Purchase user flow Final</a>
+      </div>
+
+      <section class="frame-rsp">
+        <ul>
+          <li>
+            <p>Because users were unfamiliar with the Pantry feature, the initial attempt was to introduce it with an alert window when adding items for the first time. However, it seemed to interrupt the flow and caused confusion when users stopped to read it and found the content was not related to their immediate tasks. Also it was not very helpful for understanding the Pantry feature because users forget about reading it after finishing their task that didn’t involve using it.<br>
+            That was when I came across an article, in which the author interpreted the Yerkes Dodson Law as “ideal engagement allow or assist in user’s intrinsic motivation. But over-stimuli brings down productivity.” This made me revisit the necessity of the feature of adding items to Pantry from Grocery List and Shopping Bag in the flow. Upon realizing the bonus feature was interrupting user’s immediate goals, I decided to completely take it out. And less struggles were seen on the task.</p>
+          </li>
+        </ul>
+      </section>
+      <div class="test-2col">
+        <img src="images/project2/pt2before.png" alt="grocery list screen before" />
+        <img src="images/project2/pt2after.png" alt="grocery list screen after" />
+        <h5>before</h5>
+        <h5>after</h5>
+      </div>
+      <section class="frame-rsp">
+        <ul>
+          <li>
+            <p>When users select stores in the onboarding stage, they were questioning the correlation between map pins and the listed stores. And they thought only one store can be chosen.<br>
+            So I made the following changes: <br>
+            Extra screens were added to show the change of status when users tap on a pin or a store card: A bubble pops up pointing at the store location on the map, the card is highlighted and scrolls to the top of the list. <br>
+            Changing the look of the checkboxes to eliminate the confusion with radio buttons.</p>
+          </li>
+        </ul>
+      </section>
+      <div class="test-2col">
+        <img src="images/project2/pt3before.png" alt="find stores screen before" />
+        <img src="images/project2/pt3after.png" alt="find stores screen after" />
+        <h5>before</h5>
+        <h5>after</h5>
+      </div>
+      <section class="frame-rsp">
+        <ul>
+          <li>
+            <p>When the search bar is activated, search histories are displayed on a blank background as shortcuts. Once started typing, the search suggestions were displayed in a dropdown box from the search bar with recipes displaying on the background. During testing, users expected the background recipes to be updated while typing, which was not intended for. So in order to reduce the distraction, all the search background were changed to blank while the search bar is in focus until users press Go to confirm the input. Only then the page will be refreshed with search results.</p>
+          </li>
+        </ul>
+      </section>
+      <div class="test-2col">
+        <img src="images/project2/pt4before.png" alt="search screen before" />
+        <img src="images/project2/pt4after.png" alt="search screen after" />
+        <h5>before</h5>
+        <h5>after</h5>
+      </div>
+
+      <section class="frame-rsp">
         <a href="https://docs.google.com/document/d/129QlG7WKIMIa-irMpJGiLzShZLUzQvSI97Dlm7ZHcyY/edit?usp=sharing" target="_blank" class="btn">see complete testing summary</a>
 
         <div class="heading2">
@@ -692,12 +734,12 @@
           <h2>Marketing Website</h2>
         </div>
         <p>With all the product features, identities, style guide and Hi-Fi prototype ready, the idea of creating a marketing website came up to me. The website will be a place to provide users a preview of app functionalities in a more attractive and interactive way than app stores. It also function as a channel to introduce company’s mission and vision, connect with customers, as well as potential business clients (next stage of the app if time permits).</p>
-        <img src="images/project2/websitePrev.png" alt="website screen shots" />
+        <img class="mktWebsite" src="images/project2/websitePrev.png" alt="website screen shots" />
       </section>
 
 
       <a name="prot_test"></a>
-      <section class="prot_test">
+      <section class="prot_test frame-rsp">
         <h1 id="bran_h1"><br>- Conclusion -</h1>
         <p>It has been a very rewarding journey designing the app from the ground up. Some users from the testing loved the business model introduced in the app. Some commented they’d use it for cooking and would like to try buying groceries with it because it seemed very convenient. Starting from looking up recipes and planning out meals simplified the pre-purchasing stages, and the online checkout process is no stranger to most shoppers. The main challenge of the app was to seamlessly combine them and making it an intuitive experience to assist users achieving their goals, which was significantly improved after rounds of iterations. </p>
         <p>As a testing-intensive project, the design of YumX benefited from the various tools available online. Learning about the theories, strengths and limitations behind the tools helped in selecting the right one to use and in analyzing the results.</p>
@@ -708,32 +750,32 @@
         </div>
         <ul>
           <li>
-            <h6>“Confidence through clarity.” One of the design principles followed by Dropbox design team.</h6>
+            <h6 class="heavy">“Confidence through clarity.” One of the design principles followed by Dropbox design team.</h6>
             <p>To my understanding, the confidence were reflected by two aspects in this design journey: The confidence users have when trying to complete a task, which is gained from a clear layout of information and a well structured user flow. Another is the confidence in the test results, which is gained with the prerequisite of clearly stated questions or instructions. When a result is not as expected, both the design and the experiment itself need to be reviewed to find the root cause of an issue.</p>
           </li>
           <li>
-            <h6>“Flow through focus.” Yet another design principle by Dropbox.</h6>
+            <h6 class="heavy">“Flow through focus.” Yet another design principle by Dropbox.</h6>
             <p>Users need motivations to stay focused and move towards a goal, which is very often the satisfaction of placing an order. In YumX’s case, successfully placing an order. Any other elements or features become distractions and reduce productivity if they are not related to the immediate task. They are extra information to process and increase users’ cognitive load, which, no matter how exciting and useful, should be excluded from the flow.</p>
           </li>
           <li>
-            <h6>UX copy is not ‘Icing on the Cake’.</h6>
+            <h6 class="heavy">UX copy is not ‘Icing on the Cake’.</h6>
             <p>I kept being reminded of the importance of UX copy throughout the process, starting from defining the characteristics of the brand, determining what’s attractive and motivative for the onboarding process, to the accuracy of CTA buttons and effectiveness of instructions, etc. UX copies are definitely not something to be considered only after having all the visuals, but rather the strategic layer woven into each design stage that could affect the overall user experience.</p>
           </li>
           <li>
-            <h6>Fight the Ikea Effect.</h6>
+            <h6 class="heavy">Fight the Ikea Effect.</h6>
             <p>I guess there is a fight every designer has had with the pushback from testing results. Art is subjective, while design is objective. Design with data and keep moving fast through iterations kept me from getting too attached to the designs and move forward.</p>
           </li>
         </ul>
-      </section>
 
       <div class="btm_links">
         <a style="color: rgba(85,135,135,1);" href="index.html"><span>- Homepage -</span>
         </a>
         <a style="color: rgba(85,135,135,1);" href="mailto:fiona.feifei.zhang@gmail.com"><span>- Contact Me -</span>
         </a>
-        <a style="color: rgba(85,135,135,1);" href=""><span>- Next Project -</span>
+        <a style="color: rgba(85,135,135,1);" href="project1.html"><span>- Next Project -</span>
         </a>
       </div>
+    </section>
 
       <footer>
         <div class="footer--wrapper">
