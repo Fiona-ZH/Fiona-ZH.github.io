@@ -29,7 +29,7 @@ function stickyNav() {
 // ------ section indicator for max-width 1024px ------
 
 var projects = document.getElementById("navprojects");
-var featuredHero = document.getElementById("hero");
+var featuredHero = document.getElementsByClassName("featured__hero");
 var proPos = (document.getElementById("proPos").offsetTop * 0.95);
 
 var about = document.getElementById("navabout");
@@ -42,11 +42,11 @@ function currentSele(){
   if(window.pageYOffset >= proPos && window.pageYOffset < aboutPos) {
     projects.classList.add("curr-sele");
     projects.classList.add("nav__dot--focus-d");
-    featuredHero.classList.add("fade-in-right");
+    featuredHero[0].classList.add("fade-in-right");
+    featuredHero[1].classList.add("fade-in-right");
   } else {
     projects.classList.remove("curr-sele");
     projects.classList.remove("nav__dot--focus-d");
-    featuredHero.classList.remove("fade-in-right");
   }
 
   if(window.pageYOffset >= aboutPos && window.pageYOffset < connPos) {
