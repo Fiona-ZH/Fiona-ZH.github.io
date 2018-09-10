@@ -11,17 +11,17 @@ window.onscroll = function(){
 var navbar = document.getElementById("navbar");
 var moveDown = document.getElementById("featured_title");
 // var sticky = navbar.offsetTop;
-var sticky = (0.95 * window.innerHeight);
+var sticky = (0.9 * window.innerHeight);
 
 
 function stickyNav() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
     navbar.classList.remove("top_hidden")
-    moveDown.classList.add("move_down")
+    // moveDown.classList.add("move_down")
   } else {
     navbar.classList.remove("sticky");
-    moveDown.classList.remove("move_down")
+    // moveDown.classList.remove("move_down")
     navbar.classList.add("top_hidden")
   }
 }
