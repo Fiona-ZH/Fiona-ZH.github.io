@@ -536,7 +536,7 @@ header .bkg {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
   font-size: 4rem;
-  color: rgba(243,221,152,1);
+  color: #000;
   display: block;
   text-align: center;
   padding-top: 8rem;
@@ -550,9 +550,9 @@ header .bkg {
 .featured__hero .intro {
   font-family: 'Hind Siliguri', sans-serif;
   font-size: 1.6rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 2.2rem;
-  color: #fff;
+  color: #000;
   text-align: center;
   display: block;
   padding-bottom: 3rem;
@@ -885,7 +885,7 @@ article .sub-title {
 }
 
 .connect__lets, .connect__thanks, .connect p, .connect__social_media, .connect__catch {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 }
 
