@@ -345,6 +345,7 @@ header .bkg {
   nav div {
     width: 90%;
     margin: 0 auto;
+    padding-top: 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -352,7 +353,6 @@ header .bkg {
 
   nav img {
     height: 3rem;
-    margin: 1rem 0 0 1.6rem;
     display: inline-block;
     float: left;
   }
@@ -605,7 +605,6 @@ header .bkg {
 .layout-l {
   width: 80%;
   margin: 0 auto;
-  padding-top: 10rem;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -713,6 +712,7 @@ header .bkg {
   .featured .layout-l {
     width: 30%;
     margin-left: 15%;
+    padding-top: 10rem;
     display: flex;
     flex-flow: column;
     align-items: start;
