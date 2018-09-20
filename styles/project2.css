@@ -51,6 +51,8 @@ h1 {
 .heading2 {
   padding-top: 4rem;
   padding-bottom: 2rem;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .bullet_hex {
@@ -193,7 +195,7 @@ ol li, ul li {
 .test-2col, .test-3col {
   width: 94%;
   margin: 0 auto;
-  padding-top: 4rem;
+  padding-bottom: 4rem;
   margin-bottom: 4rem;
   border-radius: 2rem;
   background-color: var(--bkg);
@@ -643,15 +645,15 @@ nav .burger:hover {
   width: calc(64%/100*90);
 }
 
-.ur__result5__graph .bar-3 {
+.ur__result3__graph .bar-3 {
   width: calc(60%/100*90);
 }
 
-.ur__result5__graph .bar-4 {
+.ur__result3__graph .bar-4 {
   width: calc(60%/100*90);
 }
 
-.ur__result5__graph .bar-5 {
+.ur__result3__graph .bar-5 {
   width: calc(52%/100*90);
 }
 
@@ -770,8 +772,12 @@ nav .burger:hover {
 }
 
 /* ---- ideation ---- */
+.h2-long {
+  width: 80%;
+}
+
 .persona__header {
-  width: 60%;
+  width: 100%;
   margin: 1.5rem auto;
   display: grid;
   grid-template-rows: auto;
@@ -790,6 +796,12 @@ nav .burger:hover {
   line-height: 3rem;
   padding-right: 1.6rem;
   align-self: center;
+}
+
+.persona__header .quote {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .persona-1 p, .persona-2 p, .persona-3 p {
@@ -857,8 +869,9 @@ nav .burger:hover {
 
 .treetest {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 4rem;
+  grid-template-columns: minmax(100px, 70%);
+  grid-row-gap: 4rem;
+  justify-content: center;
 }
 
 .treetest img {
@@ -1063,7 +1076,7 @@ nav .burger:hover {
   width: 94%;
   border-radius: 2rem;
   margin: 6rem auto;
-  padding: 4rem 1rem 4rem 1rem;
+  padding: 4rem 1rem;
   background-color: var(--bkg);
 }
 
