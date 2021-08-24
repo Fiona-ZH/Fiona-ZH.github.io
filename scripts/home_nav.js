@@ -45,6 +45,7 @@ function currentSele(){
     featuredHero[0].classList.add("fade-in-right");
     featuredHero[1].classList.add("fade-in-right");
     featuredHero[2].classList.add("fade-in-right");
+    featuredHero[3].classList.add("fade-in-right");
   } else {
     projects.classList.remove("curr-sele");
     projects.classList.remove("nav__dot--focus-d");
