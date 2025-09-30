@@ -544,6 +544,12 @@ header .bkg {
   margin-bottom: 4rem;
 }
 
+.qsbslp__hero {
+  max-width: 100vw;
+  background-image: linear-gradient(#FFF 0%, #FFF 5%, #B4A2DA 5%, #D7CFE9 30%, #FFF8DF 60%, #FFF 95%);
+  margin-bottom: 4rem;
+}
+
 .featured__hero .name {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
@@ -587,6 +593,11 @@ header .bkg {
 .project2-img {
   width: 65%;
   max-width: 500px;
+}
+
+.project3-img {
+  width: 90%;
+  max-width: 1000px;
 }
 
 .featured__hero img {
@@ -861,10 +872,17 @@ article .sub-title {
   .about_me__container {
     width: 100%;
     background-image: url("/images/home/about_profile-mob.png");
-    background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  @supports (-webkit-touch-callout: none) {
+  .about_me__container {
+    background-attachment: scroll;
+    }
   }
 
   .about_me__title {
@@ -881,7 +899,7 @@ article .sub-title {
   article {
     width: 70%;
     padding: 6rem 10vw;
-    margin: 70vh auto;
+    margin: 20vh auto;
     border-radius: 2rem;
     background-color: rgba(33,22,53,0.95);
   }

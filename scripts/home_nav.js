@@ -42,10 +42,16 @@ function currentSele(){
   if(window.pageYOffset >= proPos && window.pageYOffset < aboutPos) {
     projects.classList.add("curr-sele");
     projects.classList.add("nav__dot--focus-d");
-    featuredHero[0].classList.add("fade-in-right");
-    featuredHero[1].classList.add("fade-in-right");
-    featuredHero[2].classList.add("fade-in-right");
-    featuredHero[3].classList.add("fade-in-right");
+    for (let i = 0; i < featuredHero.length; i++) {
+  featuredHero[i].classList.add("fade-in-right");
+}
+  //featuredHero[0].classList.add("fade-in-right");
+  //featuredHero[1].classList.add("fade-in-right");
+  // featuredHero[2].classList.add("fade-in-right");
+  //featuredHero[3].classList.add("fade-in-right");
+  //featuredHero[4].classList.add("fade-in-right");
+  //featuredHero[5].classList.add("fade-in-right");
+  //featuredHero[6].classList.add("fade-in-right");
   } else {
     projects.classList.remove("curr-sele");
     projects.classList.remove("nav__dot--focus-d");
