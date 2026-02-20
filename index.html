@@ -1,14 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Fiona Zhang</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" type="text/css" href="styles/home.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Exo|Oswald|Playfair+Display:400,900" rel="stylesheet">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiona Zhang's Portfolio</title>
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -17,256 +12,342 @@
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#291e41">
     <meta name="msapplication-TileColor" content="#291e41">
     <meta name="theme-color" content="#ffffff">
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  </head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- style -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
 
-  <body>
-    <header>
-      <a name="top"></a>
-      <div class="splash">
-        <div class="splash__logo_wrap">
-          <img src="images/home/logo.svg" alt="logo of fiona zhang" />
-        </div>
-        <div class="splash__line"></div>
-        <div class="splash__menu_wrap">
-          <a href="#featured"><h4 class="line">projects</h4></a>
-          <a href="#about"><h4 class="line">about</h4></a>
-          <a href="#connect"><h4>connect</h4></a>
-        </div>
-        <div>
-          <h1>Hello<span style="color: rgba(252,153,158,1);"> -</span></h1>
-        </div>
-        <div class="splash__intro">
-          <h6>I’m Fiona, a Product Designer digging the complex workflows in regulated domains.  <br> I enjoy scaling user experiences and driving measurable business outcomes through systems thinking and cross-functional collaboration.
-          </h6>
-        </div>
+        :root {
+            --neon-pink: #f252c5;
+            --navy-deep: #020617;
+            --off-white: #f1f5f9;
+            --transition-speed: 0.6s;
+        }
 
-      </div>
-      <img class="bkg" src="images/home/landscape_copy2.png" />
-      <div class="splash__more">
-        <img/>
-      </div>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: var(--navy-deep);
+            color: var(--off-white);
+            overflow-x: hidden;
+        }
 
-    </header>
+        /* Entry Animations */
+        @keyframes spanOut {
+            0% { letter-spacing: -0.5em; opacity: 0; filter: blur(12px); transform: scale(0.95); }
+            100% { letter-spacing: -0.05em; opacity: 1; filter: blur(0); transform: scale(1); }
+        }
 
-    <nav class="top_hidden fade-in-left fade-in-top" id="navbar">
-      <div>
-        <a href="#top">
-          <div class="nav__dot"><img src="images/home/logo.svg"/></div>
-        </a>
-        <a href="#featured">
-          <div id="navprojects" class="nav__dot"><h4 >projects</h4></div>
-        </a>
-        <a href="#about">
-          <div id="navabout" class="nav__dot"><h4 >about</h4></div>
-        </a>
-        <a href="#connect">
-          <div id="navconnect" class="nav__dot"><h4 >connect</h4></div>
-        </a>
-      </div>
+        @keyframes fadeInSlide {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .animate-title { animation: spanOut 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .animate-fade-up { opacity: 0; animation: fadeInSlide 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards; }
+        .animate-nav-entry { opacity: 0; animation: fadeInSlide 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1s forwards; }
+
+        /* Highlight Effect */
+        .text-highlight {
+            position: relative;
+            display: inline-block;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .text-highlight::after {
+            content: '';
+            position: absolute;
+            left: -2px;
+            right: -2px;
+            bottom: 2px;
+            height: 40%;
+            background-color: rgba(242, 82, 197, 0.25);
+            z-index: -1;
+            transition: height 0.3s ease;
+        }
+        .text-highlight:hover::after {
+            height: 100%;
+        }
+
+        /* Shared Navigation Styles */
+        .side-nav {
+            position: fixed;
+            z-index: 40;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 40px;
+            gap: 40px;
+            background: rgba(2, 6, 23, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-link {
+            font-size: 0.75rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: rgba(255, 255, 255, 0.4);
+            transition: all 0.4s ease;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--neon-pink);
+            text-shadow: 0 0 15px rgba(242, 82, 197, 0.5);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @keyframes calmPulse {
+            0% { transform: translate(-50%, -50%) scale(1); opacity: 0.1; }
+            50% { transform: translate(-50%, -50%) scale(1.4); opacity: 0.2; }
+            100% { transform: translate(-50%, -50%) scale(1); opacity: 0.1; }
+        }
+
+        .calm-pulse {
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 800px;
+            height: 800px;
+            background: var(--neon-pink);
+            border-radius: 50%;
+            filter: blur(160px);
+            z-index: 10;
+            transform: translate(-25%, -50%);
+            animation: calmPulse 10s cubic-bezier(0.33, 1, 0.68, 1) infinite;
+        }
+
+        .wireframe-placeholder {
+            position: relative;
+            overflow: hidden;
+            background: #1e293b;
+            min-height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.5s ease;
+        }
+
+        /* Custom Cursor */
+        .cursor-dot {
+            width: 8px; height: 8px; background: var(--neon-pink);
+            position: fixed; pointer-events: none; border-radius: 50%; z-index: 999;
+            box-shadow: 0 0 15px var(--neon-pink);
+            transform: translate(120%, 150%);
+        }
+
+        /* Fluid Typography for Splash */
+        .fluid-title {
+            font-size: clamp(4.5rem, 12vw, 14rem);
+        }
+
+        /* Outline text helper */
+        .text-outline-sm {
+            -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="custom-cursor" class="cursor-dot"></div>
+
+    <!-- Section Navigation -->
+    <nav class="side-nav animate-nav-entry">
+        <a href="#splash" class="nav-link active">Intro</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
     </nav>
 
-    <main>
-      <a name="featured"></a>
-      <!-- Portfolio Contact Mgmt -->
-      <section class="featured" id="proPos">
-        <div class="layout-l-wrapper">
-          <div class="featured__hero mv__hero">
-            <span class="name .project2-name">Reimagine Tender Offer</span>
-            <span class="intro project2-intro">Define and deliver a scalable user experience that provides real-time visibility into tender offers, reduces manual operational overhead, and establishes a foundation for self-serve, product-led liquidity workflows.</span>
-            <span class="hero-img project3-img"><img src="images/home/image_CINCTO_hero.png" alt="Carta Fund Admin offering website"/></span>
-          </div>
-          <div class="layout-l">
-            <span class="name">Reimagine Tender Offer</span>
-            <span class="intro">Define and deliver a scalable user experience that provides real-time visibility into tender offers, reduces manual operational overhead, and establishes a foundation for self-serve, product-led liquidity workflows.</span>
-            <div class="featured__role">Product Design | UX Vision & Design </div>
-            <div class="featured__intro">As a strategic IC, I worked on the UX vision, phased delivery planning, and led end-to-end product, UX, and UI design through handoff—driving daily issuer usage during tenders, enabling scale with a lean service team, and eliminating 80% of manual tooling. <!-- <br> &#128274 NDA-protected.-->
+    <main id="content-render">
+        <!-- Optimized Splash -->
+        <section id="splash" class="min-h-screen relative flex flex-col justify-end overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#020617] to-[#01040a] z-10"></div>
+            <div class="calm-pulse"></div>
+            
+            <div class="max-w-7xl mx-auto w-full px-8 md:px-20 relative z-20 pb-20 md:pb-32">
+                <div class="mb-12">
+                    <span class="text-[#f252c5] font-bold tracking-[0.3em] uppercase mb-6 block animate-fade-up text-xs md:text-sm">Fiona Zhang / Canada / Remote</span>
+                    <h1 class="fluid-title font-black uppercase leading-[0.8] tracking-tighter text-white animate-title">
+                        Empirical<br><span class="text-outline" style="-webkit-text-stroke: 2px rgba(255,255,255,0.25); color: transparent;">Intuition</span>
+                    </h1>
+                </div>
+                
+                <div class="flex flex-col md:flex-row justify-between items-end gap-12 animate-fade-up">
+                    <p class="max-w-2xl text-xl md:text-2xl font-light leading-relaxed text-white/50">
+                        A <span class="text-highlight">first-principles designer</span> translating complex problems and human motivations into intuitive experiences and business outcomes.
+                    </p>
+                </div>
             </div>
-            <!-- <a class="view_casestudy" href="mailto:fiona.feifei.zhang@gmail.com">
-            Contact me</a> -->
-             <a class="view_casestudy" href="https://drive.google.com/file/d/18RhadrxwPyU_8afYN6amSL5e8H0nGjdq/view?usp=sharing">
-            view case study</a>
-          </div>
-        </div>
-      </section>
-      <!-- QSBS Statement -->
-      <section class="featured">
-        <div class="layout-l-wrapper">
-          <div class="featured__hero qsbslp__hero">
-            <span class="name">QSBS Statement for Investors</span>
-            <span class="intro project2-intro">Design a structured, scalable QSBS intake experience that captures the right financial information upfront, reduces manual follow-ups, and enables faster, more reliable delivery across Carta.</span>
-            <span class="hero-img project3-img"><img src="images/home/image_qsbslp_hero.png" alt="Carta QSBS offering website"/></span>
-          </div>
-          <div class="layout-l">
-            <span class="name">Financials for QSBS</span>
-            <span class="intro">Design a structured, scalable QSBS intake experience that captures the right financial information upfront, reduces manual follow-ups, and enables faster, more reliable delivery across Carta.</span>
-            <div class="featured__role"> UX/UI Design </div>
-            <div class="featured__intro">The redesigned experience drove a 55% increase in deliveries, reduced the backlog by 70%, and cut average time to delivery by 75%. About 80% of customers now reach review-ready status without manual intervention. <!-- <br> &#128274 NDA-protected.-->
-            </div>
-            <!-- <a class="view_casestudy" href="mailto:fiona.feifei.zhang@gmail.com">
-            Contact me</a> -->
-             <a class="view_casestudy" href="https://drive.google.com/file/d/1YeEqNzdoSTwLToDkR5bEJ6XgDaG--OkR/view?usp=sharing">
-            view case study</a>
-          </div>
-        </div>
-      </section>
-      <!-- Mastery View -->
-      <section class="featured">
-        <h2 id="featured_title"></h2>
-        <div class="layout-l-wrapper">
-          <div class="featured__hero mv__hero" id="hero">
-            <span class="name project2-name">Mastery Gradebook</span>
-            <span class="intro project2-intro">A powerful tool that enables instructors to provide personalized interventions and make continuous improvement on course content by monitor the achievement level of learning outcomes of the whole class as well as individual learners.</span>
-            <span class="hero-img"><img src="images/home/image_ma_hero2.png" alt="Mastery gradebook page showing individual learner's outcome achievements and class distribution"/></span>
-          </div>
-          <div class="layout-l">
-            <span class="name">Mastery Gradebook</span>
-            <span class="intro">A powerful tool that enables instructors to provide personalized interventions and make continuous improvement on course content by monitor the achievement level of learning outcomes of the whole class.</span>
-            <div class="featured__role"> Product Design | UX/UI Design </div>
-            <div class="featured__intro">Designer of the product from concept to launch. Conducted explorative user research, design exploration, stakeholder review, design critique, usability testing, and accessibility testing, with the goal of a useful, accessible, and delightful experience in mind.
-            </div>
-            <a class="view_casestudy" href="MV_holder.html">
-            View Case Study</a>
-          </div>
-        </div>
-      </section>
-      <!-- Self-Serve Analytics -->
-      <section class="featured">
-        <div class="layout-l-wrapper">
-          <div class="featured__hero ssa__hero">
-            <span class="name">Self-Serve Analytics</span>
-            <span class="intro project2-intro">A data analytics solution designed to enable educators with various levels of data analysis skills to benefit from their own teaching and learning data right within Brightspace®.</span>
-            <span class="hero-img project2-img"><img src="images/home/image_ssa_hero.png" alt="Self-Serve Analytics launch screen, onboarding page, and report template dashboard"/></span>
-          </div>
-          <div class="layout-l">
-            <span class="name">Self-Serve Analytics</span>
-            <span class="intro">A data analytics solution for educators with various levels of data analysis skills to benefit from teaching and learning data right within Brightspace®.</span>
-            <div class="featured__role"> Product Design | UX/UI Design </div>
-            <div class="featured__intro"> Designed the end-to-end experience for data analysts and report consumers to easily access and share insights from Brightspace® learning data through a third-party BI tool integration.<br>
-              <ul>
-                <li>• Mapped user personas and journeys to identify pain points and design opportunities</li>
-                <li>• Conducted system analysis to evaluate experience gaps and inform the choice of integration partner</li>
-                <li>• Defined user flows and service blueprints to align user interactions with backend systems</li>
-              </ul>
-            </div>
-            <a class="view_casestudy" href="SSA_holder.html">View Case Study</a>
-            <!-- <a class="view_casestudy" href="mailto:fiona.feifei.zhang@gmail.com">
-            Contact Me</a> -->
-          </div>
-        </div>
-      </section>
-      <!-- YUMX -->
-      <section class="featured">
-        <div class="layout-l-wrapper">
-          <div class="featured__hero project2__hero">
-            <span class="name project2-name">YUMX</span>
-            <span class="intro project2-intro">A place to find great recipes, get groceries delivered, and share accomplishments with the community.</span>
-            <span class="hero-img project2-img"><img src="images/project2/img_device-web.png" alt="Yum X mobile interface showcase"/></span>
-          </div>
-          <div class="layout-l">
-            <span class="name project2-name">YUMX</span>
-            <span class="intro">A place to find great recipes, get groceries delivered, and share accomplishments with the community.</span>
-            <div class="featured__role"> Product Design | UX/UI Design | Branding </div>
-            <div class="featured__intro"> YumX is an E-Commerce mobile application. Its goal is to encourage home-cooking and support local stores by providing a user-friendly experience of getting cooking inspirations and shopping groceries online.
-            </div>
-            <a class="view_casestudy" href="project2.html">
-            view case study</a>
-          </div>
-        </div>
-      </section>
-      <!-- HIVE -->
-      <section class="featured">
-        <div class="layout-l-wrapper">
-          <div class="featured__hero">
-            <span class="name">HIVE</span>
-            <span class="intro">The place to harness insperations, <br> share your ideas, and make them heard.</span>
-            <span class="hero-img"><img src="images/home/hifi-mock.png" alt="HIVE desktop and mobile interface showcase"/></span>
-          </div>
-          <div class="layout-l">
-            <span class="name">HIVE</span>
-            <span class="intro">The place to harness insperations, share your ideas, and make them heard.</span>
-            <div class="featured__role"> UX/UI Design | Branding </div>
-            <div class="featured__intro"> HIVE is a lightweight personal cloud storage application, aiming at providing versatile storing and sharing solutions to the group of people who are creative, collaborative, and have a fast-paced lifestyle.
-            </div>
-            <a class="view_casestudy" href="project1.html">
-            view case study</a>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <a name="about"></a>
-      <section class="about_me" id="aboutPos">
-        <div class="about_me__wrapper">
-          <img class="profile" src="images/home/about_profile-mob.png" alt="my profile photo"/>
-        </div>
-        <div class="about_me__container">
-          <div class="content_box">
-            <article>
-              <div class="about_me__title">ABOUT ME
-              </div>
-              <span class="line"></span>
-              <span>I’m a Product Designer with a background in engineering and a deep commitment to human-centered design. My unconventional path—from scientific research to product design—taught me to approach challenges with analytical rigor while staying adaptable, a mindset that fuels continuous learning and growth.
-              </span>
-              <div class="sub-title">Crafting impactful experiences</div>
-              <span>Over the past seven years, I’ve designed and launched intuitive digital products across diverse industries, bringing creativity, technology, and business needs into alignment. I see design not as a static discipline, but as a process of constant discovery.
-              </span>
-              <div class="sub-title">My design philosophy</div>
-              <span>Leveraging AI as a mindset has become central to my practice—it extends creativity, accelerates exploration, and helps uncover new possibilities. For me, great design is about more than delivering seamless experiences; it’s about empowering teams to think differently and creating solutions that genuinely improve people’s lives.
-            </article>
-            <div class="more">
-              <img class="more" src="images/home/dotted-line--pink.svg" />
+        <!-- Projects Section -->
+        <section id="projects" class="py-40 px-8 relative z-20">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex items-baseline gap-4 mb-32">
+                    <h2 class="text-8xl font-black tracking-tighter text-white uppercase">Projects</h2>
+                    <div class="h-1 flex-grow bg-white/10 relative">
+                        <div class="absolute left-0 top-0 h-full bg-[#f252c5] w-24"></div>
+                    </div>
+                </div>
+
+                <div class="space-y-64">
+                    <!-- Project 01 -->
+                    <div class="grid grid-cols-12 gap-12 items-center group">
+                        <div class="col-span-12 md:col-span-8 overflow-hidden rounded-2xl glass-panel p-4">
+                            <div class="wireframe-placeholder min-h-[600px] rounded-xl group-hover:scale-[1.01] transition-transform duration-700">
+                                <img src="images/project-cover/cover_CINCTO.png" alt="Carta Tender Offer website"/>
+                            </div>
+                        </div>
+                        <div class="col-span-12 md:col-span-4 space-y-6">
+                            <span class="text-[#f252c5] font-mono tracking-widest uppercase text-xs">Fintech / Carta / 2024</span>
+                            <h3 class="text-5xl font-bold leading-tight text-white">Reimagine Tender Offer</h3>
+                            <p class="text-white/40 text-lg font-light">Conceptualized and delivered a scalable experience that provides real-time visibility into tender offers, reduces manual operational overhead, and establishes a foundation for self-serve, product-led liquidity workflows.</p>
+                            <a href="https://drive.google.com/file/d/18RhadrxwPyU_8afYN6amSL5e8H0nGjdq/view?usp=sharing" class="inline-block px-8 py-3 border border-[#f252c5] text-[#f252c5] rounded-full hover:bg-[#f252c5] hover:text-white transition-all uppercase text-xs font-bold tracking-widest" >View Case Study</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 02 -->
+                    <div class="grid grid-cols-12 gap-12 items-center group">
+                        <div class="col-span-12 md:col-span-4 order-2 md:order-1 space-y-6">
+                            <span class="text-[#f252c5] font-mono tracking-widest uppercase text-xs">Fintech / Carta / 2025</span>
+                            <h3 class="text-5xl font-bold leading-tight text-white">Financials for QSBS</h3>
+                            <p class="text-white/40 text-lg font-light">Crafted a structured, scalable intake experience that drove a 55% increase in deliveries, reduced the backlog by 70%, and cut average time to delivery by 75%.</p>
+                            <a href="https://drive.google.com/file/d/1YeEqNzdoSTwLToDkR5bEJ6XgDaG--OkR/view?usp=sharing" class="inline-block px-8 py-3 border border-[#f252c5] text-[#f252c5] rounded-full hover:bg-[#f252c5] hover:text-white transition-all uppercase text-xs font-bold tracking-widest">View Case Study</a>
+                        </div>
+                        <div class="col-span-12 md:col-span-8 order-1 md:order-2 overflow-hidden rounded-2xl glass-panel p-4">
+                            <div class="wireframe-placeholder min-h-[600px] rounded-xl group-hover:scale-[1.01] transition-transform duration-700">
+                                <img src="images/project-cover/cover_QSBS_fin.png" alt="Carta QSBS website"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 03 -->
+                    <div class="grid grid-cols-12 gap-12 items-center group">
+                        <div class="col-span-12 md:col-span-8 overflow-hidden rounded-2xl glass-panel p-4">
+                            <div class="wireframe-placeholder min-h-[600px] rounded-xl group-hover:scale-[1.01] transition-transform duration-700">
+                                <img src="images/project-cover/cover_MV.png" alt="Brightspace Mastery View feature"/>
+                            </div>
+                        </div>
+                        <div class="col-span-12 md:col-span-4 space-y-6">
+                            <span class="text-[#f252c5] font-mono tracking-widest uppercase text-xs">EdTech / D2L / 2020</span>
+                            <h3 class="text-5xl font-bold leading-tight text-white">Mastery Gradebook</h3>
+                            <p class="text-white/40 text-lg font-light">Led the end to end design of a centralized assessment dashboard that transformed fragmented grading data into a visual mastery map, enabling educators to identify learning gaps in real-time. This redesign streamlined the feedback loop for millions of users, driving deeper engagement with personalized learning paths.</p>
+                            <a href="https://drive.google.com/file/d/1RDwzKP4PNoH-l6u9qjKkivmw8LqsBReh/view?usp=sharing" class="inline-block px-8 py-3 border border-[#f252c5] text-[#f252c5] rounded-full hover:bg-[#f252c5] hover:text-white transition-all uppercase text-xs font-bold tracking-widest">View Case Study</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 04 -->
+                    <div class="grid grid-cols-12 gap-12 items-center group">
+                        <div class="col-span-12 md:col-span-4 order-2 md:order-1 space-y-6">
+                            <span class="text-[#f252c5] font-mono tracking-widest uppercase text-xs">EdTech / D2L / 2019</span>
+                            <h3 class="text-5xl font-bold leading-tight text-white">Self-serve Analytics</h3>
+                            <p class="text-white/40 text-lg font-light">Led the design of a visual reporting builder that empowers educators to build custom reports without needing the technical expertise to query fragmented LMS data. This initiative transformed complex raw datasets into a user-friendly 'drag-and-drop' interface, significantly lowering the barrier for data-driven decision-making across K-12 and Higher Ed institutions.</p>
+                            <a href="https://drive.google.com/file/d/1yotzDVaIgZpQDd_b3C5cpsyJKHrVogBQ/view?usp=sharing" class="inline-block px-8 py-3 border border-[#f252c5] text-[#f252c5] rounded-full hover:bg-[#f252c5] hover:text-white transition-all uppercase text-xs font-bold tracking-widest">View Case Study</a>
+                        </div>
+                        <div class="col-span-12 md:col-span-8 order-1 md:order-2 overflow-hidden rounded-2xl glass-panel p-4">
+                            <div class="wireframe-placeholder min-h-[600px] rounded-xl group-hover:scale-[1.01] transition-transform duration-700">
+                                <img src="images/project-cover/cover_SSA.png" alt="Brightspace Self-Serve Analytics feature"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <a name="connect"></a>
-      <section class="connect" id="connPos">
-        <div class="connect__lets">let's connect</div>
-        <p>Thanks for stopping by!<br>
-        Check out my <a  href="https://drive.google.com/file/d/1ukppGrj-gVsWtoSu8hFj7Xfy5Bqliztu/view?usp=drive_link" target="_blank" class="resume">resume</a> and let's connect if you like to chat about my work or discuss UX design.</p>
-        <ul class="connect__social_media">
-          <li class="email">
-            <a href="mailto:fiona.feifei.zhang@gmail.com">
-              <img class="icon" src="images/home/icon_mail--pink.svg" alt=""/>
-              <span class="name">email</span>
-            </a>
-          </li>
-          <li class="linkedin">
-            <a href="https://www.linkedin.com/in/fiona-feifei-zhang" target="_blank">
-              <img class="icon" src="images/home/icon_linkedin--pink.svg" alt=""/>
-              <span class="name">linkedin</span>
-            </a>
-          </li>
-          <li class="github">
-            <a  href="https://github.com/Fiona-ZH" target="_blank">
-              <img class="icon" src="images/home/icon_github--pink.svg" alt=""/>
-              <span class="name">github</span>
-            </a>
-          </li>
-        </ul>
-        <p class="connect__catch">If you’re around Waterloo CA, I’m always down for a coffee and a good chat — espresso yourself! Not nearby? A virtual coffee works just as well. &#9749;<span style="color: rgba(78,60,97,1)"></span></p>
-      </section>
+        <!-- About Section -->
+        <section id="about" class="py-40 px-8 relative z-20">
+            <div class="max-w-7xl mx-auto">
+                <!-- Styled Section Title -->
+                <div class="flex items-baseline gap-4 mb-32">
+                    <h2 class="text-8xl font-black tracking-tighter text-white uppercase">About <span class="text-[#f252c5]">Me</span></h2>
+                    <div class="h-1 flex-grow bg-white/10 relative">
+                        <div class="absolute left-0 top-0 h-full bg-[#f252c5] w-24"></div>
+                    </div>
+                </div>
 
-      <footer>
-        <!-- <div class="quote">“I want to touch people with my art. I want them to say ‘he feels deeply, he feels tenderly.’”<br> -- Vincent Van Gogh
-        </div> -->
-        <div class="copyright">© 2026 All Rights Reserved <br> Designed and Developed by <span style="color: rgba(252,153,158,1)"> Fiona Zhang</span> with &#10024 and &#128156; </div>
-      </footer>
+                <!-- Circular Portrait & Text Alignment -->
+                <div class="flex flex-col md:flex-row gap-20 items-center md:items-start justify-center">
+                    <!-- Fixed Portrait Masking -->
+                    <div class="w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
+                        <div class="glass-panel p-1 rounded-full relative w-full h-full overflow-hidden">
+                            <div class="absolute inset-0 border border-[#f252c5]/30 rounded-full z-10 pointer-events-none"></div>
+                            <!-- Image container with strict masking -->
+                            <div class="w-full h-full rounded-full overflow-hidden bg-[#1e293b] flex items-center justify-center">
+                                <img src="images/profile.png" alt="profile photo" class="h-full w-auto max-w-none">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Content block with max-width for readability -->
+                    <div class="w-full max-w-2xl">
+                        <p class="text-lg md:text-xl font-light text-white/80 leading-[1.8]">
+                            I didn’t take the traditional path to design. My journey began in scientific research, where I learned that <span class="text-highlight">true innovation</span> requires both rigorous data and deep empathy. Today, I use that analytical foundation to "meet people where they are," translating high-complexity problems into simple, empowering experiences.
+                            <br><br>
+                            I thrive in the weeds of complex workflows and technical constraints. Whether I’m designing for EdTech or other regulated spaces, I look past the surface to <span class="text-highlight">see the broader system</span>, ensuring every design choice serves both the user’s motivation and the business’s bottom line.
+                            <br><br>
+                            Beyond the screen, I believe my role is to act as a bridge. I advocate for the user while driving toward <span class="text-highlight">measurable outcomes</span>, helping cross-functional teams unlock new ways of thinking and solving problems together.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <footer id="contact" class="pt-64 pb-12 px-8 bg-[#01040a] relative z-20">
+            <div class="max-w-7xl mx-auto text-center">
+                <div class="space-y-12">
+                    <p class="text-[#f252c5] uppercase tracking-[0.5em] text-[10px] animate-pulse">Interested in my work?</p>
+                    <a href="mailto:fiona.feifei.zhang@gmail.com" class="text-5xl md:text-[10vw] font-black tracking-tighter text-white hover:text-[#f252c5] transition-colors duration-500 block uppercase">GET IN TOUCH</a>
+                    
+                    <!-- Updated Social/Resume Links -->
+                    <div class="pt-20 flex justify-center gap-12 font-bold tracking-[0.2em] text-[11px] uppercase text-white/40">
+                        <a href="https://www.linkedin.com/in/fiona-feifei-zhang" target="_blank" class="hover:text-white transition-colors duration-300">LinkedIn</a>
+                        <a href="https://drive.google.com/file/d/1ukppGrj-gVsWtoSu8hFj7Xfy5Bqliztu/view?usp=drive_link" target="_blank" class="hover:text-white transition-colors duration-300">Resume</a>
+                    </div>
+                </div>
+
+                <!-- Subtle Footnote -->
+                <div class="mt-48 pt-8 border-t border-white/5">
+                    <p class="text-[10px] font-mono tracking-wider text-white/20 uppercase">
+                        © 2026 All Rights Reserved | Designed and Developed by Fiona Zhang
+                    </p>
+                </div>
+            </div>
+        </footer>
     </main>
 
-    <!-- Scripts  -->
-    <script src="scripts/home_nav.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120573511-1"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        const cursor = document.getElementById('custom-cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
 
-      gtag('config', 'UA-120573511-1');
+        const options = { threshold: 0.3 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                    });
+                }
+            });
+        }, options);
+
+        document.querySelectorAll('section, footer').forEach(section => observer.observe(section));
     </script>
-    <script src="scripts/smoothscroll.js"></script>
-  </body>
+</body>
 </html>
