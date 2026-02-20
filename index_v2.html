@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiona Zhang's Portfolio</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#291e41">
+    <meta name="msapplication-TileColor" content="#291e41">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- style -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+
+        :root {
+            --neon-pink: #f252c5;
+            --navy-deep: #020617;
+            --off-white: #f1f5f9;
+            --transition-speed: 0.6s;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: var(--navy-deep);
+            color: var(--off-white);
+            overflow-x: hidden;
+        }
+
+        /* Entry Animations */
+        @keyframes spanOut {
+            0% { letter-spacing: -0.5em; opacity: 0; filter: blur(12px); transform: scale(0.95); }
+            100% { letter-spacing: -0.05em; opacity: 1; filter: blur(0); transform: scale(1); }
+        }
+
+        @keyframes fadeInSlide {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .animate-title { animation: spanOut 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .animate-fade-up { opacity: 0; animation: fadeInSlide 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards; }
+        .animate-nav-entry { opacity: 0; animation: fadeInSlide 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1s forwards; }
+
+        /* Highlight Effect */
+        .text-highlight {
+            position: relative;
+            display: inline-block;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .text-highlight::after {
+            content: '';
+            position: absolute;
+            left: -2px;
+            right: -2px;
+            bottom: 2px;
+            height: 40%;
+            background-color: rgba(242, 82, 197, 0.25);
+            z-index: -1;
+            transition: height 0.3s ease;
+        }
+        .text-highlight:hover::after {
+            height: 100%;
+        }
+
+        /* Shared Navigation Styles */
+        .side-nav {
+            position: fixed;
+            z-index: 40;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 40px;
+            gap: 40px;
+            background: rgba(2, 6, 23, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-link {
+            font-size: 0.75rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: rgba(255, 255, 255, 0.4);
+            transition: all 0.4s ease;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--neon-pink);
+            text-shadow: 0 0 15px rgba(242, 82, 197, 0.5);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @keyframes calmPulse {
+            0% { transform: translate(-50%, -50%) scale(1); opacity: 0.1; }
+            50% { transform: translate(-50%, -50%) scale(1.4); opacity: 0.2; }
+            100% { transform: translate(-50%, -50%) scale(1); opacity: 0.1; }
+        }
+
+        .calm-pulse {
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 800px;
+            height: 800px;
+            background: var(--neon-pink);
+            border-radius: 50%;
+            filter: blur(160px);
+            z-index: 10;
+            transform: translate(-25%, -50%);
+            animation: calmPulse 10s cubic-bezier(0.33, 1, 0.68, 1) infinite;
+        }
+
+        .wireframe-placeholder {
+            position: relative;
+            overflow: hidden;
+            background: #1e293b;
+            min-height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.5s ease;
+        }
+
+        /* Custom Cursor */
+        .cursor-dot {
+            width: 8px; height: 8px; background: var(--neon-pink);
+            position: fixed; pointer-events: none; border-radius: 50%; z-index: 999;
+            box-shadow: 0 0 15px var(--neon-pink);
+            transform: translate(120%, 150%);
+        }
+
+        /* Fluid Typography for Splash */
+        .fluid-title {
+            font-size: clamp(4.5rem, 12vw, 14rem);
+        }
+
+        /* Outline text helper */
+        .text-outline-sm {
+            -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="custom-cursor" class="cursor-dot"></div>
+
+    <!-- Section Navigation -->
+    <nav class="side-nav animate-nav-entry">
+        <a href="#splash" class="nav-link active">Intro</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <main id="content-render">
+        <!-- Optimized Splash -->
+        <section id="splash" class="min-h-screen relative flex flex-col justify-end overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#020617] to-[#01040a] z-10"></div>
+            <div class="calm-pulse"></div>
+            
+            <div class="max-w-7xl mx-auto w-full px-8 md:px-20 relative z-20 pb-20 md:pb-32">
+                <div class="mb-12">
+                    <span class="text-[#f252c5] font-bold tracking-[0.3em] uppercase mb-6 block animate-fade-up text-xs md:text-sm">Fiona Zhang / Canada / Remote</span>
+                    <h1 class="fluid-title font-black uppercase leading-[0.8] tracking-tighter text-white animate-title">
+                        Empirical<br><span class="text-outline" style="-webkit-text-stroke: 2px rgba(255,255,255,0.25); color: transparent;">Intuition</span>
+                    </h1>
+                </div>
+                
+                <div class="flex flex-col md:flex-row justify-between items-end gap-12 animate-fade-up">
+                    <p class="max-w-2xl text-xl md:text-2xl font-light leading-relaxed text-white/50">
+                        A <span class="text-highlight">first-principles designer</span> translating complex problems and human motivations into intuitive experiences and business outcomes.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-40 px-8 relative z-20">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex items-baseline gap-4 mb-32">
+                    <h2 class="text-8xl font-black tracking-tighter text-white uppercase">Projects</h2>
+                    <div class="h-1 flex-grow bg-white/10 relative">
+                        <div class="absolute left-0 top-0 h-full bg-[#f252c5] w-24"></div>
+                    </div>
+                </div>
+
+                <div class="space-y-64">
+                    <!-- Project 01 -->
+                    <div class="grid grid-cols-12 gap-12 items-center group">
+                        <div class="col-span-12 md:col-span-8 overflow-hidden rounded-2xl glass-panel p-4">
+                            <div class="wireframe-placeholder min-h-[600px] rounded-xl group-hover:scale-[1.01] transition-transform duration-700">
+                                <img src="images/project-cover/cover_CINCTO.png" alt="Carta Tender Offer website"/>
+                            </div>
+                        </div>
+                        <div class="col-span-12 md:col-span-4 space-y-6">
+                            <span class="text-[#f252c5] font-mono tracking-widest uppercase text-xs">Fintech / Carta / 2024</span>
+                            <h3 class="text-5xl font-bold leading-tight text-white">Reimagine Tender Offer</h3>
+                            <p class="text-white/40 text-lg font-light">Conceptualized and delivered a scalable experience that provides real-time visibility into tender offers, reduces manual operational overhead, and establishes a foundation for self-serve, product-led liquidity workflows.</p>
+                            <a href="https://drive.google.com/file/d/18RhadrxwPyU_8afYN6amSL5e8H0nGjdq/view?usp=sharing" class="inline-block px-8 py-3 border border-[#f252c5] text-[#f252c5] rounded-full hover:bg-[#f252c5] hover:text-white transition-all uppercase text-xs font-bold tracking-widest" >View Case Study</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 02 -->
+                    <div class="grid grid-cols-12 gap-12 items-center group">
+                        <div class="col-span-12 md:col-span-4 order-2 md:order-1 space-y-6">
+                            <span class="text-[#f252c5] font-mono tracking-widest uppercase text-xs">Fintech / Carta / 2025</span>
+                            <h3 class="text-5xl font-bold leading-tight text-white">Financials for QSBS</h3>
+                            <p class="text-white/40 text-lg font-light">Crafted a structured, scalable intake experience that drove a 55% increase in deliveries, reduced the backlog by 70%, and cut average time to delivery by 75%.</p>
+                            <a href="https://drive.google.com/file/d/1YeEqNzdoSTwLToDkR5bEJ6XgDaG--OkR/view?usp=sharing" class="inline-block px-8 py-3 border border-[#f252c5] text-[#f252c5] rounded-full hover:bg-[#f252c5] hover:text-white transition-all uppercase text-xs font-bold tracking-widest">View Case Study</a>
+                        </div>
+                        <div class="col-span-12 md:col-span-8 order-1 md:order-2 overflow-hidden rounded-2xl glass-panel p-4">
+                            <div class="wireframe-placeholder min-h-[600px] rounded-xl group-hover:scale-[1.01] transition-transform duration-700">
+                                <img src="images/project-cover/cover_QSBS_fin.png" alt="Carta QSBS website"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 03 -->
+                    <div class="grid grid-cols-12 gap-12 items-center group">
+                        <div class="col-span-12 md:col-span-8 overflow-hidden rounded-2xl glass-panel p-4">
+                            <div class="wireframe-placeholder min-h-[600px] rounded-xl group-hover:scale-[1.01] transition-transform duration-700">
+                                <img src="images/project-cover/cover_MV.png" alt="Brightspace Mastery View feature"/>
+                            </div>
+                        </div>
+                        <div class="col-span-12 md:col-span-4 space-y-6">
+                            <span class="text-[#f252c5] font-mono tracking-widest uppercase text-xs">EdTech / D2L / 2020</span>
+                            <h3 class="text-5xl font-bold leading-tight text-white">Mastery Gradebook</h3>
+                            <p class="text-white/40 text-lg font-light">Led the end to end design of a centralized assessment dashboard that transformed fragmented grading data into a visual mastery map, enabling educators to identify learning gaps in real-time. This redesign streamlined the feedback loop for millions of users, driving deeper engagement with personalized learning paths.</p>
+                            <a href="https://drive.google.com/file/d/1RDwzKP4PNoH-l6u9qjKkivmw8LqsBReh/view?usp=sharing" class="inline-block px-8 py-3 border border-[#f252c5] text-[#f252c5] rounded-full hover:bg-[#f252c5] hover:text-white transition-all uppercase text-xs font-bold tracking-widest">View Case Study</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 04 -->
+                    <div class="grid grid-cols-12 gap-12 items-center group">
+                        <div class="col-span-12 md:col-span-4 order-2 md:order-1 space-y-6">
+                            <span class="text-[#f252c5] font-mono tracking-widest uppercase text-xs">EdTech / D2L / 2019</span>
+                            <h3 class="text-5xl font-bold leading-tight text-white">Self-serve Analytics</h3>
+                            <p class="text-white/40 text-lg font-light">Led the design of a visual reporting builder that empowers educators to build custom reports without needing the technical expertise to query fragmented LMS data. This initiative transformed complex raw datasets into a user-friendly 'drag-and-drop' interface, significantly lowering the barrier for data-driven decision-making across K-12 and Higher Ed institutions.</p>
+                            <a href="https://drive.google.com/file/d/1yotzDVaIgZpQDd_b3C5cpsyJKHrVogBQ/view?usp=sharing" class="inline-block px-8 py-3 border border-[#f252c5] text-[#f252c5] rounded-full hover:bg-[#f252c5] hover:text-white transition-all uppercase text-xs font-bold tracking-widest">View Case Study</a>
+                        </div>
+                        <div class="col-span-12 md:col-span-8 order-1 md:order-2 overflow-hidden rounded-2xl glass-panel p-4">
+                            <div class="wireframe-placeholder min-h-[600px] rounded-xl group-hover:scale-[1.01] transition-transform duration-700">
+                                <img src="images/project-cover/cover_SSA.png" alt="Brightspace Self-Serve Analytics feature"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-40 px-8 relative z-20">
+            <div class="max-w-7xl mx-auto">
+                <!-- Styled Section Title -->
+                <div class="flex items-baseline gap-4 mb-32">
+                    <h2 class="text-8xl font-black tracking-tighter text-white uppercase">About <span class="text-[#f252c5]">Me</span></h2>
+                    <div class="h-1 flex-grow bg-white/10 relative">
+                        <div class="absolute left-0 top-0 h-full bg-[#f252c5] w-24"></div>
+                    </div>
+                </div>
+
+                <!-- Circular Portrait & Text Alignment -->
+                <div class="flex flex-col md:flex-row gap-20 items-center md:items-start justify-center">
+                    <!-- Fixed Portrait Masking -->
+                    <div class="w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
+                        <div class="glass-panel p-1 rounded-full relative w-full h-full overflow-hidden">
+                            <div class="absolute inset-0 border border-[#f252c5]/30 rounded-full z-10 pointer-events-none"></div>
+                            <!-- Image container with strict masking -->
+                            <div class="w-full h-full rounded-full overflow-hidden bg-[#1e293b] flex items-center justify-center">
+                                <img src="images/profile.png" alt="profile photo" class="h-full w-auto max-w-none">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Content block with max-width for readability -->
+                    <div class="w-full max-w-2xl">
+                        <p class="text-lg md:text-xl font-light text-white/80 leading-[1.8]">
+                            I didn’t take the traditional path to design. My journey began in scientific research, where I learned that <span class="text-highlight">true innovation</span> requires both rigorous data and deep empathy. Today, I use that analytical foundation to "meet people where they are," translating high-complexity problems into simple, empowering experiences.
+                            <br><br>
+                            I thrive in the weeds of complex workflows and technical constraints. Whether I’m designing for EdTech or other regulated spaces, I look past the surface to <span class="text-highlight">see the broader system</span>, ensuring every design choice serves both the user’s motivation and the business’s bottom line.
+                            <br><br>
+                            Beyond the screen, I believe my role is to act as a bridge. I advocate for the user while driving toward <span class="text-highlight">measurable outcomes</span>, helping cross-functional teams unlock new ways of thinking and solving problems together.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <footer id="contact" class="pt-64 pb-12 px-8 bg-[#01040a] relative z-20">
+            <div class="max-w-7xl mx-auto text-center">
+                <div class="space-y-12">
+                    <p class="text-[#f252c5] uppercase tracking-[0.5em] text-[10px] animate-pulse">Interested in my work?</p>
+                    <a href="mailto:fiona.feifei.zhang@gmail.com" class="text-5xl md:text-[10vw] font-black tracking-tighter text-white hover:text-[#f252c5] transition-colors duration-500 block uppercase">GET IN TOUCH</a>
+                    
+                    <!-- Updated Social/Resume Links -->
+                    <div class="pt-20 flex justify-center gap-12 font-bold tracking-[0.2em] text-[11px] uppercase text-white/40">
+                        <a href="https://www.linkedin.com/in/fiona-feifei-zhang" target="_blank" class="hover:text-white transition-colors duration-300">LinkedIn</a>
+                        <a href="https://drive.google.com/file/d/1ukppGrj-gVsWtoSu8hFj7Xfy5Bqliztu/view?usp=drive_link" target="_blank" class="hover:text-white transition-colors duration-300">Resume</a>
+                    </div>
+                </div>
+
+                <!-- Subtle Footnote -->
+                <div class="mt-48 pt-8 border-t border-white/5">
+                    <p class="text-[10px] font-mono tracking-wider text-white/20 uppercase">
+                        © 2026 All Rights Reserved | Designed and Developed by Fiona Zhang
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        const cursor = document.getElementById('custom-cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        const options = { threshold: 0.3 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                    });
+                }
+            });
+        }, options);
+
+        document.querySelectorAll('section, footer').forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
