@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="95px" height="95px" viewBox="0 0 95 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>ur_result2-2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Case-Study" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HIVE---Case-Study-Page-1" transform="translate(-816.000000, -3184.000000)">
+            <g id="Group-5" transform="translate(787.000000, 3189.000000)">
+                <g id="ur_result2-2" transform="translate(34.000000, 0.000000)">
+                    <path d="M42.5,85 C65.9721019,85 85,65.9721019 85,42.5 C85,30.8935424 80.3475016,20.373734 72.8057417,12.7038118 C68.4159285,8.23939947 63.0472261,4.74053588 57.0473553,2.55494184 C52.5091777,0.901803897 47.6099026,0 42.5,0 C19.0278981,0 0,19.0278981 0,42.5 C0,65.9721019 19.0278981,85 42.5,85 Z" id="Oval-3" stroke="#B4B3B5" stroke-width="10"></path>
+                    <path d="M57.0473553,2.55494184 C52.5091777,0.901803897 47.6099026,0 42.5,0 C19.0278981,0 0,19.0278981 0,42.5 C0,65.9721019 19.0278981,85 42.5,85 C65.9721019,85 85,65.9721019 85,42.5 C85,30.8935424 80.3475016,20.373734 72.8057417,12.7038118" id="Oval-3" stroke="#FA926E" stroke-width="10"></path>
+                    <text id="89%" font-family="Ubuntu-Medium, Ubuntu" font-size="30" font-weight="400" fill="#504840">
+                        <tspan x="12" y="50">89%</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

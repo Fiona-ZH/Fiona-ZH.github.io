@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="461px" height="198px" viewBox="0 0 461 198" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo/big bw 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M30,0 L411,0 C427.568542,-3.04359188e-15 441,13.4314575 441,30 L441,148 C441,164.568542 427.568542,178 411,178 L30,178 C13.4314575,178 1.67448831e-14,164.568542 0,148 L0,30 C-2.02906125e-15,13.4314575 13.4314575,-4.06183548e-15 30,-7.10542736e-15 Z" id="path-1"></path>
+        <filter x="-3.6%" y="-7.9%" width="107.3%" height="118.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.590162628   0 0 0 0 0.590162628   0 0 0 0 0.590162628  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Hive---Style-Guide-V3" transform="translate(-739.000000, -978.000000)">
+            <g id="Logo" transform="translate(33.000000, 490.000000)">
+                <g id="Logo/big-bw-2" transform="translate(716.014125, 496.000000)">
+                    <g id="Rectangle-5-Copy-7">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <path d="M223,58 L328,58 L328,120 L327.145161,120 L223,120 L169,151 L114,120 L114,58 L169,27 L223,58 Z M223.67101,63 L171,92 L171,146 L223.67101,116.5 L325,116.5 L325,63 L223.67101,63 Z M214,74 L214,113.592915 L204.663551,118.994703 L204.663551,102.761608 L186.336449,113.365117 L186.336449,129.598212 L177,135 L177,95.4070845 L186.336449,90.0052969 L186.336449,105.616218 L204.663551,95.0127086 L204.663551,79.4017877 L214,74 Z M223,69 L233,69 L233,109 L223,109 L223,69 Z M282,69 L264.176471,109 L254.764706,109 L237,69 L247.294118,69 L259.823529,97.5714286 L272.529412,69 L282,69 Z M319,101.571429 L319,109 L287,109 L287,69 L318.232472,69 L318.232472,76.4285714 L296.505535,76.4285714 L296.505535,85.1142857 L315.693727,85.1142857 L315.693727,92.3142857 L296.505535,92.3142857 L296.505535,101.571429 L319,101.571429 Z" id="Combined-Shape" fill="#000000"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
