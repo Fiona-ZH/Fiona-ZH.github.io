@@ -113,10 +113,16 @@ a {
 
 header {
   min-height: 100vh;
+  background-image: linear-gradient(#1e1433 10%, #4b3b57 25%, #7b67a2 65%, #F9BDDD 85%, #f9f0d5 98%);
+  background-image: -webkit-linear-gradient (#1e1433 10%, #4b3b57 25%, #7b67a2 65%, #F9BDDD 85%, #f9f0d5 98%);
+  background-image: -moz-linear-gradient(#1e1433 10%, #4b3b57 25%, #7b67a2 65%, #F9BDDD 85%, #f9f0d5 98%);
+  background-image: -o-linear-gradient(#1e1433 10%, #4b3b57 25%, #7b67a2 65%, #F9BDDD 85%, #f9f0d5 98%);
+  /* prev bkg --- 
   background-image: linear-gradient(#291E41 0%, #252661 25%, #F49491 75%, #FFDEBD 90%, #FFFCE9 100%);
   background-image: -webkit-linear-gradient (#291E41 0%, #252661 25%, #F49491 55%, #FFDEBD 75%, #FFFCE9 95%);
   background-image: -moz-linear-gradient(#291E41 0%, #252661 20%, #F49491 55%, #FFDEBD 75%, #FFFCE9 95%);
   background-image: -o-linear-gradient(#291E41 0%, #252661 20%, #F49491 55%, #FFDEBD 75%, #FFFCE9 95%);
+  --- */
   background-repeat: repeat-x;
   background-attachment: fixed;
   position: relative;
