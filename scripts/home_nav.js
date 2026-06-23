@@ -3,10 +3,20 @@ window.onload = function() {
 
 // ------ Sticky nav bar ------
 
+var bkgImg = document.querySelector('header .bkg');
+var splashContent = document.querySelector('.splash__content');
+
 window.onscroll = function(){
-  stickyNav()
-  currentSele()
+  stickyNav();
+  currentSele();
+  fadeSplashOnScroll();
 };
+
+function fadeSplashOnScroll() {
+  var opacity = Math.max(0, 1 - window.pageYOffset / window.innerHeight);
+  if (bkgImg) bkgImg.style.opacity = opacity;
+  if (splashContent) splashContent.style.opacity = opacity;
+}
 
 var navbar = document.getElementById("navbar");
 var moveDown = document.getElementById("featured_title");
@@ -29,7 +39,6 @@ function stickyNav() {
 // ------ section indicator for max-width 1024px ------
 
 var projects = document.getElementById("navprojects");
-var featuredHero = document.getElementsByClassName("featured__hero");
 var proPos = (document.getElementById("proPos").offsetTop * 0.95);
 
 var about = document.getElementById("navabout");
@@ -38,20 +47,75 @@ var aboutPos = (document.getElementById("aboutPos").offsetTop * 0.95);
 var connect = document.getElementById("navconnect");
 var connPos = (document.getElementById("connPos").offsetTop * 0.95);
 
+// ------ Letter raise-and-fade rotation on splash h6 ------
+(function () {
+  var words = ['human-centred', 'AI-empowered', 'data-driven', 'intuitive', 'delightful'];
+  var container = document.getElementById('typewriter-word');
+  if (!container) return;
+
+  var STAGGER_IN  = 40;
+  var STAGGER_OUT = 25;
+  var DUR_IN      = 600;
+  var DUR_OUT     = 200;
+  var PAUSE       = 1000;
+  var wordIndex   = 0;
+
+  function fixWidth() {
+    var longest = words.reduce(function (a, b) { return b.length > a.length ? b : a; }, '');
+    container.textContent = longest;
+    container.style.minWidth = container.offsetWidth + 'px';
+    container.innerHTML = '';
+  }
+
+  function buildSpans(word) {
+    container.innerHTML = '';
+    return word.split('').map(function (ch) {
+      var s = document.createElement('span');
+      s.textContent = ch;
+      container.appendChild(s);
+      return s;
+    });
+  }
+
+  function animateIn(word, done) {
+    var spans = buildSpans(word);
+    spans.forEach(function (s, i) {
+      s.style.animationDelay = (i * STAGGER_IN) + 'ms';
+      s.classList.add('tw-in');
+    });
+    setTimeout(done, (spans.length - 1) * STAGGER_IN + DUR_IN + 30);
+  }
+
+  function animateOut(done) {
+    var spans = Array.prototype.slice.call(container.querySelectorAll('span'));
+    if (!spans.length) { done(); return; }
+    spans.forEach(function (s, i) {
+      s.style.animationDelay = (i * STAGGER_OUT) + 'ms';
+      s.classList.remove('tw-in');
+      s.classList.add('tw-out');
+    });
+    setTimeout(done, (spans.length - 1) * STAGGER_OUT + DUR_OUT + 30);
+  }
+
+  function cycle() {
+    animateOut(function () {
+      wordIndex = (wordIndex + 1) % words.length;
+      animateIn(words[wordIndex], function () {
+        setTimeout(cycle, PAUSE);
+      });
+    });
+  }
+
+  fixWidth();
+  animateIn(words[0], function () {
+    setTimeout(cycle, PAUSE);
+  });
+}());
+
 function currentSele(){
   if(window.pageYOffset >= proPos && window.pageYOffset < aboutPos) {
     projects.classList.add("curr-sele");
     projects.classList.add("nav__dot--focus-d");
-    for (let i = 0; i < featuredHero.length; i++) {
-  featuredHero[i].classList.add("fade-in-right");
-}
-  //featuredHero[0].classList.add("fade-in-right");
-  //featuredHero[1].classList.add("fade-in-right");
-  // featuredHero[2].classList.add("fade-in-right");
-  //featuredHero[3].classList.add("fade-in-right");
-  //featuredHero[4].classList.add("fade-in-right");
-  //featuredHero[5].classList.add("fade-in-right");
-  //featuredHero[6].classList.add("fade-in-right");
   } else {
     projects.classList.remove("curr-sele");
     projects.classList.remove("nav__dot--focus-d");
@@ -73,3 +137,24 @@ function currentSele(){
     connect.classList.remove("nav__dot--focus-d");
   }
 }
+
+// ------ Hero image fade-in on viewport entry ------
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+
+  var heroes = document.querySelectorAll('.featured__hero');
+  if (!heroes.length) return;
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var img = entry.target.querySelector('.hero-img');
+        if (img) img.classList.add('hero-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  heroes.forEach(function (el) { observer.observe(el); });
+}());
+
