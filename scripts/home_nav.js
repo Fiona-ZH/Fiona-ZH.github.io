@@ -1,4 +1,9 @@
 window.onload = function() {
+  var savedPos = sessionStorage.getItem('homeScrollPos');
+  if (savedPos !== null) {
+    sessionStorage.removeItem('homeScrollPos');
+    window.scrollTo(0, parseInt(savedPos, 10));
+  }
 };
 
 // ------ Sticky nav bar ------
@@ -137,6 +142,13 @@ function currentSele(){
     connect.classList.remove("nav__dot--focus-d");
   }
 }
+
+// ------ Save scroll position before navigating to same-tab case studies ------
+document.querySelectorAll('.view_casestudy:not([target="_blank"])').forEach(function(a) {
+  a.addEventListener('click', function() {
+    sessionStorage.setItem('homeScrollPos', window.scrollY.toString());
+  });
+});
 
 // ------ Hero image fade-in on viewport entry ------
 (function () {
